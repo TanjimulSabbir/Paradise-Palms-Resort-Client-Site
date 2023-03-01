@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import Blogs from "../../../JsonFiles/Blogs.json";
+import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import GetBlogs from "../../../Hooks/GetBlogs";
+import useBlogs from "../../../Hooks/useBlogs";
 import PageLoading from "../../../Components/Shared/Loading/Loading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -10,17 +9,14 @@ const B09Cards = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const pathName = location.pathname;
-  const [BlogsData, isLoading, isError] = GetBlogs();
+  const [BlogsData, isLoading] = useBlogs();
 
   if (isLoading) {
     return <PageLoading></PageLoading>;
   }
-  if (isError) {
-    return console.log(isError, "from Blogs");
-  }
 
   function handleBlog(_id) {
-    navigate(`/blog/${_id}`); // Navigate to a new page when the p tag is clicked
+    navigate(`/blog/${_id}`)
   }
 
   return (
@@ -31,33 +27,27 @@ const B09Cards = () => {
       {BlogsData?.map((blog) => {
         const { _id, title, description, img, date, author } = blog;
         return (
-          <div onClick={() => handleBlog(_id)}
-            key={_id}
-            className="card relative pb-24 p-6 border cursor-pointer"
-            id={`${title}`}>
-            <figure className="rounded-none">
-              <img
-                src={img}
-                className={`${pathName === "/" ? "h-[300px]" : "max-h-min"
-                  } w-full`}
-                alt="blog"
-              />
-            </figure>
-            <div className="mt-6">
+          <div key={_id} className="relative pb-6 p-2 border rounded" id={`${title}`}>
+            <img
+              src={img}
+              className={`${pathName === "/" ? "h-[300px]" : "max-h-min"} w-full`} alt="blog" />
+            <div className="mt-6 p-4">
               <div className="flex justify-between">
-                <span className="">{date} </span> <br />
-                <Link
-                  to={`/author`}
-                  className="text-[12px] link link-success text-green-500">by {author}
+                <span>{date} </span> <br />
+                <Link to="/author" className="text-[12px] link text-green-600">
+                  by {author}
                 </Link>
               </div>
-              <h2 className="card-title font-diplayFair mt-4">
-                {title.slice(0, 30) + "..."}
-              </h2>
-              <div> <p className="font-openSans mt-10">{description.slice(0, 180)}<Link to={`/blog/$              {_id}`} className="text-rose-500">
-                ...more
-              </Link>
-              </p>
+
+              <div onClick={() => handleBlog(_id)} className="cursor-pointer">
+                <h2 className="card-title font-diplayFair mt-6">
+                  {title.slice(0, 35) + "..."}
+                </h2>
+                <div>
+                  <p className="font-openSans text-justify mt-8">{description.slice(0, 130)}
+                    <p onClick={() => handleBlog(_id)} className="text-rose-500 cursor-pointer">read more...</p>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -65,7 +55,7 @@ const B09Cards = () => {
       })}
       {pathName === "/" && (
         <Link to={"/blog"}>
-          <button className="btn border-none rounded-none text-black bg-rose-300 mt-14">
+          <button className="btn border-none rounded-none text-black bg-rose-300">
             know More{" "}
             <FontAwesomeIcon
               icon={faArrowRight}

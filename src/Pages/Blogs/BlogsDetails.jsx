@@ -1,12 +1,12 @@
 import React from "react";
 import {Link, useParams} from "react-router-dom";
 import PageLoading from "../../Components/Shared/Loading/Loading";
-import GetBlogs from "../../Hooks/GetBlogs";
+import useBlogs from "../../Hooks/useBlogs";
 import ExtraDetailsText from "./ExtraDetailsText";
 
 const BlogsDetails = () => {
   const params = useParams();
-  const [BlogsData, isLoading, isError] = GetBlogs();
+  const [BlogsData, isLoading, isError] = useBlogs();
   if (isLoading) {
     return <PageLoading />;
   }

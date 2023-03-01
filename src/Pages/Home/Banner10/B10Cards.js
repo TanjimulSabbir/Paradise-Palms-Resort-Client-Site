@@ -1,19 +1,21 @@
 import React from 'react';
-import Gallary from '../../../JsonFiles/Gallery.json'
+import PageLoading from '../../../Components/Shared/Loading/Loading';
+import useGallery from '../../../Hooks/useGallery';
+
 
 const B10Cards = () => {
+    const [Gallary, isLoading] = useGallery()
+    if (isLoading) {
+        return <PageLoading></PageLoading>
+    }
     return (
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
+        <div className='grid grid-cols-4'>
             {
-                Gallary.map(photo => {
-                    const { title, img, } = photo;
+                Gallary?.map(photo => {
+                    const { img } = photo;
                     return (
-                        <div className='card'>
-                        <div className="rounded">
-                            <figure><img src={`/image/Banner10/${img}`} className='h-[320px] w-full rounded' alt="gallery" /></figure> 
-                            <h2 className="card-title pl-2">{title}</h2>
-                        </div>
-                        
+                        <div className="relative flex border-4 border-teal-600 shadow-lg transform transition duration-700 delay-75 hover:scale-150 md:hover:scale-125 hover:z-40 overflow-visible cursor-pointer">
+                            <img src={img} alt="Gallery" />
                         </div>
                     )
                 })

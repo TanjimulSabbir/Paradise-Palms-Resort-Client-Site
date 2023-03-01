@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import img1 from "../../../Assets/images/Banner08/img-1.jpg";
 import img2 from "../../../Assets/images/Banner08/img-2.jpg";
 const Banner08 = () => {
   return (
     <div className="py-24 UniversalPadding bg-gray-200">
       <div className="lg:w-2/3 p-4">
-        <h2 className="font-diplayFair text-5xl font-bold text-black">
+        <h2 className="font-diplayFair text-3xl mid-lg:text-5xl font-bold text-black">
           Special Offers
           <p className="border inline-block border-[#6e3434] h-[1px] w-16 ml-4 items-end"></p>
         </h2>
@@ -40,7 +41,7 @@ const Banner08 = () => {
             <h2 className="headingS text-xl text-black">
               15% Off on this packages
             </h2>
-            <p className="Btn-Primary">Book Now</p>
+            <Link to="/offers" className="Btn-Primary">Book Now</Link>
           </div>
         </div>
 
@@ -66,7 +67,7 @@ const Banner08 = () => {
             <h2 className="headingS text-xl text-black">
               21% Off on this packages
             </h2>
-            <p className="Btn-Primary">Book Now</p>
+            <Link to="/offers" className="Btn-Primary">Book Now</Link>
           </div>
         </div>
       </div>

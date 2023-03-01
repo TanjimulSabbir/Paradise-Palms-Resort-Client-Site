@@ -1,8 +1,7 @@
-import React from 'react';
 import { useQuery } from 'react-query';
 import { useLocation } from 'react-router-dom';
 
-const GetServices = () => {
+const useServices = () => {
     const location = useLocation();
     const pathName = location.pathname;
 
@@ -21,4 +20,4 @@ const GetServices = () => {
     return [ServicesData, isError, isLoading]
 };
 
-export default GetServices;
+export default useServices;
