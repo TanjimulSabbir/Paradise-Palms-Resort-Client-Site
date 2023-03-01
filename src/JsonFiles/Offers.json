@@ -1,0 +1,45 @@
+[
+          {
+            "title": "Stay and Relax",
+            "description": "Book your stay for 3 nights and get a complimentary massage at our spa",
+            "img": "https://i.ibb.co/tHk9yxk/photo-1596169095544-8605b2f1e3a9-ixlib-rb-4-0.jpg",
+            "valid_from": "2023-02-12",
+            "valid_to": "2023-03-31"
+          },
+          {
+            "title": "Family Getaway",
+            "description": "Bring your family to our resort and enjoy a 50% discount on kids' meals and activities",
+            "img": "https://i.ibb.co/SdZRz4H/photo-1611441084699-f2ec867c8edf-ixlib-rb-4-0.jpg",
+            "valid_from": "2023-02-12",
+            "valid_to": "2023-03-31"
+          },
+          {
+            "title": "Romantic Escape",
+            "description": "Surprise your partner with a romantic getaway and receive a bottle of sparkling wine upon arrival",
+            "img": "https://i.ibb.co/8xbvLqQ/photo-1593067512699-71f808be15e7-ixlib-rb-4-0.jpg",
+            "valid_from": "2023-02-12",
+            "valid_to": "2023-03-31"
+          },
+          {
+            "title": "Adventure Package",
+            "description": "Book your stay for 5 nights and get a free kayaking excursion for 2",
+            "img": "https://i.ibb.co/rfKbqvy/photo-1602002418211-9d76470fa71f-ixlib-rb-4-0.jpg",
+            "valid_from": "2023-02-12",
+            "valid_to": "2023-03-31"
+          },
+          {
+            "title": "Extended Stay",
+            "description": "Book your stay for 7 nights and receive a discount of $100 on your room rate",
+            "img": "https://i.ibb.co/Q8Gh8Hm/photo-1566073771259-6a8506099945-ixlib-rb-4-0.jpg",
+            "valid_from": "2023-02-12",
+            "valid_to": "2023-03-31"
+          },
+          {
+            "title": "Group Getaway",
+            "description": "Book your stay with a group of 10 or more and receive a complimentary welcome drink upon arrival",
+            "img": "https://i.ibb.co/mHhQdTZ/premium-photo-1664910773367-08acfa0ddcc3-ixlib-rb-4-0.jpg",
+            "valid_from": "2023-02-12",
+            "valid_to": "2023-03-31"
+          }
+      
+]

@@ -1,0 +1,114 @@
+[
+    {
+        "_id":1, "title": "Junior Suit",
+        "text": "A luxurious room that typically includes a separate living area and bedroom, making it ideal for travelers who value extra space and privacy. This room time: is perfect for couples or families who want a bit of extra space and luxury during their stay.",
+        "price": "$200",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-1.jpg"
+    },
+    {
+        "_id":2, "title": "Junior Suit",
+        "text": "A luxurious room that typically includes a separate living area and bedroom, making it ideal for travelers who value extra space and privacy. This room time: is perfect for couples or families who want a bit of extra space and luxury during their stay.",
+        "price": "$200",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-1.jpg"
+    },
+    {
+        "_id":3, "title": "Junior Suit",
+        "text": "A luxurious room that typically includes a separate living area and bedroom, making it ideal for travelers who value extra space and privacy. This room time: is perfect for couples or families who want a bit of extra space and luxury during their stay.",
+        "price": "$200",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-1.jpg"
+    },
+    {
+        "_id":4, "title": "Junior Suit",
+        "text": "A luxurious room that typically includes a separate living area and bedroom, making it ideal for travelers who value extra space and privacy. This room time: is perfect for couples or families who want a bit of extra space and luxury during their stay.",
+        "price": "$200",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-1.jpg"
+    },
+    {
+        "_id":5, "title": "Junior Suit",
+        "text": "A luxurious room that typically includes a separate living area and bedroom, making it ideal for travelers who value extra space and privacy. This room time: is perfect for couples or families who want a bit of extra space and luxury during their stay.",
+        "price": "$200",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-1.jpg"
+    },
+    {
+        "_id":6, "title": "Family Room",
+        "text": "A spacious room designed to accommodate families, with separate sleeping areas for children and adults. This room time: is perfect for families with kids who need more space to spread out.",
+        "price": "$350",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-2.jpg"
+    },
+    {
+        "_id":7, "title": "Standard Room",
+        "text": "A comfortable and basic room, typically featuring a bed, desk, and bathroom. This is a good option for travelers who are looking for a basic, budget-friendly accommodation.",
+        "price": "$150",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-3.jpg"
+    },
+    {
+        "_id":8, "title": "Delux Room",
+        "text": " An upgraded version of the standard room, offering more space and additional amenities such as a comfortable seating area, better views, and premium bedding. This is a great option for travelers who want a bit more comfort and luxury.",
+        "price": "$250",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-4.jpg"
+    },
+    {
+        "_id":9, "title": "Delux Room",
+        "text": " An upgraded version of the standard room, offering more space and additional amenities such as a comfortable seating area, better views, and premium bedding. This is a great option for travelers who want a bit more comfort and luxury.",
+        "price": "$250",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-4.jpg"
+    },
+    {
+        "_id":10, "title": "Delux Room",
+        "text": " An upgraded version of the standard room, offering more space and additional amenities such as a comfortable seating area, better views, and premium bedding. This is a great option for travelers who want a bit more comfort and luxury.",
+        "price": "$250",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-4.jpg"
+    },
+    {
+        "_id":11, "title": "Delux Room",
+        "text": " An upgraded version of the standard room, offering more space and additional amenities such as a comfortable seating area, better views, and premium bedding. This is a great option for travelers who want a bit more comfort and luxury.",
+        "price": "$250",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-4.jpg"
+    },
+    {
+        "_id":12, "title": "Delux Room",
+        "text": " An upgraded version of the standard room, offering more space and additional amenities such as a comfortable seating area, better views, and premium bedding. This is a great option for travelers who want a bit more comfort and luxury.",
+        "price": "$250",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-4.jpg"
+    },
+    {
+        "_id":13, "title": "Delux Room",
+        "text": " An upgraded version of the standard room, offering more space and additional amenities such as a comfortable seating area, better views, and premium bedding. This is a great option for travelers who want a bit more comfort and luxury.",
+        "price": "$250",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-4.jpg"
+    },
+    {
+        "_id":14, "title": "Delux Room",
+        "text": " An upgraded version of the standard room, offering more space and additional amenities such as a comfortable seating area, better views, and premium bedding. This is a great option for travelers who want a bit more comfort and luxury.",
+        "price": "$250",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-4.jpg"
+    },
+    {
+        "_id":15, "title": "Delux Room",
+        "text": " An upgraded version of the standard room, offering more space and additional amenities such as a comfortable seating area, better views, and premium bedding. This is a great option for travelers who want a bit more comfort and luxury.",
+        "price": "$250",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-4.jpg"
+    }, 
+    {
+        "_id":16, "title": "Delux Room",
+        "text": " An upgraded version of the standard room, offering more space and additional amenities such as a comfortable seating area, better views, and premium bedding. This is a great option for travelers who want a bit more comfort and luxury.",
+        "price": "$250",
+        "time": "Night",
+        "img": "https://shtheme.com/demosd/charlostin1/wp-content/uploads/2018/09/room-4.jpg"
+    }
+]

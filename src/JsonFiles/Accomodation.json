@@ -1,0 +1,182 @@
+[
+          {
+            "title": "Deluxe Room",
+            "description": "Our deluxe rooms are spacious and elegantly decorated, featuring comfortable beds, a large bathroom with a shower and tub, and a private balcony with stunning views of the surrounding area.",
+            "img": "https://i.ibb.co/SwbCJnr/photo-1652400096996-e3670b8c9d6e-ixlib-rb-4-0.jpg",
+            "amenities": [
+              "King-sized bed",
+              "Private balcony",
+              "Large bathroom with shower and tub",
+              "Complimentary Wi-Fi",
+              "Flat-screen TV",
+              "Mini-fridge",
+              "Air conditioning"
+            ],
+            "price": "$200 per night"
+          },
+          {
+            "title": "Suite Room",
+            "description": "Our suite rooms are the epitome of luxury, featuring a separate living room, a king-sized bed, a large bathroom with a shower and tub, and a private balcony with breathtaking views. Perfect for couples or families.",
+            "img": "https://i.ibb.co/DCT5gnh/photo-1656570788871-ee98617686b0-ixlib-rb-4-0.jpg",
+            "amenities": [
+              "King-sized bed",
+              "Private balcony",
+              "Separate living room",
+              "Large bathroom with shower and tub",
+              "Complimentary Wi-Fi",
+              "Flat-screen TV",
+              "Mini-fridge",
+              "Air conditioning"
+            ],
+            "price": "$300 per night"
+          },
+          {
+            "title": "Family Room",
+            "description": "Our family rooms are perfect for families or groups of friends, featuring two queen-sized beds, a separate living area, and a large bathroom with a shower and tub. Enjoy stunning views from the private balcony.",
+            "img": "https://i.ibb.co/PWtP16Y/photo-1657349226767-66c983d7df39-ixlib-rb-4-0.jpg",
+            "amenities": [
+              "Two queen-sized beds",
+              "Private balcony",
+              "Separate living area",
+              "Large bathroom with shower and tub",
+              "Complimentary Wi-Fi",
+              "Flat-screen TV",
+              "Mini-fridge",
+              "Air conditioning"
+            ],
+            "price": "$400 per night"
+          },
+          {
+            "title": "Superior Room",
+            "description": "Our Superior Rooms offer comfortable and stylish accommodations, perfect for a relaxing and enjoyable stay. Each room features a queen-sized bed, a seating area with comfortable chairs, a flat-screen TV, and a private bathroom with a shower and bathtub. Our Superior Rooms are cozy and inviting, offering the perfect blend of comfort and convenience.",
+            "img": "https://i.ibb.co/DWGSyZh/photo-1663911240934-c352569e3f57-ixlib-rb-4-0.jpg",
+            "amenities": [        "Queen-sized bed",        "Seating area with comfortable chairs",        "Flat-screen TV",        "Private bathroom with shower and bathtub",        "Complimentary Wi-Fi",        "Mini-fridge",        "In-room safe"      ]
+          },
+          {
+            "title": "Luxury Suite",
+            "description": "Our Luxury Suites are spacious and beautifully appointed, featuring a separate living area, comfortable bedding, and a private balcony with stunning views. These suites are equipped with a flat-screen TV, mini-fridge, and coffee/tea making facilities. Room size: 550 sq.ft.",
+            "img": "https://i.ibb.co/7Gq1kst/bed04.jpg",
+            "amenities": [
+              "King bed",
+              "Separate living area",
+              "Private balcony with views",
+              "Flat-screen TV",
+              "Mini-fridge",
+              "Coffee/tea making facilities",
+              "Free Wi-Fi",
+              "Complimentary bottled water"
+            ]
+          },
+          {
+            "title": "Premier Room",
+            "description": "Our Premier Rooms offer guests a more spacious and luxurious experience, featuring a separate living area, comfortable bedding, and a private balcony with stunning views. These rooms are equipped with a flat-screen TV, mini-fridge. Each room features a queen-sized bed, a seating area with comfortable chairs, a flat-screen TV, and a private bathroom with a shower and bathtub. Our Superior Rooms are cozy and inviting, offering the perfect blend of comfort and convenience",
+             "img": "https://i.ibb.co/j8wPMXm/bed01.jpg",
+            "amenities": [
+              "Two queen-sized beds",
+              "Private balcony",
+              "Separate living area",
+              "Large bathroom with shower and tub",
+              "Complimentary Wi-Fi",
+              "Flat-screen TV",
+              "Mini-fridge",
+              "Air conditioning"
+            ],
+            "price": "$400 per night"
+         },
+         {
+          "title": "Villa Room",
+          "description": "A luxurious room that typically includes a separate living area and bedroom, making it ideal for travelers who value extra space and privacy. This room time: is perfect for couples or families who want a bit of extra space and luxury during their stay.",
+          "img": "https://i.ibb.co/QbMYM7k/photo-1582719478250-c89cae4dc85b-ixlib-rb-4-0.jpg",
+            "amenities": [
+              "Two queen-sized beds",
+              "Private balcony",
+              "Separate living area",
+              "Large bathroom with shower and tub",
+              "Complimentary Wi-Fi",
+              "Flat-screen TV",
+              "Mini-fridge",
+              "Air conditioning"
+            ],
+            "price": "$400 per night"
+      },
+         {
+          "title": "Pool View Room",
+          "description": "A luxurious room that typically includes a separate living area and bedroom, making it ideal for travelers who value extra space and privacy. This room time: is perfect for couples or families who want a bit of extra space and luxury during their stay.",
+          "img": "https://i.ibb.co/CtY3P9k/photo-1665930152500-26acb7c86076-ixlib-rb-4-0.jpg",
+            "amenities": [
+              "Two queen-sized beds",
+              "Private balcony",
+              "Separate living area",
+              "Large bathroom with shower and tub",
+              "Complimentary Wi-Fi",
+              "Flat-screen TV",
+              "Mini-fridge",
+              "Air conditioning"
+            ],
+            "price": "$400 per night"
+      },
+         {
+          "title": "Junior Suit",
+          "description": "A luxurious room that typically includes a separate living area and bedroom, making it ideal for travelers who value extra space and privacy. This room time: is perfect for couples or families who want a bit of extra space and luxury during their stay.",
+          "img": "https://i.ibb.co/6R7J8w3/photo-1633505650701-6104c4fc72c2-ixlib-rb-4-0.jpg",
+            "amenities": [
+              "Two queen-sized beds",
+              "Private balcony",
+              "Separate living area",
+              "Large bathroom with shower and tub",
+              "Complimentary Wi-Fi",
+              "Flat-screen TV",
+              "Mini-fridge",
+              "Air conditioning"
+            ],
+            "price": "$400 per night"
+      },
+         {
+          "title": "Ocean View Room",
+          "description": "A luxurious room that typically includes a separate living area and bedroom, making it ideal for travelers who value extra space and privacy. This room time: is perfect for couples or families who want a bit of extra space and luxury during their stay.",
+          "img": "https://i.ibb.co/HhCfLg9/bed07.jpg",
+            "amenities": [
+              "Two queen-sized beds",
+              "Private balcony",
+              "Separate living area",
+              "Large bathroom with shower and tub",
+              "Complimentary Wi-Fi",
+              "Flat-screen TV",
+              "Mini-fridge",
+              "Air conditioning"
+            ],
+            "price": "$400 per night"
+      },
+         {
+          "title": "Honeymoon Suite",
+          "description": "A luxurious room that typically includes a separate living area and bedroom, making it ideal for travelers who value extra space and privacy. This room time: is perfect for couples or families who want a bit of extra space and luxury during their stay.",
+          "img": "https://i.ibb.co/WWyXtsZ/premium-photo-1664910074138-2875a84d5e43-ixlib-rb-4-0.jpg",
+            "amenities": [
+              "Two queen-sized beds",
+              "Private balcony",
+              "Separate living area",
+              "Large bathroom with shower and tub",
+              "Complimentary Wi-Fi",
+              "Flat-screen TV",
+              "Mini-fridge",
+              "Air conditioning"
+            ],
+            "price": "$400 per night"
+      },
+         {
+          "title": "Executive Room",
+          "description": "A luxurious room that typically includes a separate living area and bedroom, making it ideal for travelers who value extra space and privacy. This room time: is perfect for couples or families who want a bit of extra space and luxury during their stay.",
+          "img": "https://i.ibb.co/mzRSWTb/bed06.jpg",
+            "amenities": [
+              "Two queen-sized beds",
+              "Private balcony",
+              "Separate living area",
+              "Large bathroom with shower and tub",
+              "Complimentary Wi-Fi",
+              "Flat-screen TV",
+              "Mini-fridge",
+              "Air conditioning"
+            ],
+            "price": "$400 per night"
+      }
+]

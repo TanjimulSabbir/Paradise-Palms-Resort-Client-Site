@@ -1,0 +1,11 @@
+[
+    {"_id":1,"title":"Spa and Wellness","img":"spa.jpg"},
+    {"_id":2,"title":"Restaurant","img":"restaurant.jpg"},
+    {"_id":3,"title":"OutDoor Activities","img":"activities.jpg"},
+    {"_id":4,"title":"Luxurious Rooms","img":"room.jpg"},
+    {"_id":5,"title":"Romantic Gateway","img":"outdoor.jpg"},
+    {"_id":6,"title":"Sea & Pools","img":"pool.jpg"},
+    {"_id":7,"title":"Nature View","img":"nv.jpg"},
+    {"_id":8,"title":"Relax and Refresh","img":"refresh.jpg"},
+    {"_id":9,"title":"Window Natural View","img":"windowview.jpg"}
+]

@@ -1,0 +1,5 @@
+{
+    "html.format.wrapLineLength": 0,
+    "html.format.wrapAttributes": "auto",
+    "html.format.wrapAttributesIndentSize": 80000000000
+}

@@ -1,0 +1,70 @@
+ [
+    {
+      "title": "Fine Dining Restaurant",
+      "description": "Indulge in a sophisticated dining experience featuring gourmet cuisine made with the freshest ingredients and presented with an artful flair. Our fine dining restaurant offers an extensive menu of contemporary dishes with a focus on local flavors and seasonal ingredients.",
+      "img": "https://i.ibb.co/27SMB2S/photo-1507914372368-b2b085b925a1-ixlib-rb-4-0.jpg",
+      "details": [
+        {
+          "title": "Private Dining Room",
+          "description": "For a truly intimate dining experience, book a private dining room. Enjoy a custom menu tailored to your tastes, served in a secluded, elegant space for you and your guests.",
+          "img":"https://i.ibb.co/NCN77x3/photo-1606066352252-93e4d325787b-ixlib-rb-4-0.jpg"
+        },
+        {
+          "title": "Wine Pairing",
+          "description": "Enhance your dining experience with a carefully curated wine pairing. Our expert sommelier will select the perfect wines to complement each dish and elevate your taste buds.",
+          "img":"https://i.ibb.co/QjmSqV5/photo-1564759224907-65b945ff0e84-ixlib-rb-4-0.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Poolside Restaurant",
+      "description": "Enjoy a light and refreshing meal while basking in the sun by the pool. Our poolside restaurant offers a menu of healthy and delicious dishes, along with refreshing drinks and cocktails.",
+      "img": "https://i.ibb.co/9yYq6Yx/photo-1579027989536-b7b1f875659b-ixlib-rb-4-0.jpg",
+      "details": [
+        {
+          "title": "Cabana Dining",
+          "description": "For a more private dining experience, book a cabana and enjoy your meal in the shade. Our cabanas come equipped with comfortable seating and a private waiter to attend to your needs.",
+          "img": "https://i.ibb.co/kxwYvbg/photo-1587574293340-e0011c4e8ecf-ixlib-rb-4-0.jpg"
+        },
+        {
+          "title": "Poolside Cocktails",
+          "description": "Sip on a refreshing cocktail while lounging by the pool. Our poolside bar offers a range of signature drinks, as well as classic favorites and frozen treats.",
+          "img": "https://i.ibb.co/J5HCKy5/photo-1414235077428-338989a2e8c0-ixlib-rb-4-0.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Beachfront Restaurant",
+      "description": "Savor a meal with a view of the ocean at our beachfront restaurant. Enjoy fresh seafood, grilled meats, and crisp salads, all made with the finest local ingredients and served against the backdrop of the turquoise sea.",
+      "img": "https://i.ibb.co/tzHR9tY/photo-1587899897387-091ebd01a6b2-ixlib-rb-4-0.jpg",
+      "details": [
+        {
+          "title": "Beachside Dining",
+          "description": "For a truly unforgettable dining experience, book a table on the beach and enjoy your meal with your toes in the sand. Our beachside dining area offers a romantic and serene setting.",
+          "img": "https://i.ibb.co/GR38twz/photo-1586999768265-24af89630739-ixlib-rb-4-0.jpg"
+        },
+        {
+          "title": "Sunset Dinner",
+          "description": "Watch the sun set over the ocean while savoring a delicious meal. Our beachfront restaurant offers a special sunset dinner menu, complete with the perfect pairing of wines and cocktails.",
+          "img": "https://i.ibb.co/9tZCxbc/photo-1552566626-52f8b828add9-ixlib-rb-4-0.jpg"
+        }
+      ]
+    },
+    
+        {"title":"Lobby Lunch",
+          "description": "Relax and dine in the elegant lobby of our resort and enjoy a delicious meal in a sophisticated atmosphere.",
+          "img": "https://i.ibb.co/JjqSJNW/photo-1559339352-11d035aa65de-ixlib-rb-4-0.jpg",
+          "details": [
+            {
+              "title": "Lunch Buffet",
+              "description": "Enjoy a variety of dishes, including fresh salads, grilled meats, and seasonal fruits and vegetables, all available in a convenient and stylish buffet setting.",
+              "img": "https://i.ibb.co/tZMQm4X/photo-1606836576983-8b458e75221d-ixlib-rb-4-0.jpg"
+            },
+            {
+              "title": "A La Carte Menu",
+              "description": "Choose from a carefully crafted menu of delicious dishes, all made with the freshest ingredients and expertly prepared by our talented chefs.",
+              "img": "https://i.ibb.co/tZMQm4X/photo-1606836576983-8b458e75221d-ixlib-rb-4-0.jpg"
+            }
+          ]
+        }
+]

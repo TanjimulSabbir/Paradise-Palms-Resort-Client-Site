@@ -1,0 +1,47 @@
+ [
+      {
+        "title": "Airport Pick-up and Drop-off",
+        "description": "Our resort provides airport pick-up and drop-off services for guests for their convenience.",
+        "img": "https://i.ibb.co/dM23gZd/photo-1556388158-158ea5ccacbd-ixlib-rb-4-0.jpg",
+        "details": {
+          "fee": "$50 per trip",
+          "availability": "24 hours a day, 7 days a week"
+        }
+      },
+      {
+        "title": "Car Rental",
+        "description": "For guests who prefer to explore the area on their own, car rental services are available.",
+        "img": "https://i.ibb.co/WHxCKcD/photo-1551522435-a13afa10f103-ixlib-rb-4-0.jpg",
+        "details": {
+          "fee": "$30 per day",
+          "availability": "24 hours a day, 7 days a week"
+        }
+      },
+      {
+        "title": "Shuttle Service",
+        "description": "Our resort provides shuttle services to take guests to popular destinations in the area.",
+        "img": "https://i.ibb.co/MZtZHq1/photo-1528824036966-36325e3140fa-ixlib-rb-4-0.jpg",
+        "details": {
+          "fee": "$20 per trip",
+          "availability": "10:00 AM - 6:00 PM"
+        }
+      },
+      {
+        "title": "Private Car Service",
+        "description": "For those looking for a more luxurious and private transportation option, our resort offers a private car service with a professional driver.",
+        "img": "https://i.ibb.co/CJY2NMY/photo-1503736334956-4c8f8e92946d-ixlib-rb-4-0.jpg",
+        "details": {
+          "fee": "$40 per trip",
+          "availability": "10:00 AM - 6:00 PM"
+        }
+      },
+      {
+        "title": "Bicycle Rental",
+        "description": "For guests who enjoy exploring the local area on two wheels, our resort offers a range of bicycles for rent at affordable rates.",
+        "img": "https://i.ibb.co/xf7D7fW/photo-1616257240427-07e5165722ca-ixlib-rb-4-0.jpg",
+        "details": {
+          "fee": "$10 per trip",
+          "availability": "10:00 AM - 6:00 PM"
+        }
+      }
+]

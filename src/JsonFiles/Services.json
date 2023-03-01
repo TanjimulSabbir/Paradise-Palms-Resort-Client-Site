@@ -1,0 +1,36 @@
+[
+    {
+        "title":"Accommodation",
+    "description":"Offer a variety of room options, such as standard rooms, deluxe rooms, suites, and villas, each equipped with comfortable beds, high-end linens, en-suite bathrooms, and modern amenities such as flat-screen TVs, mini-fridges, and Wi-Fi.",
+    "img":"https://i.ibb.co/j8wPMXm/bed01.jpg"},
+    {
+        "title":"Dining and Restaurant",
+    "description":"Provide guests with a range of dining options, including a gourmet restaurant, a casual cafe, a bar, and room service. Offer a diverse menu featuring local and international cuisine, as well as vegetarian and gluten-free options.",
+    "img":"https://i.ibb.co/Pt7PTfv/restaurant.jpg"},
+    {
+        "title":"Spa and Wellness",
+    "description":"Offer a full-service spa and wellness center, featuring a range of massages, body treatments, facials, and other services designed to help guests relax and rejuvenate. Provide a sauna, steam room, and a hot tub for guests to enjoy.","img":"https://i.ibb.co/8MY5RF0/spa1.jpg"},
+    {
+        "title":"Fitness Center",
+    "description":"Provide guests with a state-of-the-art fitness center, featuring the latest exercise equipment, such as treadmills, ellipticals, weight machines, and free weights. Offer fitness classes, such as yoga and Pilates, for guests to participate in.","img":"https://i.ibb.co/vYQVcrM/photo-1510894347713-fc3ed6fdf539-ixlib-rb-4-0.jpg"},
+    {
+        "title":"Outdoor Activities",
+    "description":"Offer a variety of outdoor activities, such as hiking, biking, golfing, and water sports, for guests to enjoy. Provide equipment and guidance from experienced instructors..Provide guests with access to nearby hiking trails, either on the resort property or in the surrounding area. Offer guided hikes, led by experienced guides, who can share their knowledge of the local flora and fauna, as well as the history and culture of the area.",
+    "img":"https://i.ibb.co/dWgBq32/photo-1619676289827-3b6eefa7ff93-ixlib-rb-4-0.jpg"},
+    {
+        "title":"Transportation",
+    "description":"Offer guests special packages and deals, such as romantic getaways, family vacations, and corporate retreats, to help make their stay more memorable and affordable.",
+    "img":"https://i.ibb.co/xf7D7fW/photo-1616257240427-07e5165722ca-ixlib-rb-4-0.jpg"},
+    {
+        "title": "Business and Meeting",
+        "description": "Our resort offers state-of-the-art facilities and experienced staff to make your business or meeting a success. Our conference rooms are equipped with the latest technology, including high-speed internet, audio-visual equipment, and projectors. We also provide on-site catering and break services to keep you and your guests refreshed and focused.",
+        "img": "https://i.ibb.co/bJc34Rt/photo-1552581234-26160f608093-ixlib-rb-4-0.jpg"},
+    {
+        "title": "Shopping and Gift Shop",
+      "description": "Whether you're looking for souvenirs, gifts, or a new outfit, our resort's shopping and gift shop has everything you need. Browse our selection of clothing, accessories, jewelry, and more, all carefully curated to ensure the highest quality and style.",
+      "img": "https://i.ibb.co/BKMxC6q/photo-1507914372368-b2b085b925a1-ixlib-rb-4-0.jpg"},
+    {
+        "title": "Wedding and Event",
+        "description": "Make your special day unforgettable at our resort. Our experienced wedding planners will work with you to create the wedding of your dreams, whether you're planning a grand affair or an intimate celebration. Our resort's picturesque setting and top-notch facilities make it the perfect location for your special event.",
+        "img": "https://i.ibb.co/HxhSSnD/photo-1517456215183-9a2c3a748d0c-ixlib-rb-4-0.jpg"}
+]

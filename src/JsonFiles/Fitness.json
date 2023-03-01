@@ -1,0 +1,23 @@
+[
+          {"title":"Gym",
+            "description": "The resort's state-of-the-art gym is equipped with a variety of cardio and weight training equipment, as well as free weights and resistance machines. Personal trainers are available for one-on-one sessions.",
+            "img": "https://i.ibb.co/XtDhj3N/photo-1603102859961-64b17d43580d-ixlib-rb-4-0.jpg",
+            "Opening Hours": "Open 24 hours"
+          },
+         { "title":"Yoga and Pilates Studio",
+            "description": "The resort's dedicated yoga and Pilates studio offers a variety of classes, including Hatha yoga, vinyasa flow, and power Pilates. Classes are led by experienced instructors.",
+            "img": "https://i.ibb.co/vYQVcrM/photo-1510894347713-fc3ed6fdf539-ixlib-rb-4-0.jpg"
+            
+          },
+           { "title":"Tennis Courts",
+            "description": "Lighted outdoor tennis courts, available for guests to use at any time. Rental equipment and tennis lessons available.",
+            "img": "https://i.ibb.co/SRh4Ms0/photo-1571145628430-1ae37cd87d32-ixlib-rb-4-0.jpg",
+            "sub_services": []
+          },
+          {
+            "title": "Pool",
+            "description": "Outdoor swimming pool with a sun deck, lounge chairs, and cabanas. Perfect for laps, relaxation, or just soaking up the sun.",
+            "img": "https://i.ibb.co/jRFh0YF/photo-1576336463225-18df4bee0e38-ixlib-rb-4-0.jpg",
+            "sub_services": []
+          }
+]

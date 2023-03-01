@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .Btn-Primary{
+        @apply py-3 px-6 text-black font-diplayFair bg-green-500 border border-green-500 hover:text-green-500 hover:bg-opacity-0 delay-150 duration-500
+    }
+    .cardHover {
+        @apply absolute mx-4 opacity-0 hover:opacity-100 delay-150 duration-500 cursor-pointer hover:bg-black hover:bg-opacity-30 inset-0 sm:pt-14 md:pt-32 lg:pt-6;
+    }
+
+    .headingL{
+        @apply font-diplayFair text-5xl text-white font-bold;
+    }
+    .headingM{
+        @apply font-diplayFair text-4xl text-white font-bold;
+    }
+    .headingS{
+        @apply font-diplayFair text-3xl text-white font-bold;
+    }
+    .paragraphD{
+        @apply font-openSans text-base text-white;
+    }
+    .UniversalPadding{
+        @apply px-5 sm:px-8 md:px-12 lg:px-16
+    }
+    .UniversalMargin{
+        @apply ml-5 sm:ml-8 md:ml-12 lg:ml-16
+    }
+    .ClickedBtn{
+        @apply focus:underline underline-offset-4 focus:text-green-600 transform hover:scale-105 duration-300 hover:text-red-600
+    }
+    .BorderBtm{
+        @apply flex border-b w-20 ml-60 h-1 bg-orange-700;
+    }
+}

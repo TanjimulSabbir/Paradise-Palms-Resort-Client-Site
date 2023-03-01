@@ -1,0 +1,88 @@
+[
+  {"Spa": [
+        {
+          "title": "Massages",
+          "img":"https://i.ibb.co/ypynLW2/photo-1502323777036-f29e3972d82f-ixlib-rb-4-0.jpg","description": "Unwind and relax with a variety of massage treatments, including Swedish, deep tissue, hot stone, and sports massages.",
+          "details": [
+            {
+              "title": "Swedish Massage",
+              "img":"https://i.ibb.co/WHPmsXW/photo-1559185590-765cdc663325-ixlib-rb-4-0.jpg","description": "A classic full-body massage using long, soothing strokes to promote relaxation and relieve muscle tension."
+            },
+            {
+              "title": "Deep Tissue Massage",
+              "img":"https://i.ibb.co/2gqdgcc/photo-1627564554639-cf003858f5b5-ixlib-rb-4-0.jpg","description": "A therapeutic massage that targets deep muscle layers and helps alleviate chronic pain and tightness."
+            },
+            {
+              "title": "Hot Stone Massage",
+              "img":"https://i.ibb.co/5LKFRs3/photo-1638167793149-09d88fcead2b-ixlib-rb-4-0.jpg","description": "A massage that uses heated stones to loosen tight muscles, increase circulation, and create a sense of deep relaxation."
+            },
+            {
+              "title": "Sports Massage",
+              "img":"https://i.ibb.co/6tC7Nv0/photo-1591108098734-57fd45d2f244-ixlib-rb-4-0.jpg","description": "A massage designed to help athletes recover from and prevent sports-related injuries."
+            }
+          ]
+        },
+        {
+          "title": "Facials",
+          "img":"https://i.ibb.co/H43rC7Q/photo-1552046122-03184de85e08-ixlib-rb-4-0.jpg","description": "Rejuvenate your skin and improve your complexion with our variety of luxurious facials.",
+          "details": [
+            {
+              "title": "Signature Facial",
+              "img":"https://i.ibb.co/3s3Jsy1/photo-1518860308377-800f02d5498a-ixlib-rb-4-0.jpg","description": "A personalized facial treatment tailored to your specific skin concerns and needs."
+            },
+            {
+              "title": "Anti-Aging Facial",
+              "img":"https://i.ibb.co/qnHbkp3/photo-1632345031435-8727f6897d53-ixlib-rb-4-0.jpg","description": "A facial treatment designed to reduce the appearance of fine lines and wrinkles, and improve skin texture and elasticity."
+            },
+            {
+              "title": "Detoxifying Facial",
+              "img":"https://i.ibb.co/h1KxMb5/photo-1612538512159-26f5336d2ca2-ixlib-rb-4-0.jpg","description": "A deep-cleansing facial that removes impurities and improves the overall health and appearance of your skin."
+            },
+            {
+              "title": "Hydrating Facial",
+              "img":"https://i.ibb.co/Z6ZXSGC/photo-1523459178261-028135da2714-ixlib-rb-4-0.jpg","description": "A facial that replenishes moisture and hydration in dry, dull skin, leaving it soft, smooth, and radiant."
+            }
+          ]
+        },
+        {
+          "title": "Body Treatments",
+          "img":"https://i.ibb.co/9WMrm0h/photo-1512290923902-8a9f81dc236c-ixlib-rb-4-0.jpg","description": "Indulge in a variety of body treatments designed to pamper, soothe, and rejuvenate the skin.",
+          "details": 
+          [
+            {
+              "title": "Salt Scrub",
+              "img":"https://i.ibb.co/ZcJKKBV/photo-1556760544-74068565f05c-ixlib-rb-4-0.jpg","description": "A full-body exfoliation treatment that removes dead skin cells and leaves skin feeling soft, smooth, and revitalized."
+            },
+            {
+              "title": "Body Wrap",
+              "img":"https://i.ibb.co/94wHqcW/photo-1623120594168-a6d35474043b-ixlib-rb-4-0.jpg","description": "A relaxing body treatment that involves being wrapped in warm, nourishing products to improve skin tone, hydration, and firmness."
+            },
+            {
+              "title": "Aromatherapy Bath",
+              "img":"https://i.ibb.co/k9ybTDT/photo-1616394584738-fc6e612e71b9-ixlib-rb-4-0.jpg","description": "Soak in a luxurious bath infused with essential oils to promote relaxation and improve overall wellness."
+            }
+          ]
+}]},
+{
+    "Wellness": 
+    [
+      {
+        "title": "Massages",
+        "img":"https://i.ibb.co/28D8B1b/photo-1540555700478-4be289fbecef-ixlib-rb-4-0.jpg","description": "Choose from a variety of massages, including Swedish, deep tissue, hot stone, and sports massages. Our experienced therapists will help you unwind and release tension."
+      },
+      {
+        "title": "Yoga and Meditation",
+        "img":"https://i.ibb.co/bPxkB1R/photo-1512621776951-a57141f2eefd-ixlib-rb-4-0.jpg","description": "Join us for daily yoga and meditation classes, led by experienced instructors. Find inner peace and improve your physical and mental health."
+      },
+      {
+        "title": "Sauna and Steam Room",
+        "img":"https://i.ibb.co/TqYVNCc/premium-photo-1661727019087-cad9a5e41c91-ixlib-rb-4-0.jpg","description": "Relax in our sauna and steam room, designed to promote detoxification and improve circulation. Take a break from the outside world and treat yourself to some well-deserved pampering."
+      },
+      {
+        "title": "Fitness Center",
+        "img":"https://i.ibb.co/y4psRPr/photo-1501959915551-4e8d30928317-ixlib-rb-4-0.jpg","description": "Stay active during your stay with our state-of-the-art fitness center. Our facility is equipped with a variety of cardio and weight training equipment, as well as free weights."
+      }
+    ]
+}
+
+]

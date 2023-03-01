@@ -1,0 +1,100 @@
+[
+        {
+          "title": "Hiking",
+          "description": "Provide guests with access to nearby hiking trails, either on the resort property or in the surrounding area. Offer guided hikes, led by experienced guides, who can share their knowledge of the local flora and fauna, as well as the history and culture of the area.",
+          "img":"https://i.ibb.co/QddzCXt/photo-1610106429770-a67c402e78c0-ixlib-rb-4-0.jpg",
+          "equipment": [],
+          "instructions": [
+            {
+              "title": "Guided Hikes",
+              "description": "Led by experienced guides who can share knowledge of the local flora, fauna, history and culture of the area.",
+              "img":"https://i.ibb.co/QddzCXt/photo-1610106429770-a67c402e78c0-ixlib-rb-4-0.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Biking",
+          "description": "Provide guests with rental bikes and access to nearby biking trails. Offer guided bike tours, led by experienced guides, who can take guests to scenic locations, hidden gems, and off-the-beaten-path destinations.",
+          "img":"https://i.ibb.co/bRYR1bP/photo-1630910315693-99da9cf76efa-ixlib-rb-4-0.jpg",
+          "equipment": [
+            "Rental Bikes"
+          ],
+          "instructions": [
+            {
+              "title": "Guided Bike Tours",
+              "description": "Led by experienced guides who can take guests to scenic locations, hidden gems, and off-the-beaten-path destinations.",
+              "img":"https://i.ibb.co/bRYR1bP/photo-1630910315693-99da9cf76efa-ixlib-rb-4-0.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Golfing",
+          "description": "If your resort is located near a golf course, offer guests access to the course and the necessary equipment, such as clubs and golf carts. Provide golf lessons, led by professional golfers, for guests who want to improve their game.",
+          "img":"https://i.ibb.co/17yJsJT/photo-1535132011086-b8818f016104-ixlib-rb-4-0.jpg",
+          "equipment": [
+            "Golf Clubs",
+            "Golf Carts"
+          ],
+          "instructions": [
+            {
+              "title": "Golf Lessons",
+              "description": "Led by professional golfers for guests who want to improve their game.",
+              "img":"https://i.ibb.co/17yJsJT/photo-1535132011086-b8818f016104-ixlib-rb-4-0.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Water Sports",
+          "description": "If your resort is located near a lake, river, or ocean, offer guests access to a variety of water sports, such as kayaking, canoeing, paddleboarding, and surfing. Provide equipment, such as life jackets and paddles, as well as instruction from experienced guides.",
+          "img":"https://i.ibb.co/jkD4KGV/photo-1561719997-c19239a3a8b2-ixlib-rb-4-0.jpg",
+          "equipment": [
+            "Kayaks",
+            "Canoes",
+            "Paddleboards",
+            "Surfboards",
+            "Life Jackets",
+            "Paddles"
+          ],
+          "instructions": [
+            {
+              "title": "Instruction",
+              "description": "From experienced guides for a variety of water sports.",
+              "img":"https://i.ibb.co/QddzCXt/photo-1610106429770-a67c402e78c0-ixlib-rb-4-0.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Fishing",
+          "description": "Offer guests access to nearby fishing spots, either on the resort property or in the surrounding area. Provide equipment, such as rods, reels, and bait, as well as guidance from experienced fishing guides.",
+          "img":"https://i.ibb.co/pX3Ywmw/photo-1497671954146-59a89ff626ff-ixlib-rb-4-0.jpg",
+          "equipment": [
+            "Rods",
+            "Reels",
+            "Bait"
+          ],
+          "instructions": [
+            {
+              "title": "Guidance",
+              "description": "From experienced fishing guides."
+              ,"img":"https://i.ibb.co/j5MP9r4/photo-1503856348302-6829f18073f9-ixlib-rb-4-0.jpg"
+            }
+          ]
+        },
+        {
+            "title": "Fishing",
+            "description": "Offer guests access to nearby fishing spots, either on the resort property or in the surrounding area. Provide equipment, such as rods, reels, and bait, as well as guidance from experienced fishing guides.",
+            "img":"https://i.ibb.co/WG40Y6N/photo-1604336102823-1a4df72dfa26-ixlib-rb-4-0.jpg",
+            "equipment": [
+              "Rods",
+              "Reels",
+              "Bait"
+            ],
+            "instructions": [
+              {
+                "title": "Guidance",
+                "description": "From experienced fishing guides.",
+                "img":"https://i.ibb.co/j5MP9r4/photo-1503856348302-6829f18073f9-ixlib-rb-4-0.jpg"
+              }
+            ]
+        }
+]

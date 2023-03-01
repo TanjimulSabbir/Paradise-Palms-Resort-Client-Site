@@ -1,0 +1,50 @@
+[
+    {
+        "_id": 1,
+        "title": "Discover the Best Kept Secrets of Our Resort and Hotel",
+        "text": "This post can showcase hidden gems and lesser-known features of Our resort and hotel that guests might not know about, such as a secret garden, a rooftop terrace, or a private beach. This post can also highlight special packages or deals that are available to guests who want to take advantage of these unique features.",
+        "img": "blog-1.jpg",
+        "date": "9 February, 2023",
+        "writer": "Tanjimul Islam Sabbir"
+    },
+    {
+        "_id": 2,
+        "title": "The Perfect Romantic Getaway at Our Resort and Hotel",
+        "text": "This post can focus on Our romantic getaway package and what it offers to couples, including luxurious accommodations, romantic dining experiences, and couples' activities. You can share testimonials and photos from previous guests who have taken advantage of this package.",
+        "img": "blog-2.jpg",
+        "date": "9 February, 2023",
+        "writer": "Tanjimul Islam Sabbir"
+    },
+    {
+        "_id": 3,
+        "title": "Recharge and Rejuvenate with Our Relaxing Package",
+        "text": "This post can focus on Our relaxing package, highlighting the spa treatments, relaxing activities, and wellness classes that are available to guests. You can also share tips and advice on how to make the most of this package and leave feeling refreshed and rejuvenated.",
+        "img": "blog-3.jpg",
+        "date": "9 February, 2023",
+        "writer": "Tanjimul Islam Sabbir"
+    },
+    {
+        "_id": 4,
+        "title": "Indulge in the Flavors of Our Region with Our Food and Beverage Offerings",
+        "text": "This post can showcase Our hotel's food and beverage offerings, highlighting local and seasonal ingredients, unique and creative dishes, and special dining experiences. You can also share photos of Our restaurant and bar, and information about any events or promotions that are happening in the near future.",
+        "img": "blog-4.jpg",
+        "date": "9 February, 2023",
+        "writer": "Tanjimul Islam Sabbir"
+    },
+    {
+        "_id": 5,
+        "title": "Experience the Best of the Local Culture and Activities",
+        "text": " This post can highlight the local culture and activities that are available near Our resort and hotel. You can share information about local festivals, events, museums, and attractions, and also offer suggestions for how guests can make the most of their time in the area. You can also share photos of these local sights and experiences to entice guests to explore more.",
+        "img": "blog-5.jpg",
+        "date": "9 February, 2023",
+        "writer": "Tanjimul Islam Sabbir"
+    },
+    {
+        "_id": 6,
+        "title": "The Best Outdoor Adventures Near Our Resort and Hotel",
+        "text": "This post can highlight the outdoor activities and adventures that are available near your resort and hotel. You can share information about local parks, beaches, hiking trails, and water sports, as well as any tours or excursions that your hotel offers. You can also share photos of guests participating in these activities, to give a sense of the excitement and fun that they can expect.",
+        "img": "NV-2.jpg",
+        "date": "9 February, 2023",
+        "writer": "Tanjimul Islam Sabbir"
+    }
+]
