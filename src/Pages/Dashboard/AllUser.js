@@ -18,7 +18,7 @@ const AllUser = () => {
             if (confirmDelete && user) {
                 axios.defaults.headers.common['authorization'] =
                     `Bearer ${localStorage.getItem('accessToken')}`;
-                const res = await axios.delete(`http://localhost:5000/alluser/${user?.email}`,
+                const res = await axios.delete(`https://tourist-booking-server.vercel.app/alluser/${user?.email}`,
                     { data: { id: id } });
                 if (res.status === 204) {
                     toast.success(res.data.message)

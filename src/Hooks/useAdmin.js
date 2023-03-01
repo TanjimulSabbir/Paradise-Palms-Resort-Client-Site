@@ -18,7 +18,7 @@ const useAdmin = () => {
                 if (user?.email) {
                     axios.defaults.headers.common['authorization'] =
                         `Bearer ${localStorage.getItem('accessToken')}`;
-                    const res = await axios.get(`http://localhost:5000/admin/${user.email}`)
+                    const res = await axios.get(`https://tourist-booking-server.vercel.app/admin/${user.email}`)
                     return res.data.data;
                 }
             } catch (error) {

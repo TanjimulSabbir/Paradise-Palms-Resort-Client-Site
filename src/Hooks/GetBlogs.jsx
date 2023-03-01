@@ -8,7 +8,7 @@ const pathName=location.pathname;
 let {data:BlogsData=[],isLoading,isError}=useQuery({
     queryKey:['BlogsData'],
     queryFn:async()=>{
-        const res=await fetch('http://localhost:5000/blogs')
+        const res=await fetch('https://tourist-booking-server.vercel.app/blogs')
         const data=res.json();
         return data;
     }

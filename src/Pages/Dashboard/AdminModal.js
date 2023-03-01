@@ -23,7 +23,7 @@ const AdminModal = () => {
         }
         try {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
-            const res = await axios.delete(`http://localhost:5000/admin/${user?.email}`, { data: { email } })
+            const res = await axios.delete(`https://tourist-booking-server.vercel.app/admin/${user?.email}`, { data: { email } })
             console.log(res, 'addmin delete')
             if (res.status === 204) {
                 toast.success(`${email} Deleted Successfully`);

@@ -1,16 +1,14 @@
 import React from "react";
-import Banner04 from "../../Home/Banner04/Banner04";
 import B10Cards from "../../Home/Banner10/B10Cards";
 import Service from "./Service";
 
-const SBanner01 = () => {
+const Banner01 = () => {
   return (
-    <div className="py-24">
-      <div className="">
-        <Service/>
+    <div className="py-24 space-y-14 bg-gray-200">
+      <div>
+        <Service />
       </div>
-
-      <div className="UniversalPadding py-24">
+      <div className="py-24">
         <h2 className="font-diplayFair text-3xl font-bold">
           What we offer to our customer
           <span className="BorderBtm"></span>
@@ -22,11 +20,8 @@ const SBanner01 = () => {
           restaurant is the perfect place to dine.
         </p>
       </div>
-      <div className="UniversalPadding">
-        <B10Cards />
-      </div>
     </div>
   );
 };
 
-export default SBanner01;
+export default Banner01;

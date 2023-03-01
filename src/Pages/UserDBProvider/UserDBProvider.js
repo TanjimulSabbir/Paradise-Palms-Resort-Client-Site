@@ -21,7 +21,7 @@ const UserDBProvider = ({ children }) => {
     const UpdateDBUser = async (UserData) => {
         try {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
-            const response = await axios.put(`http://localhost:5000/alluser/${user?.email}`, { UserData })
+            const response = await axios.put(`https://tourist-booking-server.vercel.app/alluser/${user?.email}`, { UserData })
             if (response.status === 201) {
                 toast.success(response.data.message)
                 navigate(from, { replace: true })
@@ -45,7 +45,7 @@ const UserDBProvider = ({ children }) => {
         }
         try {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
-            const response = await axios.delete(`http://localhost:5000/booking/${user?.email}`, { data: UserData })
+            const response = await axios.delete(`https://tourist-booking-server.vercel.app/booking/${user?.email}`, { data: UserData })
             if (response.status === 204) {
                 toast.success(`${UserData.bookingName} Deleted Successfully`);
             }

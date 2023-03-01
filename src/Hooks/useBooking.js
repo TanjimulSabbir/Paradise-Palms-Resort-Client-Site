@@ -15,7 +15,7 @@ const useBooking = () => {
             try {
                 if (user?.email) {
                     axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
-                    const response = await axios.get(`http://localhost:5000/booking/${user?.email}`)
+                    const response = await axios.get(`https://tourist-booking-server.vercel.app/booking/${user?.email}`)
                     if (response.status === 200) {
                         return response.data.data
                     }

@@ -16,7 +16,7 @@ function useAllUser() {
             try {
                 if (user?.email) {
                     axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
-                    const res = await axios.get(`http://localhost:5000/alluser/${user?.email}`)
+                    const res = await axios.get(`https://tourist-booking-server.vercel.app/alluser/${user?.email}`)
                     console.log(res, 'from all user')
                     return res.data.data
                 }

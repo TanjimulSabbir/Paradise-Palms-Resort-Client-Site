@@ -2,7 +2,7 @@ import React from "react";
 import ScrollToTopButton from "../../../Components/Shared/ScrollTop/Scrolltop";
 import useTitle from "../../../Hooks/useTitle";
 import Header from "./Header";
-import SBanner01 from "./SBanner01";
+import Banner01 from "./Banner01";
 import Service from "./Service";
 
 const Services = () => {
@@ -10,7 +10,7 @@ const Services = () => {
   return (
     <div>
       <Header />
-      <SBanner01 />
+      <Banner01 />
       <ScrollToTopButton />
     </div>
   );

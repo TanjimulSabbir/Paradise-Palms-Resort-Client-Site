@@ -20,7 +20,7 @@ const MakeAdmin = () => {
         const PostData = async () => {
             try {
                 axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
-                const res = await axios.post(`http://localhost:5000/admin/${user?.email}`, { UserData })
+                const res = await axios.post(`https://tourist-booking-server.vercel.app/admin/${user?.email}`, { UserData })
                 if (res.status === 201) {
                     toast.success(res.data.message);
                     console.log(res, 'from make admin')
