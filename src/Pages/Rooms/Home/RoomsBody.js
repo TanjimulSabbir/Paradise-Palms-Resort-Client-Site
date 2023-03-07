@@ -4,14 +4,12 @@ import PageLoading from "../../../Components/Shared/Loading/Loading";
 import useRoom from "../../../Hooks/useRoom";
 
 const RoomsBody = () => {
-  const [RoomsData, isLoading, isError] = useRoom();
+  const [RoomsData, isLoading] = useRoom();
 
   if (isLoading) {
     return <PageLoading></PageLoading>;
   }
-  if (isError) {
-    return console.log(isError);
-  }
+
   return (
     <div>
       <div>

@@ -4,15 +4,11 @@ import headerImage from '../../../Assets/images/Services/Header/header.jpg'
 const Header = () => {
   return (
     <div>
-      <div className="relative bg-black">
-        <div>
-          <img
-            src={headerImage}
-            alt=""
-            className="h-[400px] w-full object-center"
-          />
-        </div>
-      </div>
+      <img
+        src={headerImage}
+        alt=""
+        className="w-full object-center"
+      />
     </div>
   );
 };

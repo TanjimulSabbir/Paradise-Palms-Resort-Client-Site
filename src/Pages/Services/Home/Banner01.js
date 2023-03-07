@@ -1,13 +1,11 @@
 import React from "react";
-import B10Cards from "../../Home/Banner10/B10Cards";
 import Service from "./Service";
 
 const Banner01 = () => {
   return (
-    <div className="py-24 space-y-14 bg-gray-200">
-      <div>
-        <Service />
-      </div>
+    <div className="pt-16 pb-24 space-y-14 bg-gray-200">
+      <Service />
+
       <div className="py-24">
         <h2 className="font-diplayFair text-3xl font-bold">
           What we offer to our customer

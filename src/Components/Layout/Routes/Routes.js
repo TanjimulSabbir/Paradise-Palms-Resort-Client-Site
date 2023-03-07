@@ -16,6 +16,7 @@ import Dashboard from "../../../Pages/Dashboard/Dashboard";
 import AllUser from "../../../Pages/Dashboard/AllUser";
 import AllBooking from "../../../Pages/Dashboard/AllBooking";
 import MakeAdmin from "../../../Pages/Dashboard/MakeAdmin";
+import LastDetails from "../../../Pages/Services/Home/ServiceDetails/LastDetails";
 
 const Router = createBrowserRouter([
   {
@@ -89,6 +90,46 @@ const Router = createBrowserRouter([
             element: <MakeAdmin></MakeAdmin>
           }
         ]
+      },
+      {
+        path: "/services/rooms/:id",
+        element: <LastDetails></LastDetails>,
+      },
+      {
+        path: "/services/restaurant/:id",
+        element: <LastDetails></LastDetails>,
+      },
+      {
+        path: "/services/spa/:id",
+        element: <LastDetails></LastDetails>,
+      },
+      {
+        path: "/services/fitness/:id",
+        element: <LastDetails></LastDetails>,
+      },
+      {
+        path: "/services/spa/:id",
+        element: <LastDetails></LastDetails>,
+      },
+      {
+        path: "/services/outdoor/:id",
+        element: <LastDetails></LastDetails>,
+      },
+      {
+        path: "/services/transportation/:id",
+        element: <LastDetails></LastDetails>,
+      },
+      {
+        path: "/services/business/:id",
+        element: <LastDetails></LastDetails>,
+      },
+      {
+        path: "/services/shop/:id",
+        element: <LastDetails></LastDetails>,
+      },
+      {
+        path: "/services/wedding/:id",
+        element: <LastDetails></LastDetails>,
       },
     ],
   },

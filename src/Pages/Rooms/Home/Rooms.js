@@ -6,7 +6,7 @@ import RoomsHeader from './RoomsHeader';
 const Rooms = () => {
     useTitle('Rooms')
     return (
-        <div className=''>
+        <div>
             <RoomsHeader />
             <div className='py-24 UniversalPadding bg-gray-200'>
                 <RoomsBody />

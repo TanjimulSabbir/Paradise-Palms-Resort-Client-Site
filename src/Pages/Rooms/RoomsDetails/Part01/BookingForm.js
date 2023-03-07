@@ -11,12 +11,15 @@ import { AuthContext } from "../../../AuthContext/AuthProvider";
 
 const BookingForm = ({ matchedRoom }) => {
   const [RoomsData, isLoading, isError] = useRoom();
-  const [saveMatchedRoom, setSaveMatchedRoom] = useState(matchedRoom)
   const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
   const [user] = useAuthState(auth);
   const { UserSignOut } = useContext(AuthContext);
-  const { _id, price, title, img } = saveMatchedRoom;
-  console.log({ saveMatchedRoom })
+
+  const params = useParams();
+  console.log(params, 'from room booking form')
+  const MatchedRoomData = RoomsData?.find(rooms => rooms._id === params.id)
+  const { _id, price, title, img } = MatchedRoomData;
+
   const navigate = useNavigate()
 
   const onSubmit = (data) => {
