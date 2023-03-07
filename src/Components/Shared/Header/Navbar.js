@@ -1,6 +1,6 @@
 import React from 'react';
 import NavbarAvator from './NavbarAvator';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, Navigate, NavLink, useNavigate } from 'react-router-dom';
 import auth from '../../../Firebase/Firebase.init.config';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
@@ -31,12 +31,12 @@ const Navbar = () => {
 
     const ActiveBtn = 'hover:bg-primary text-white rounded active:bg-primary focus:outline-none'
     const NavMenu = <>
-        <li className={ActiveBtn}><Link to='/'>Home</Link></li>
-        <li className={ActiveBtn}><Link to='/rooms'>Rooms</Link></li>
-        <li className={ActiveBtn}><Link to='/services'>Services</Link></li>
-        <li className={ActiveBtn}><Link to='/offers'>Offers</Link></li>
-        <li className={ActiveBtn}><Link to='/blog'>Blog</Link></li>
-        <li className={ActiveBtn}><Link to='/dashboard'>Dashboard</Link></li>
+        <li className={ActiveBtn}><NavLink to='/'>Home</NavLink></li>
+        <li className={ActiveBtn}><NavLink to='/rooms'>Rooms</NavLink></li>
+        <li className={ActiveBtn}><NavLink to='/services'>Services</NavLink></li>
+        <li className={ActiveBtn}><NavLink to='/offers'>Offers</NavLink></li>
+        <li className={ActiveBtn}><NavLink to='/blog'>Blog</NavLink></li>
+        <li className={ActiveBtn}><NavLink to='/dashboard'>Dashboard</NavLink></li>
         <li className={ActiveBtn}>{LoginLogOut}</li>
     </>
 

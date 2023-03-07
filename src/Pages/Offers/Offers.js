@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PageLoading from "../../Components/Shared/Loading/Loading";
 import GetOffers from "../../Hooks/GetOffers";
 import useTitle from "../../Hooks/useTitle";
@@ -12,50 +13,39 @@ const Offers = () => {
   if (isLoading) {
     return <PageLoading />;
   }
-  if (isError) {
-    return console.log(isError);
-  }
 
   return (
-    <div className="py-24 UniversalPadding space-y-16">
-      <div className="UniversalPadding">
+    <div className="py-24 UniversalPadding space-y-16 bg-gray-100">
+      <div>
         <h2 className="font-diplayFair text-3xl font-bold">
           What we offer to our customer
           <span className="BorderBtm"></span>
         </h2>
-        <p className="text-b3T-color mt-8 mid-lg:w-1/2">
+        <p className="text-b3T-color mt-8">
           Our restaurant offers a variety of delicious, locally-sourced cuisine,
           served in a warm and inviting atmosphere. Whether you're looking to
           relax after a day of exploring, or celebrate a special occasion, our
           restaurant is the perfect place to dine.
         </p>
       </div>
-      {OffersData.map((offers) => {
-        const { title, img, description, valid_from, valid_to } = offers;
-
+      {OffersData?.map((feature, index) => {
+        const { _id, title, description, img } = feature
         return (
-          <div className="hero flex justify-center mid-lg:justify-start shadow-xl">
-            <div
-              className="hero-content flex-col space-y-6 
-        mid-lg:space-y-0 mid-lg:space-x-6 mid-lg:flex-row"
-            >
-              <img
-                src={img}
-                className="max-w-sm md:max-w-md mid-lg:max-w-sm rounded-lg shadow-2xl mx-auto"
-                alt=""
-              />
+          <div className='my-20 bg-base-100'>
+            <div className={`md:flex md:items-center pb-16 md:py-6 ${index % 2 === 0 ? "flex-row-reverse" : ""}`}>
+              <div className="w-full md:w-1/2">
+                <img src={img} className="w-full p-4 max-h-[400px]" alt="" />
+              </div>
+              <div className='w-full md:w-1/2 px-8'>
+                <h1 className="font-displayFair text-3xl mt-6 md:mt-4">{title}</h1>
+                <h2 className='text-gray-300 mt-1 text-sm'>Opening a door to the future</h2>
+                <p className="font-openSans mt-4 mb-16 mid-lg:block">{description.slice(0, 120)} <Link to="/booking">...More</Link></p>
 
-              <div className="space-y-5 text-start">
-                <h1 className="text-5xl font-bold text-black">{title}</h1>
-                <div>
-                  <p className="text-rose-500">Valid From: {valid_from}</p>
-                  <p className="text-black">Valid to: {valid_to}</p>
-                </div>
-                <button className="btn btn-primary mt-6">Book Now</button>
+                <Link to="/booking" className="Btn-Primary">Book Now</Link>
               </div>
             </div>
           </div>
-        );
+        )
       })}
     </div>
   );

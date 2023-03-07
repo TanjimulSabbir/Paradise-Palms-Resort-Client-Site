@@ -17,6 +17,7 @@ import AllUser from "../../../Pages/Dashboard/AllUser";
 import AllBooking from "../../../Pages/Dashboard/AllBooking";
 import MakeAdmin from "../../../Pages/Dashboard/MakeAdmin";
 import LastDetails from "../../../Pages/Services/Home/ServiceDetails/LastDetails";
+import Booking from "../../../Pages/Booking/Booking";
 
 const Router = createBrowserRouter([
   {
@@ -130,6 +131,10 @@ const Router = createBrowserRouter([
       {
         path: "/services/wedding/:id",
         element: <LastDetails></LastDetails>,
+      },
+      {
+        path: "/booking",
+        element: <Booking></Booking>,
       },
     ],
   },
