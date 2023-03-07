@@ -2,8 +2,8 @@ import React from 'react';
 
 const AdditionalInfo = () => {
     return (
-        <div className="">
-        <h2 className="font-diplayFair font-bold text-4xl md:text-2xl lg:text-4xl leading-tight">
+        <div>
+        <h2 className="font-diplayFair font-bold text-2xl md:text-3xl mid-lg:text-4xl leading-tight">
           Our hotel has been available for more than{" "}
           <strong className="text-amber-300">15 years</strong>. We give best
           service to all.

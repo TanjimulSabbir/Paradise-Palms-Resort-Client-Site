@@ -4,7 +4,6 @@ import Login from "../../../Pages/Login/Login";
 import Rooms from "../../../Pages/Rooms/Home/Rooms";
 import Layout from "../Layout";
 import RoomDetailsHome from "../../../Pages/Rooms/RoomsDetails/RoomDetailsHome";
-import Description from "../../../Pages/Rooms/RoomsDetails/OutletPart/OutletChild/Description";
 import Services from "../../../Pages/Services/Home/Services";
 import ChildHome from "../../../Pages/Rooms/RoomsDetails/OutletPart/OutletChild/ChildHome";
 import Blogs from "../../../Pages/Blogs/Blogs";

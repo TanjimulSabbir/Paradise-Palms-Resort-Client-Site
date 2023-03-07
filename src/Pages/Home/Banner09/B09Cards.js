@@ -27,10 +27,10 @@ const B09Cards = () => {
       {BlogsData?.map((blog) => {
         const { _id, title, description, img, date, author } = blog;
         return (
-          <div key={_id} className="relative pb-6 p-2 border rounded" id={`${title}`}>
+          <div key={_id} className="relative pb-6 shadow-lg" id={`${title}`}>
             <img
               src={img}
-              className={`${pathName === "/" ? "h-[300px]" : "max-h-min"} w-full`} alt="blog" />
+              className={`rounded ${pathName === "/" ? "md:h-[300px]" : "max-h-min"} w-full`} alt="blog" />
             <div className="mt-6 p-4">
               <div className="flex justify-between">
                 <span>{date} </span> <br />
@@ -40,13 +40,13 @@ const B09Cards = () => {
               </div>
 
               <div onClick={() => handleBlog(_id)} className="cursor-pointer">
-                <h2 className="card-title font-diplayFair mt-6">
-                  {title.slice(0, 35) + "..."}
+                <h2 className="font-diplayFair font-bold my-8 ">
+                  {title}
                 </h2>
                 <div>
                   <p className="font-openSans text-justify mt-8">{description.slice(0, 130)}
-                    <p onClick={() => handleBlog(_id)} className="text-rose-500 cursor-pointer">read more...</p>
                   </p>
+                  <Link to="/blog" className="cursor-pointer pt-6 text-rose-700">Read More...</Link>
                 </div>
               </div>
             </div>

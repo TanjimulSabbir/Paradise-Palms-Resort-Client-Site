@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import PageLoading from "../../../Components/Shared/Loading/Loading";
-import GetRoom from "../../../Hooks/GetRoom";
+import useRoom from "../../../Hooks/useRoom";
 
 const RoomsBody = () => {
-  const [RoomsData, isLoading, isError] = GetRoom();
-  console.log(RoomsData, "");
+  const [RoomsData, isLoading, isError] = useRoom();
+
   if (isLoading) {
     return <PageLoading></PageLoading>;
   }
@@ -22,7 +22,7 @@ const RoomsBody = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 mid-lg:grid-cols-3 gap-y-10 gap-3 lg:gap-x-5 pt-10">
         {RoomsData?.map((room) => {
-          const {_id, title, description, price, img} = room;
+          const { _id, title, description, price, img } = room;
           console.log(room);
           return (
             <div className="relative shadow-lg p-4">

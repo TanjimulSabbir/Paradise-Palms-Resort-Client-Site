@@ -33,9 +33,6 @@
     .UniversalMargin{
         @apply ml-5 sm:ml-8 md:ml-12 lg:ml-16
     }
-    .ClickedBtn{
-        @apply focus:underline underline-offset-4 focus:text-green-600 transform hover:scale-105 duration-300 hover:text-red-600
-    }
     .BorderBtm{
         @apply flex border-b w-20 ml-60 h-1 bg-orange-700;
     }

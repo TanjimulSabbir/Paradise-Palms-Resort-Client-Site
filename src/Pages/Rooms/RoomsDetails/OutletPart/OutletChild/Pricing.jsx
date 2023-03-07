@@ -2,12 +2,12 @@ import React from 'react';
 
 const Pricing = () => {
     return (
-        <div className="min-h-screen">
-        <h2 className="font-diplayFair text-5xl font-bold text-black">
+        <div>
+        <h2 className="font-diplayFair text-2xl sm:text-3xl mid-lg:text-5xl font-bold text-black">
          Pic-up Your Best Choice and Special Offers
           <p className="border inline-block border-[#6e3434] h-[1px] w-16 ml-4 items-end"></p>
         </h2>
-        <p className="text-gray-800 font-lora mt-8 text-lg">
+        <p className="text-gray-800 font-lora mt-10 text-lg">
           Exciting news! Our tourist resort is proud to announce a new offer for
           our guests. Whether you're looking for a relaxing escape or an
           adventure-filled getaway, our resort has something for everyone. With
@@ -22,14 +22,14 @@ const Pricing = () => {
           and fitness classes.Private downtime: Access to quiet or secluded
           areas of the resort, such as a private beach or garden.
         </p>
-        <div className="flex justify-between md:justify-around items-center bg-rose-200 mt-8 mid-lg:mx-4">
-          <h2 className="pl-4 text-sm  text-black">
+        <div className="flex justify-between md:justify-around items-center bg-emerald-100 mt-16 mid-lg:mx-4">
+          <h2 className="ml-4 text-sm  text-black">
             21% Off on this packages
           </h2>
           <p className="Btn-Primary">Book Now</p>
         </div>
-        <div className="flex justify-between md:justify-around items-center mt-8 mid-lg:p-4 bg-rose-200 mid-lg:mx-4">
-          <h2 className="pl-4 text-sm  text-black">
+        <div className="flex justify-between items-center mt-10 mid-lg:p-4 bg-emerald-100 mid-lg:mx-4">
+          <h2 className="ml-4 text-sm text-black">
             15% Off on this packages
           </h2>
           <p className="Btn-Primary">Book Now</p>

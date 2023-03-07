@@ -1,19 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import PageLoading from "../../../Components/Shared/Loading/Loading";
-import GetRoom from "../../../Hooks/GetRoom";
+import useRoom from "../../../Hooks/useRoom";
 
 
 const B3Cards = () => {
+  const [RoomsData, isLoading] = useRoom();
+  const NewRoomsData = [...RoomsData?.slice(9, RoomsData?.length), ...RoomsData?.slice(0, 9)]
 
-  const [RoomsData, isLoading] = GetRoom();
+  console.log({ NewRoomsData })
+
   if (isLoading) {
     return <PageLoading></PageLoading>;
   }
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-3 lg:gap-x-7">
-      {RoomsData?.map((room) => {
+      {NewRoomsData?.map((room) => {
         const { _id, title, description, price, img } = room;
         return (
           <div className="relative shadow-lg p-4 rounded">

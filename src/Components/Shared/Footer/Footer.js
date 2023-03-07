@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className="footer bg-gray-600 border-t text-black p-10 sm:flex sm:flex-col lg:flex-row lg:items-center lg:justify-evenly">
             <div className='lg:w-1/3'>
-                <span className="font-bold headingM ">Paradise Palms</span>
+                <span className="font-bold shadow-2xl headingM ">Paradise Palms</span>
                 <p className='mt-10 font-openSans'>Our tour hostel is also equipped with all the amenities you need to make your stay comfortable. We have a fully equipped kitchen, a lounge area with comfortable seating, and a library where you can relax and read a book.</p>
                 <div><FontAwesomeIcon ></FontAwesomeIcon></div>
             </div>
@@ -34,6 +34,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+
         </footer>
     );
 };

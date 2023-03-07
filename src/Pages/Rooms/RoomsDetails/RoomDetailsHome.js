@@ -5,13 +5,13 @@ import BookingForm from "./Part01/BookingForm";
 import RoomFacilitie from "./Part02/RoomFacilities";
 import RoomOverView from "./Part02/RoomOverView";
 import { useParams } from "react-router-dom";
-import GetRoom from "../../../Hooks/GetRoom";
+import useRoom from "../../../Hooks/useRoom";
 import PageLoading from "../../../Components/Shared/Loading/Loading";
 
 
 const RoomDetailsHome = () => {
   const params = useParams();
-  const [RoomsData, isError, isLoading] = GetRoom();
+  const [RoomsData, isError, isLoading] = useRoom();
 
   if (isLoading) {
     return <PageLoading></PageLoading>;
@@ -23,25 +23,20 @@ const RoomDetailsHome = () => {
   const matchedRoom = RoomsData?.find((room) => room._id === params.id);
   console.log(matchedRoom, "RoomDetailsHome");
 
-  let width = window.innerWidth;
-  let height = window.innerHeight;
-
   return (
-    <div className="">
-      <h1 className="font-bold text-3xl">{width}</h1>
-      <div className="relative bg-black">
+    <div>
+      <div>
         <img src={img1} alt="" className="" />
       </div>
-      <div className="UniversalPadding">
-        {/* Part01*/}
-        <div className="mid-lg:flex py-14">
-          <RoomImage matchedRoom={matchedRoom && matchedRoom}></RoomImage>
-          <BookingForm matchedRoom={matchedRoom && matchedRoom}></BookingForm>
-        </div>
+
+      <div className="UniversalPadding py-16">
+        <RoomImage matchedRoom={matchedRoom && matchedRoom}></RoomImage>
+        <BookingForm matchedRoom={matchedRoom && matchedRoom}></BookingForm>
       </div>
-      {/* Part02 */}
+
+
       <div>
-        <div className="UniversalPadding">
+        <div>
           <div className="mx-auto">
             <RoomFacilitie />
           </div>

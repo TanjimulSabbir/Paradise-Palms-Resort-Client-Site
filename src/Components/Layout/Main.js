@@ -6,13 +6,11 @@ import UserDBProvider from '../../Pages/UserDBProvider/UserDBProvider';
 const Main = () => {
     return (
         <div className='mt-16'>
-
             <AuthProvider>
                 <UserDBProvider>
                     <Outlet></Outlet>
                 </UserDBProvider>
             </AuthProvider>
-
         </div>
     );
 };
