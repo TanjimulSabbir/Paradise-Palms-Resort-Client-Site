@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Breadcumb from "../../Components/Shared/Breadcumb";
 import PageLoading from "../../Components/Shared/Loading/Loading";
 import GetOffers from "../../Hooks/GetOffers";
 import useTitle from "../../Hooks/useTitle";
@@ -9,7 +10,7 @@ const Offers = () => {
 
   // For time shorten i have show here in Offers Data instead of Shop Data.
   // A s i haven't enough time to write json data on shop. And it also time consuming matter.it doesn't carry so much importance that i have to show accurate shop data here.
-  const [OffersData, isLoading, isError] = GetOffers();
+  const [OffersData, isLoading] = GetOffers();
   if (isLoading) {
     return <PageLoading />;
   }
@@ -40,13 +41,13 @@ const Offers = () => {
                 <h1 className="font-displayFair text-3xl mt-6 md:mt-4">{title}</h1>
                 <h2 className='text-gray-300 mt-1 text-sm'>Opening a door to the future</h2>
                 <p className="font-openSans mt-4 mb-16 mid-lg:block">{description.slice(0, 120)} <Link to="/booking">...More</Link></p>
-
                 <Link to="/booking" className="Btn-Primary">Book Now</Link>
               </div>
             </div>
           </div>
         )
       })}
+      <Breadcumb />
     </div>
   );
 };

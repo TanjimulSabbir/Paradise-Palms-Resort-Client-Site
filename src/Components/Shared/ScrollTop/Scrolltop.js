@@ -19,8 +19,8 @@ function ScrollToTopButton() {
 
   return (
     <div className="fixed flex flex-col right-4 bottom-8">
-      <IoArrowUpOutline className="text-3xl cursor-pointer" onClick={scrollToTop} />
-      <IoArrowDownOutline className="text-3xl cursor-pointer" onClick={scrollToBottom} />
+      <VscTriangleUp title="Scroll Up" className="text-2xl cursor-pointer" onClick={scrollToTop} />
+      <VscTriangleDown title="Scroll Down" className="text-2xl cursor-pointer" onClick={scrollToBottom} />
     </div>
   );
 }

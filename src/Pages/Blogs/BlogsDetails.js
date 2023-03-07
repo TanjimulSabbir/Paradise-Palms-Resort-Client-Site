@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
+import Breadcumb from "../../Components/Shared/Breadcumb";
 import PageLoading from "../../Components/Shared/Loading/Loading";
 import useBlogs from "../../Hooks/useBlogs";
 import ExtraDetailsText from "./ExtraDetailsText";
@@ -33,6 +34,7 @@ const BlogsDetails = () => {
           </p>
         </div>
       </div>
+      <Breadcumb />
     </div>
   );
 };

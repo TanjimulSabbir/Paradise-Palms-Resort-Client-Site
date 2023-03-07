@@ -7,6 +7,7 @@ import RoomOverView from "./Part02/RoomOverView";
 import { useParams } from "react-router-dom";
 import useRoom from "../../../Hooks/useRoom";
 import PageLoading from "../../../Components/Shared/Loading/Loading";
+import Breadcumb from "../../../Components/Shared/Breadcumb";
 
 const RoomDetailsHome = () => {
   const params = useParams();
@@ -26,6 +27,7 @@ const RoomDetailsHome = () => {
         <RoomFacilitie />
         <RoomOverView />
       </div>
+      <Breadcumb />
     </div>
   );
 };

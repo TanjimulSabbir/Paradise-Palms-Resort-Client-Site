@@ -1,4 +1,5 @@
 import React from 'react';
+import Breadcumb from '../../../Components/Shared/Breadcumb';
 import useTitle from '../../../Hooks/useTitle';
 import RoomsBody from './RoomsBody';
 import RoomsHeader from './RoomsHeader';
@@ -11,6 +12,7 @@ const Rooms = () => {
             <div className='py-24 UniversalPadding bg-gray-200'>
                 <RoomsBody />
             </div>
+            <Breadcumb />
         </div>
     );
 };

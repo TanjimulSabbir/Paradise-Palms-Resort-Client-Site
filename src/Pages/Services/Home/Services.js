@@ -1,9 +1,8 @@
 import React from "react";
-import ScrollToTopButton from "../../../Components/Shared/ScrollTop/Scrolltop";
 import useTitle from "../../../Hooks/useTitle";
 import Header from "./Header";
 import Banner01 from "./Banner01";
-import Service from "./Service";
+import Breadcumb from "../../../Components/Shared/Breadcumb";
 
 const Services = () => {
   useTitle('Services')
@@ -11,7 +10,7 @@ const Services = () => {
     <div>
       <Header />
       <Banner01 />
-      <ScrollToTopButton />
+      <Breadcumb></Breadcumb>
     </div>
   );
 };
