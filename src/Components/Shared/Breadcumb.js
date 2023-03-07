@@ -3,15 +3,23 @@ import { Link, useLocation } from 'react-router-dom'
 
 const Breadcumb = () => {
     const location = useLocation();
-    const currentPath = location.pathname.split('/')
+    const PathName = location.pathname.split('/');
+    PathName.pop()
 
-
+    let PathLink = "";
     return (
-        <div className='uppercase'>
-            <ul className='flex text-lora font-bold text-black'>
-                <li><Link to='/' className='text-green-500'>Home </Link> </li>
-                <li> | {currentPath}</li>
-            </ul>
+        <div className='uppercase flex justify-center flex-row space-x-4 mt-16'>
+            {
+                PathName.map(path => {
+                    const ElementName = path === "" ? "Home" : path
+                    PathLink = `${PathLink !== '/' ? PathLink : ""}/` + path
+                    return (
+                        <button className="btn bg-black border-emerald-400 text-emerald-500">
+                            <Link to={PathLink}>{ElementName}</Link>
+                        </button>
+                    )
+                })
+            }
         </div>
     )
 }

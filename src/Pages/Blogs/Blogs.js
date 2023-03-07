@@ -6,17 +6,17 @@ import ScrollToTopButton from '../../Components/Shared/ScrollTop/Scrolltop';
 
 
 const Blogs = () => {
- 
+
   return (
     <div className='lg:flex UniversalPadding py-14'>
-     <div className='lg:w-[30%]'>
-      <Banner09Heading/>
-     <BlogsSidebar/>
-     </div>
-        <div className='lg:w-[70%]'>
-        <Banner09/>
-        </div>
-        <ScrollToTopButton/>
+      <div className='lg:w-[30%]'>
+        <Banner09Heading />
+        <BlogsSidebar />
+      </div>
+      <div className='lg:w-[70%]'>
+        <Banner09 />
+      </div>
+      <ScrollToTopButton />
     </div>
   );
 };

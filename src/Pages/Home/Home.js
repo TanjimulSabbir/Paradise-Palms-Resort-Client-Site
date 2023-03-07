@@ -9,6 +9,7 @@ import Banner08 from './Banner08/Banner08';
 import Banner09 from './Banner09/Banner09';
 import Banner10 from './Banner10/Banner10';
 import useTitle from '../../Hooks/useTitle';
+import ScrollToTopButton from '../../Components/Shared/ScrollTop/Scrolltop';
 
 const Home = () => {
     useTitle('Home')
@@ -24,6 +25,7 @@ const Home = () => {
             <Banner08 />
             <Banner09 />
             <Banner10 />
+            <ScrollToTopButton />
         </div>
     );
 };

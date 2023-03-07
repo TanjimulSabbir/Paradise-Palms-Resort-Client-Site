@@ -1,15 +1,8 @@
-import { useState } from "react";
+import { VscTriangleUp, VscTriangleDown } from "react-icons/vsc";
+import { IoArrowUpOutline, IoArrowDownOutline } from "react-icons/io5";
+
 
 function ScrollToTopButton() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -17,17 +10,18 @@ function ScrollToTopButton() {
       behavior: "smooth"
     });
   };
-
-  window.addEventListener("scroll", toggleVisibility);
+  const scrollToBottom = () => {
+    window.scroll({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth',
+    });
+  };
 
   return (
-    <>
-      {isVisible && (
-        <button onClick={scrollToTop} className="fixed bottom-4 right-4 p-3 rounded-full bg-sky-600 text-white">
-          Scroll to top
-        </button>
-      )}
-    </>
+    <div className="fixed flex flex-col right-4 bottom-8">
+      <IoArrowUpOutline className="text-3xl cursor-pointer" onClick={scrollToTop} />
+      <IoArrowDownOutline className="text-3xl cursor-pointer" onClick={scrollToBottom} />
+    </div>
   );
 }
 export default ScrollToTopButton

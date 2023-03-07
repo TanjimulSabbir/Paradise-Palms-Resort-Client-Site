@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import Breadcumb from '../../../../Components/Shared/Breadcumb';
 import PageLoading from '../../../../Components/Shared/Loading/Loading';
 import UseServicesDetails from '../../../../Hooks/UseServicesDetails';
 import useTitle from '../../../../Hooks/useTitle';
@@ -8,11 +9,12 @@ const ServicesDetails = () => {
     useTitle('ServicesDetails');
     const params = useParams();
     const link = params.id;
-    const [ServicesDetailsData, isLoading, isError] = UseServicesDetails(link);
+    const [ServicesDetailsData, isLoading] = UseServicesDetails(link);
 
     if (isLoading) {
         return <PageLoading></PageLoading>
     }
+
 
     return (
         <div className='UniversalPadding py-24 bg-gray-200'>
@@ -46,6 +48,7 @@ const ServicesDetails = () => {
                 )
             })
             }
+            <Breadcumb></Breadcumb>
         </div>
     );
 };

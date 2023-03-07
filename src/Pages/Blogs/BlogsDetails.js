@@ -18,7 +18,7 @@ const BlogsDetails = () => {
       <div className="mx-auto UniversalPadding">
         <h1 className='font-diplayFair text-2xl mid-lg:text-4xl'>{title}</h1>
 
-        <Link to='/autor' className="my-6 flex space-x-2">
+        <Link to='/author' className="my-6 flex space-x-2">
           <p className="link link-success">{author}</p>
           <p> || {date}</p>
         </Link>

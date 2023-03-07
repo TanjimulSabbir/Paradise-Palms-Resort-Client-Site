@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import Breadcumb from '../../../../Components/Shared/Breadcumb';
 import PageLoading from '../../../../Components/Shared/Loading/Loading';
 import UseServicesDetails from '../../../../Hooks/UseServicesDetails';
 
@@ -35,7 +36,7 @@ const LastDetails = () => {
                     <span>    If you're looking for a place to unwind and recharge, look no further than our spa services. Our spa features a wide range of treatments and therapies designed to help you relax, rejuvenate, and revitalize your body and mind. From massages to facials to body treatments, we have something for everyone. Read on to learn more about our spa services and how they can help you feel your best. At our resort, we believe that dining is more than just about the food, it's about the whole experience. That's why we offer a variety of dining options that cater to every taste and occasion. Whether you're in the mood for a romantic dinner for two, a family gathering, or a casual bite, we have something to suit your needs. In this blog post, we'll give you a sneak peek at what's on the menu at our dining venues. Find out why our resort is the ultimate destination for luxury travelers and discover our world-class accommodations. From spacious suites to stunning private villas, our resort offers a wide range of options for the most discerning guests.</span>
                 </p>
             </div>
-
+            <Breadcumb></Breadcumb>
         </div>
     );
 };
