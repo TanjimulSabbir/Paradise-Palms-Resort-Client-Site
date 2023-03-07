@@ -55,14 +55,14 @@ const BookingForm = ({ matchedRoom }) => {
   }
 
   return (
-    <div className="mt-10 w-full">
+    <div className="UniversalPadding mt-10 w-full">
       <div>
         <h1 className="text-2xl sm:text-3xl mid-lg:text-2xl p-3 font-diplayFair font-bold text-center text-black">{title}/{price}</h1>
       </div>
 
       <div className="flex flex-col mid-lg:flex-row w-full mx-auto justify-center items-center py-10 bg-base-100">
         <div className="max-w-sm sm:max-w-md shadow-2xl bg-base-100 h-[610px]">
-          <img className="min-h-[610px] rounded-l" src="https://images.unsplash.com/photo-1598751337485-0d57b0c50b83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=382&q=80" alt="" />
+          <img className="min-h-[610px] rounded-l" src="https://i.ibb.co/tHk9yxk/photo-1596169095544-8605b2f1e3a9-ixlib-rb-4-0.jpg" alt="" />
         </div>
         <div className="w-full max-w-sm sm:max-w-md h-[610px] rounded-r flex items-center justify-center shadow-2xl bg-base-100">
           <form onSubmit={handleSubmit(onSubmit)} className="w-full mx-10 space-y-1">

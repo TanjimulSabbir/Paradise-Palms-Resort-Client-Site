@@ -5,17 +5,17 @@ const RoomOverView = () => {
     {
       Occupancy: "Max three Persons",
     },
-    {Size: "800 sq. feet"},
-    {View: "Sea or Garden view"},
-    {"Room Service": "Available per request"},
-    {Terraces: "Balcony"},
-    {"Free Pickup Facility": "Yes"},
-    {"Internet Free": "Yes"},
-    {Gym: "Yes"},
+    { Size: "800 sq. feet" },
+    { View: "Sea or Garden view" },
+    { "Room Service": "Available per request" },
+    { Terraces: "Balcony" },
+    { "Free Pickup Facility": "Yes" },
+    { "Internet Free": "Yes" },
+    { Gym: "Yes" },
   ];
 
   return (
-    <div className="p-10">
+    <div className="UniversalPadding mt-14">
       <h1 className="font-diplayFair text-3xl font-bold">Room OverView</h1>
       <div className="overflow-x-auto pt-10">
         <table className="table w-full border">
