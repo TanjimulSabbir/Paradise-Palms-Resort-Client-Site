@@ -1,18 +1,19 @@
 import React from "react";
+import Breadcumb from "../../../Components/Shared/Breadcumb";
 import B10Cards from "../../Home/Banner10/B10Cards";
 import Service from "./Service";
 
 const Banner01 = () => {
   return (
-    <div className="pt-16 pb-24 space-y-14 bg-gray-200">
+    <div className="py-16 space-y-14 bg-gray-200">
       <Service />
 
-      <div className="UniversalPadding py-24">
+      <div className="UniversalPadding">
         <h2 className="font-diplayFair text-3xl md:text-4xl font-bold">
           What we offer to our customer
           <span className="BorderBtm"></span>
         </h2>
-        <p className="text-b3T-color mt-8 mb-14 ">
+        <p className="text-b3T-color mt-8 mb-14">
           Our restaurant offers a variety of delicious, locally-sourced cuisine,
           served in a warm and inviting atmosphere. Whether you're looking to
           relax after a day of exploring, or celebrate a special occasion, our

@@ -19,6 +19,7 @@ import MakeAdmin from "../../../Pages/Dashboard/MakeAdmin";
 import LastDetails from "../../../Pages/Services/Home/ServiceDetails/LastDetails";
 import Booking from "../../../Pages/Booking/Booking";
 import Writer from "../../../Pages/BlogWriter/Writer";
+import Payment from "../../../Pages/Payment/Payment";
 
 const Router = createBrowserRouter([
   {
@@ -140,6 +141,10 @@ const Router = createBrowserRouter([
       {
         path: "/author",
         element: <Writer />,
+      },
+      {
+        path: "/payment",
+        element: <Payment />,
       },
     ],
   },

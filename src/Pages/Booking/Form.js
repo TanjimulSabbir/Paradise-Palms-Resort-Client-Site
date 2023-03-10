@@ -11,7 +11,7 @@ const Form = () => {
     const { UserSignOut } = useContext(AuthContext);
 
     const onSubmit = (data) => {
-        toast("Sorry! This Section is Unavailable.")
+        toast("Sorry! This Section is Unavailable.😪")
 
     }
 

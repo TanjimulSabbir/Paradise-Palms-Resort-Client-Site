@@ -1,7 +1,6 @@
-import React from 'react';
 import { useQuery } from 'react-query';
 
-const GetOffers = () => {
+const useOffers = () => {
     let { data: OffersData = [], isError, isLoading, refetch } = useQuery({
         queryKey: ['Offers'],
         queryFn: async () => {
@@ -13,4 +12,4 @@ const GetOffers = () => {
     return [OffersData, isLoading, isError]
 };
 
-export default GetOffers;
+export default useOffers;

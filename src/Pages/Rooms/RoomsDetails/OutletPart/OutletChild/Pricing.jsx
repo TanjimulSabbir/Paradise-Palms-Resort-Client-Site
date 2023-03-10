@@ -3,7 +3,7 @@ import React from 'react';
 const Pricing = () => {
     return (
         <div>
-        <h2 className="font-diplayFair text-2xl sm:text-3xl mid-lg:text-5xl font-bold text-black">
+        <h2 className="font-diplayFair text-2xl sm:text-3xl font-bold text-black">
          Pic-up Your Best Choice and Special Offers
           <p className="border inline-block border-[#6e3434] h-[1px] w-16 ml-4 items-end"></p>
         </h2>

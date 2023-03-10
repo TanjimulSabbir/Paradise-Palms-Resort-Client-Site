@@ -17,7 +17,6 @@ function useAllUser() {
                 if (user?.email) {
                     axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
                     const res = await axios.get(`https://tourist-booking-server.vercel.app/alluser/${user?.email}`)
-                    console.log(res, 'from all user')
                     return res.data.data
                 }
             } catch (error) {
@@ -30,6 +29,7 @@ function useAllUser() {
         }
     })
 
+    refetch()
     return [AllUser, isLoading, isError, refetch]
 }
 

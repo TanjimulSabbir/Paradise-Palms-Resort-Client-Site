@@ -17,7 +17,7 @@ const Dashboard = () => {
     const [AllAdmin] = useAdmin();
     const [user] = useAuthState(auth)
     const { BookingCart } = useContext(DBContext);
-    const [AllBooking, isLoading, isError] = useBooking();
+    const [AllBooking] = useBooking();
     const location = useLocation();
     const pathName = location.pathname;
     const Hover = 'hover:bg-primary'
@@ -29,8 +29,7 @@ const Dashboard = () => {
         const matchedAdmin = Role.includes(FindingAdmin?.userType);
         setAdminCheckingValue(matchedAdmin)
     }, [user, AllAdmin])
-    console.log(adminCheckingValue, 'from Dashboard')
-    // const matchedAdmin = true
+
     const Menu = <>
         {adminCheckingValue && <li>
             <Link className={`text-black ${Hover}`} to='/dashboard/alluser'>All User</Link>

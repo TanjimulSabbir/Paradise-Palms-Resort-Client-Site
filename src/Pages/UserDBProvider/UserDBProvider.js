@@ -4,7 +4,6 @@ import React, { createContext, useContext, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import PageLoading from '../../Components/Shared/Loading/Loading'
 import auth from '../../Firebase/Firebase.init.config'
 import useBooking from '../../Hooks/useBooking'
 import { AuthContext } from '../AuthContext/AuthProvider'
@@ -14,6 +13,7 @@ export const DBContext = createContext()
 const UserDBProvider = ({ children }) => {
     const [user] = useAuthState(auth);
     const { UserSignOut } = useContext(AuthContext);
+    const [AllUser, refetch] = useBooking();
     const navigate = useNavigate();
     const location = useLocation();
     const from = location?.state?.from?.pathname || '/'
@@ -35,19 +35,18 @@ const UserDBProvider = ({ children }) => {
             throw new Error('Failed to update user');
         }
     }
-
     // Booking Delete from Booking_Form
     const BookingDelete = async (UserData) => {
-        console.log(UserData, 'from AllBookind Delete Button')
         const conformDelete = window.confirm("Are you sure to Delete this Booking?")
         if (!conformDelete) {
-            return toast('Ha ha ha')
+            return toast('😍😋')
         }
         try {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
             const response = await axios.delete(`https://tourist-booking-server.vercel.app/booking/${user?.email}`, { data: UserData })
             if (response.status === 204) {
                 toast.success(`${UserData.bookingName} Deleted Successfully`);
+                AllUser()
             }
         } catch (error) {
             const errorStatus = [401, 403].includes(error.response.data.status);
@@ -57,7 +56,6 @@ const UserDBProvider = ({ children }) => {
             toast.error(error.response.data.message);
         }
     }
-
     // Boooking Cart
     const BookingCart = (AllBooking) => {
         const [isOpen, setIsOpen] = useState(false)

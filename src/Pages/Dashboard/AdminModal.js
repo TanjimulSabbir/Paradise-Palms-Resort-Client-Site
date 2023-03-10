@@ -24,7 +24,6 @@ const AdminModal = () => {
         try {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
             const res = await axios.delete(`https://tourist-booking-server.vercel.app/admin/${user?.email}`, { data: { email } })
-            console.log(res, 'addmin delete')
             if (res.status === 204) {
                 toast.success(`${email} Deleted Successfully`);
             }
@@ -37,12 +36,10 @@ const AdminModal = () => {
         }
     }
 
-    // if (isLoading) {
-    //     return <PageLoading></PageLoading>
-    // }
-    if (isError) {
-        console.log(isError, 'from admin')
+    if (isLoading) {
+        return <PageLoading></PageLoading>
     }
+
     const NotAdminModerator = <p className='font-displayFair headingS text-black'>You are not Admin/Moderator</p>
 
     return (
@@ -67,8 +64,8 @@ const AdminModal = () => {
                                             htmlFor="my-modal-admin" onClick={() =>
                                                 setAdminPower(true)}>{User.userType}</label>
                                         </td>
-                                        <td><button onClick={() => handleDelete(User.email)} className='badge bg-red-600 border-none 
-                                        text-black cursor-pointer'>Delete</button></td>
+                                        <td><button onClick={() => handleDelete(User.email)} className='btn btn-sm border-none 
+                                        text-black bg-red-500 hover:bg-red-600 duration-500 cursor-pointer'>Delete</button></td>
                                     </tr>
                                 </tbody>)
                             }))

@@ -16,7 +16,7 @@ const ChildHome = () => {
     const matchedRoom = RoomsData.find((room) => room._id === params.id);
 
   return (
-    <div children="w-full mid-lg:text-lg">
+    <div>
         {params?.info==='description'&&<Description matchedRoom={matchedRoom}/>}
         {params?.info === "addinformation"&& <AdditionalInfo/>}
         {params?.info === "reviews" && <Review/>}

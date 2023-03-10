@@ -3,12 +3,12 @@ import React from 'react';
 const AdditionalInfo = () => {
     return (
         <div>
-        <h2 className="font-diplayFair font-bold text-2xl md:text-3xl mid-lg:text-4xl leading-tight">
+        <h2 className="font-diplayFair font-bold text-2xl md:text-4xl leading-tight">
           Our hotel has been available for more than{" "}
           <strong className="text-amber-300">15 years</strong>. We give best
           service to all.
         </h2>
-        <p className="font-lora text-justify space-x-1 text-black mt-16">
+        <p className="font-lora text-justify space-x-1 text-black mt-10">
           Our tour hostel is also equipped with all the amenities you need to
           make your stay comfortable. We have a fully equipped kitchen, a lounge
           area with comfortable seating, and a library where you can relax and

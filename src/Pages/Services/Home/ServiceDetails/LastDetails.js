@@ -18,7 +18,7 @@ const LastDetails = () => {
         return <PageLoading></PageLoading>
     }
     return (
-        <div className='UniversalPadding pb-24 mx-auto'>
+        <div className='UniversalPadding mx-auto'>
             <div>
                 <img src={img} alt={title} className="w-full" />
             </div>

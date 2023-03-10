@@ -21,7 +21,7 @@ function AuthProvider({ children }) {
     // Sign-in/Login Email User
     const [signInWithEmailAndPassword, LogUser, LoginLoading, LoginError] = useSignInWithEmailAndPassword(auth);
     // Sign Out
-    const [signOut, loading, error] = useSignOut(auth);
+    const [signOut] = useSignOut(auth);
 
     if (CreateLoading || LoginLoading) {
         return <PageLoading></PageLoading>
@@ -30,7 +30,6 @@ function AuthProvider({ children }) {
     const CreateJwtToken = async (UserData) => {
         try {
             const res = await axios.post(`https://tourist-booking-server.vercel.app/jwt`, { UserData });
-            console.log(res.data, res.data.data)
             if (res.status === 201) {
                 localStorage.setItem("accessToken", res.data.data);
                 AddLoginUser(UserData);
@@ -50,7 +49,8 @@ function AuthProvider({ children }) {
                     if (res.user) {
                         updateProfile({ displayName: data.name })
                         toast.success("Sign-Up Successful");
-                        navigate(from, { replace: true });
+                        signOut()
+                        navigate('/login');
                     }
                 })
         } catch (err) {
@@ -58,16 +58,13 @@ function AuthProvider({ children }) {
                 toast.error(CreateError.message)
             }
         }
-
     };
     // Add Login User in Database from Dashboard AllUser
     async function AddLoginUser(UserData) {
         try {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
             const res = await axios.post(`https://tourist-booking-server.vercel.app/alluser/${UserData.email}`, { UserData })
-            console.log(res, 'from addLogin User')
             if (res.status === 201) {
-                toast.success(res.data.message)
                 navigate(from, { replace: true });
             }
 
@@ -76,10 +73,9 @@ function AuthProvider({ children }) {
             const errorStatus = [401, 403].includes(error.response.data.status);
             if (errorStatus) {
                 signOut()
-                toast.success("User Sign Out Successfully")
+                toast.success("user sign-out successfully")
             }
             if (errorResponse === 409) {
-                toast.info(error.response.data.message)
                 navigate(from, { replace: true });
             }
         }

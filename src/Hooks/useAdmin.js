@@ -28,9 +28,9 @@ const useAdmin = () => {
                 }
                 toast.info(error.response.data.message)
             }
-
         }
     })
+    refetch()
     return [AllAdmin, isLoading, refetch, isError]
 }
 

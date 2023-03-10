@@ -35,18 +35,18 @@ const AllUser = () => {
         }
     }
 
-    // if (isLoading) {
-    //     return <PageLoading></PageLoading>
-    // }
+    if (isLoading) {
+        return <PageLoading></PageLoading>
+    }
 
     return (
         <div className='py-10'>
-            <div className="overflow-x-auto md:UniversalPadding">
+            <div className="overflow-x-auto mx-10 mid-lg:mx-0">
                 <h1 className='headingM pb-4 text-black'>All User</h1>
                 <table className="table w-full border rounded-lg">
                     <thead>
                         <tr>
-                            <th>Serial</th>
+                            <td className='font-bold'>Serial</td>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Options</th>
@@ -62,7 +62,7 @@ const AllUser = () => {
                             </div>
                             return (<tbody>
                                 <tr>
-                                    <th className='border-b'>{index + 1}</th>
+                                    <td className='border-b font-bold'>{index + 1}</td>
                                     <td className='border-b'>{User.name}</td>
                                     <td className='border-b'>
                                         {User.email === user?.email ? ActiveUser : User.email}</td>

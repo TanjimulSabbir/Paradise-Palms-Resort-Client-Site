@@ -16,7 +16,6 @@ const BookingForm = ({ matchedRoom }) => {
   const { UserSignOut } = useContext(AuthContext);
 
   const params = useParams();
-  console.log(params, 'from room booking form')
   const MatchedRoomData = RoomsData?.find(rooms => rooms._id === params.id)
   const { _id, price, title, img } = MatchedRoomData;
 
@@ -28,7 +27,6 @@ const BookingForm = ({ matchedRoom }) => {
       try {
         axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
         const res = await axios.post(`https://tourist-booking-server.vercel.app/booking/${user?.email}`, { UserData })
-        console.log(res)
         if (res.status === 201) {
           reset();
           toast.success(res.data.message);
@@ -52,9 +50,6 @@ const BookingForm = ({ matchedRoom }) => {
 
   if (isLoading) {
     return <PageLoading></PageLoading>
-  }
-  if (isError) {
-    return console.log(isError)
   }
 
   return (

@@ -13,6 +13,7 @@ const useRoom = () => {
             return data;
         }
     })
+    refetch()
     if (pathName === '/') {
         RoomsData = RoomsData.slice(9, RoomsData?.length)
         return [RoomsData, isLoading, isError]

@@ -7,13 +7,9 @@ import useRoom from "../../../Hooks/useRoom";
 const B3Cards = () => {
   const [RoomsData, isLoading] = useRoom();
   const NewRoomsData = [...RoomsData?.slice(9, RoomsData?.length), ...RoomsData?.slice(0, 9)]
-
-  console.log({ NewRoomsData })
-
   if (isLoading) {
     return <PageLoading></PageLoading>;
   }
-
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-3 lg:gap-x-7">
       {NewRoomsData?.map((room) => {

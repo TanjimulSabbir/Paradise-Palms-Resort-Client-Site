@@ -2,17 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Breadcumb from "../../Components/Shared/Breadcumb";
 import PageLoading from "../../Components/Shared/Loading/Loading";
-import GetOffers from "../../Hooks/GetOffers";
+import GetOffers from "../../Hooks/useOffers";
 import useTitle from "../../Hooks/useTitle";
 
 const Offers = () => {
   useTitle('Offers')
 
   // For time shorten i have show here in Offers Data instead of Shop Data.
-  // A s i haven't enough time to write json data on shop. And it also time consuming matter.it doesn't carry so much importance that i have to show accurate shop data here.
+  // As I haven't enough time to write json data on shop. And it also time consuming matter. It doesn't carry so much importance that i have to show accurate shop data here.
   const [OffersData, isLoading] = GetOffers();
   if (isLoading) {
-    return <PageLoading />;
+    return <PageLoading />
   }
 
   return (

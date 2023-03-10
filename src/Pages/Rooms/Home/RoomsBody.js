@@ -21,7 +21,6 @@ const RoomsBody = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 mid-lg:grid-cols-3 gap-y-10 gap-3 lg:gap-x-5 pt-10">
         {RoomsData?.map((room) => {
           const { _id, title, description, price, img } = room;
-          console.log(room);
           return (
             <div className="relative shadow-lg p-4">
               <div className="md:flex justify-center items-center">

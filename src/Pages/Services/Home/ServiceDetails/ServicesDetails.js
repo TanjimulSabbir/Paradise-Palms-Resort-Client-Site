@@ -17,7 +17,7 @@ const ServicesDetails = () => {
 
 
     return (
-        <div className='UniversalPadding py-24 bg-gray-200'>
+        <div className='UniversalPadding pt-24 bg-gray-200'>
             <div className="pb-14">
                 <h2 className="font-diplayFair text-3xl font-bold mid-lg:w-2/3 leading-snug">
                     Enjoy the Outdoors with Our Resort Amenities, Including Pools, Golf Courses, and More

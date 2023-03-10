@@ -14,33 +14,23 @@ const MakeAdmin = () => {
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
     const { UserSignOut } = useContext(AuthContext);
 
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
         const UserData = { email: data.email, userType: data.userType }
-        console.log(UserData)
-        const PostData = async () => {
-            try {
-                axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
-                const res = await axios.post(`https://tourist-booking-server.vercel.app/admin/${user?.email}`, { UserData })
-                if (res.status === 201) {
-                    toast.success(res.data.message);
-                    console.log(res, 'from make admin')
-                    reset()
-                    return refetch();
-                }
-            } catch (error) {
-                const errorStatus = [401, 403].includes(error.response.data.status);
-                if (errorStatus) {
-                    UserSignOut()
-                }
+        try {
+            axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
+            const res = await axios.post(`https://tourist-booking-server.vercel.app/admin/${user?.email}`, { UserData })
+            if (res.status === 201) {
+                toast.success(res.data.message);
                 reset()
-                toast.error(error.response.data.message)
+                return refetch();
             }
-        }
-        if (user) {
-            PostData()
-        }
-        else {
-            return toast.info('No User Logged in')
+        } catch (error) {
+            const errorStatus = [401, 403].includes(error.response.data.status);
+            if (errorStatus) {
+                UserSignOut()
+            }
+            reset()
+            toast.error(error.response.data.message)
         }
     }
 
@@ -55,7 +45,7 @@ const MakeAdmin = () => {
                     <input
                         {...register("email", { required: "Email is required" })}
                         type="email"
-                        placeholder="email"
+                        placeholder="Email"
                         className="input input-bordered"
                     />
                     <small className="text-red-500">{errors?.email?.message}</small>
