@@ -1,14 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link, Outlet, useLocation } from 'react-router-dom'
-import PageLoading from '../../Components/Shared/Loading/Loading'
 import auth from '../../Firebase/Firebase.init.config'
 import useAdmin from '../../Hooks/useAdmin'
 import useBooking from '../../Hooks/useBooking'
 import { DBContext } from '../UserDBProvider/UserDBProvider'
 import AdminModal from './AdminModal'
 import AllBookings from './AllBooking'
-
+import { TiThLargeOutline } from "react-icons/ti";
 
 const Dashboard = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,40 +31,38 @@ const Dashboard = () => {
 
     const Menu = <>
         {adminCheckingValue && <li>
-            <Link className={`text-black ${Hover}`} to='/dashboard/alluser'>All User</Link>
+            <Link className={`w-full ${Hover}`} to='/dashboard/alluser'>All User</Link>
         </li>}
-        <li className='flex flex-row items-center lg:justify-between'>
-            <Link className={`text-black ${Hover}`} to='/dashboard/allbooking'>All Booking
-                <p className='block lg:hidden'>{BookingCart(AllBooking)}</p></Link>
+        <li className='w-full rounded hover:bg-primary flex flex-row items-center justify-between'>
+            <Link to='/dashboard/allbooking'>All Booking
+            </Link>
+            <p className='block lg:hidden'>{BookingCart(AllBooking)}</p>
             <p className='hidden lg:block'>{BookingCart(AllBooking)}</p>
         </li>
         {adminCheckingValue && <li>
-            <Link className={`text-black ${Hover}`} to='/dashboard/makeadmin'>Make Admin</Link>
+            <Link className={`w-full ${Hover}`} to='/dashboard/makeadmin'>Make Admin</Link>
         </li>}
         {adminCheckingValue && <li>
             <label htmlFor="my-modal-3" onClick={() =>
-                setIsOpen(true)} className={`text-black ${Hover}`}>Admin User</label>
+                setIsOpen(true)} className={`w-full ${Hover}`}>Admin User</label>
         </li>}
     </>
 
-    const DropDownBtn = <label tabIndex={0} onClick={() => setIsOpenMenu
-        (!isOpenMenu)} className="btn btn-white lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5"
-            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round"
-                strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
-        </svg>
+    const DropDownBtn = <label title='Dashboard' tabIndex={0} onClick={() => setIsOpenMenu
+        (!isOpenMenu)} className="btn bg-transparent hover:bg-green-600 border-none lg:hidden">
+        <TiThLargeOutline className='text-xl text-white' />
     </label>
 
     return (
         <div>
             <div className="drawer drawer-mobile">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div class="absolute top-2 right-8 z-50">
+                <div class="absolute top-2 right-16 z-50">
                     <div class="dropdown dropdown-end relative">
                         {DropDownBtn}
-                        <ul tabIndex={0} className={`dropdown-content menu p-2 shadow-2xl
-                        bg-white rounded-box w-52 ${isOpenMenu ? 'block' : "hidden"}`}>
+                        <ul tabIndex={0} onClick={() => setIsOpenMenu
+                            (!isOpenMenu)} className={`w-[300px] -mr-16 mt-2 h-screen rounded-none menu dropdown-content transition bg-black
+                        shadow text-white ${isOpenMenu ? 'block' : "hidden"}`}>
                             {Menu}
                         </ul>
                     </div>

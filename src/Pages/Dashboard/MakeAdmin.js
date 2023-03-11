@@ -3,14 +3,13 @@ import React, { useContext } from 'react'
 import { useAuthState, } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
-import PageLoading from '../../Components/Shared/Loading/Loading';
 import auth from '../../Firebase/Firebase.init.config';
 import useAdmin from '../../Hooks/useAdmin';
 import { AuthContext } from '../AuthContext/AuthProvider';
 
 const MakeAdmin = () => {
     const [user] = useAuthState(auth)
-    const [refetch] = useAdmin();
+    const [AllAdmin] = useAdmin();
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
     const { UserSignOut } = useContext(AuthContext);
 
@@ -22,7 +21,7 @@ const MakeAdmin = () => {
             if (res.status === 201) {
                 toast.success(res.data.message);
                 reset()
-                return refetch();
+                return AllAdmin();
             }
         } catch (error) {
             const errorStatus = [401, 403].includes(error.response.data.status);

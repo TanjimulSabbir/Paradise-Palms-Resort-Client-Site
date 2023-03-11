@@ -45,8 +45,9 @@ const B09Cards = () => {
                 </h2>
                 <div>
                   <p className="font-openSans text-justify mt-8">{description.slice(0, 130)}
+                    <Link to="/blog" className="cursor-pointer text-emerald-500">...Read More</Link>
                   </p>
-                  <Link to="/blog" className="cursor-pointer pt-6 text-rose-700">Read More...</Link>
+
                 </div>
               </div>
             </div>

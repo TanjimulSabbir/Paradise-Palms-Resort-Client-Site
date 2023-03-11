@@ -13,8 +13,9 @@ const useServices = () => {
             return data;
         }
     })
+    refetch()
     if (pathName === '/') {
-        ServicesData = ServicesData.slice(3, 6)
+        ServicesData = ServicesData.slice(0, 3)
         return [ServicesData, isLoading, isError]
     }
     return [ServicesData, isError, isLoading]

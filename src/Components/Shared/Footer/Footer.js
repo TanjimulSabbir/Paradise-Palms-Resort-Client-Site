@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="footer bg-gray-600 border-t text-black p-10 sm:flex sm:flex-col lg:flex-row lg:items-center lg:justify-evenly">
+        <footer className="footer bg-red-200 text-black p-10 sm:flex sm:flex-col lg:flex-row lg:items-center lg:justify-evenly">
             <div className='lg:w-1/3'>
-                <span className="font-bold shadow-2xl headingM ">Paradise Palms</span>
-                <p className='mt-10 font-openSans'>Our tour hostel is also equipped with all the amenities you need to make your stay comfortable. We have a fully equipped kitchen, a lounge area with comfortable seating, and a library where you can relax and read a book.</p>
+                <span className="font-bold headingM cursor-pointer text-black">Paradise Palms</span>
+                <p className='mt-6 font-openSans'>Our tour hostel is also equipped with all the amenities you need to make your stay comfortable. We have a fully equipped kitchen, a lounge area with comfortable seating, and a library where you can relax and read a book.</p>
                 <div><FontAwesomeIcon ></FontAwesomeIcon></div>
             </div>
             <div>
@@ -20,7 +20,8 @@ const Footer = () => {
                 <span className="font-bold font-diplayFair">Contact Info</span>
                 <a className="link link-hover font-openSans">Phone: +88953 445 4892</a>
                 <a className="link link-hover font-openSans">256, Resort Street,, New York 24</a>
-                <a className="link link-hover font-openSans">Email: info@paradisepalms.com</a>
+                <a className="link link-hover font-openSans">tanjimulislamsabbir02@gmail.com</a>
+                <a className="link link-hover font-openSans">info@paradisepalms.com</a>
             </div>
             <div>
                 <span className="font-bold font-diplayFair">Newsletter</span>
@@ -34,7 +35,6 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-
         </footer>
     );
 };

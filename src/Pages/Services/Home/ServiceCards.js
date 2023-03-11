@@ -13,7 +13,7 @@ const ServiceCards = () => {
             ServicesData?.map((feature, index) => {
                 const { _id, title, description, img, link } = feature
                 return (
-                    <div className='my-20 bg-base-100'>
+                    <div className='my-24 bg-base-100'>
                         <div className={`md:flex md:items-center pb-16 md:py-6 ${index % 2 === 0 ? "flex-row-reverse" : ""}`}>
                             <div className="w-full md:w-1/2">
                                 <img src={img} className="w-full p-4" alt="" />

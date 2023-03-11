@@ -15,7 +15,7 @@ const BlogsDetails = () => {
   const matchedBlog = BlogsData.find((blog) => blog._id === params.id);
   const { title, img, description, author, date } = matchedBlog;
   return (
-    <div className="pb-24 pt-14 UniversalPadding">
+    <div className="pt-14 UniversalPadding">
       <div className="mx-auto UniversalPadding">
         <h1 className='font-diplayFair text-2xl mid-lg:text-4xl'>{title}</h1>
 
@@ -29,12 +29,12 @@ const BlogsDetails = () => {
         <div className="mt-14">
           <p className="font-openSans">{description}</p>
           <ExtraDetailsText />
-          <p className="py-10">
+          <p className="pt-10">
             <Link to="/services" className="link text-green-500">Know more about our services</Link>
           </p>
+          <Breadcumb />
         </div>
       </div>
-      <Breadcumb />
     </div>
   );
 };

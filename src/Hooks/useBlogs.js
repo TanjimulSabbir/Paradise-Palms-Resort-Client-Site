@@ -14,7 +14,7 @@ const useBlogs = () => {
         }
     })
     if (pathName === '/') {
-        BlogsData = BlogsData.slice(3, 6)
+        BlogsData = BlogsData.slice(4, 7)
         return [BlogsData, isLoading, isError]
     }
     return [BlogsData, isLoading, isError]

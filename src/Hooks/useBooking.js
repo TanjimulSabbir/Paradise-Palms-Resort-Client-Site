@@ -9,7 +9,7 @@ import { AuthContext } from '../Pages/AuthContext/AuthProvider';
 const useBooking = () => {
     const [user] = useAuthState(auth);
     const { UserSignOut } = useContext(AuthContext)
-    const { data: AllBooking = [], refetch, isLoading, isError } = useQuery({
+    const { data: AllBooking = [], isLoading, isError } = useQuery({
         queryKey: ['UserData',],
         queryFn: async () => {
             try {
@@ -25,7 +25,7 @@ const useBooking = () => {
                 if (errorStatus) {
                     UserSignOut()
                 }
-                toast.error(error.response.data.message);
+
             }
         }
     })

@@ -16,7 +16,7 @@ const Corousel = () => {
     }
     const textOnImage = <>
         <div className='absolute top-0 left-0 flex inset-0 items-center bg-black bg-opacity-10'>
-            <div className='UniversalPadding py-10 space-y-10 opacity-100'>
+            <div className='UniversalPadding py-10 space-y-10'>
                 <div>
                     <h2 className='font-diplayFair text-white font-bold leading-tight text-2xl md:text-[40px] lg:text-[55px] md:w-2/3 lg:w-2/4'>{selectedText?.title}</h2>
                 </div>

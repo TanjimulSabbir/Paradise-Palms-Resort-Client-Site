@@ -24,12 +24,11 @@ function useAllUser() {
                 if (errorStatus) {
                     UserSignOut()
                 }
-                toast.info(error.response.data.message)
+
             }
         }
     })
 
-    refetch()
     return [AllUser, isLoading, isError, refetch]
 }
 

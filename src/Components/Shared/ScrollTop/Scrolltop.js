@@ -37,12 +37,12 @@ function ScrollToTopButton() {
   };
 
   return (
-    <div className={`fixed bottom-5 right-5 p-3 ${isVisible ? "visible" : "invisible"}`}>
+    <div className={`fixed bottom-3 right-0 ${isVisible ? "visible" : "invisible"}`}>
       <VscTriangleUp
-        className={"text-2xl cursor-pointer"} onClick={scrollToTop}>
+        className="text-2xl cursor-pointer p-1" onClick={scrollToTop}>
         Scroll to top
       </VscTriangleUp>
-      <VscTriangleDown title="Scroll Down" className="text-2xl cursor-pointer" onClick={scrollToBottom} />
+      <VscTriangleDown title="Scroll Down" className="text-2xl cursor-pointer p-1" onClick={scrollToBottom} />
     </div>
   );
 }

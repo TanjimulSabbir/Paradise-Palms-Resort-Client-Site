@@ -26,11 +26,10 @@ const useAdmin = () => {
                 if (errorStatus) {
                     UserSignOut()
                 }
-                toast.info(error.response.data.message)
             }
         }
     })
-    refetch()
+
     return [AllAdmin, isLoading, refetch, isError]
 }
 

@@ -85,20 +85,21 @@ function UpdateProfile() {
     VarificationError && toast.error(VarificationError.message);
 
 
-    const style = 'p-2 rounded cursor-pointer font-diplayFair text-black'
+    const style = 'btn w-full border-none p-2 rounded text-black'
     return (
         <div className='py-14'>
-            <div className='flex flex-col-reverse md:flex-row-reverse md:gap-x-10 justify-center items-center'>
-                <div className='w-full mt-16 max-w-sm sm:max-w-md'>
+            <div className='flex flex-col-reverse justify-center items-center'>
+                <div className='w-full mt-16 max-w-sm md:max-w-md'>
                     <div>
                         <p onClick={handleVerification}
-                            disabled={Date.now() - lastClick < 4 * 1000} className={`bg-green-500 ${style}`}>
+                            disabled={Date.now() - lastClick < 4 * 1000} className={`bg-green-600 ${style}`}>
                             Send Email Verification</p>
 
-                        <p className={`bg-green-500 ${style} my-4 cursor-pointer`}><label htmlFor="my-modal-6"
-                            onClick={() => setIsOpen(true)}>Update Password</label></p>
+                        <p className={`bg-green-600  ${style} my-5 cursor-pointer`}>
+                            <label htmlFor="my-modal-6" className='cursor-pointer' onClick={() => setIsOpen(true)}>Update Password</label>
+                        </p>
 
-                        <p onClick={handleDelete} className={`bg-red-500 ${style}`}>
+                        <p onClick={handleDelete} className={`bg-red-600 ${style}`}>
                             Detele Account</p>
                     </div>
                 </div>
@@ -111,7 +112,7 @@ function UpdateProfile() {
                                 <span className="label-text">Email</span>
                             </label>
                             <input name='email' type="text" placeholder={user && (user?.emailVerified
-                                ? "Your email is verified" : "Your have not yet verified your email address.") || 'No User'} className="input input-bordered" />
+                                ? "Your email is verified" : "You have not yet verifiend your Email Address.") || 'No User'} className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -124,10 +125,10 @@ function UpdateProfile() {
                             <label className="label">
                                 <span className="label-text">Profile Photo</span>
                             </label>
-                            <input name='url' type="url" placeholder={(user && (user?.photoURL ? "set URL" : "You have not uploaded profile photo yet.") || 'No User')} className="input input-bordered" />
+                            <input name='url' type="url" placeholder={(user && (user?.photoURL ? "Set URL" : "You Have Not Yet Uploaded Profile Photo.") || 'No User')} className="input input-bordered" />
                         </div>
                         <div className="form-control mt-6">
-                            <button type='submit' disabled={user ? false : true} className="btn bg-green-600 text-black border-none">Update Profile</button>
+                            <button type='submit' disabled={user ? false : true} className="btn btn-outline text-emerald-500 border-emerald-500">Update Profile</button>
                         </div>
                     </div>
                 </form>

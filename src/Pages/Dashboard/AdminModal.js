@@ -1,7 +1,6 @@
 import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
-import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import PageLoading from '../../Components/Shared/Loading/Loading';
@@ -11,7 +10,7 @@ import { AuthContext } from '../AuthContext/AuthProvider';
 import AdminPower from './AdminPower';
 
 const AdminModal = () => {
-    const [AllAdmin, isLoading, refetch, isError] = useAdmin();
+    const [AllAdmin, isLoading] = useAdmin();
     const { UserSignOut } = useContext(AuthContext)
     const [adminPower, setAdminPower] = useState(false);
     const [user] = useAuthState(auth);
@@ -25,7 +24,8 @@ const AdminModal = () => {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
             const res = await axios.delete(`https://tourist-booking-server.vercel.app/admin/${user?.email}`, { data: { email } })
             if (res.status === 204) {
-                toast.success(`${email} Deleted Successfully`);
+                toast.success(`${email} Deleted Successfully`)
+                return AllAdmin;
             }
         } catch (error) {
             const errorStatus = [401, 403].includes(error.response.data.status);
@@ -72,7 +72,7 @@ const AdminModal = () => {
                         }
                     </table>
                     {user ? "" : <Link to='/login' className='hover:link text-green-500'>
-                        No User Found. Login</Link>}
+                        No User Found! Login</Link>}
                 </div>
                 {adminPower && <AdminPower></AdminPower>}
             </div>

@@ -10,7 +10,7 @@ import { AuthContext } from '../AuthContext/AuthProvider';
 
 const AllUser = () => {
     const [user] = useAuthState(auth)
-    const [AllUser, isLoading, refetch] = useAllUser();
+    const [AllUser, isLoading] = useAllUser();
     const { UserSignOut } = useContext(AuthContext)
     const handleDelete = async (id) => {
         const confirmDelete = window.confirm('Are you want to Delete this user?')
@@ -22,9 +22,9 @@ const AllUser = () => {
                     { data: { id: id } });
                 if (res.status === 204) {
                     toast.success(res.data.message)
-                    refetch();
+                    return AllUser()
                 }
-                return refetch()
+                AllUser()
             }
         } catch (error) {
             const errorStatus = [401, 403].includes(error.response.data.status);
@@ -33,6 +33,7 @@ const AllUser = () => {
             }
             toast.error(error.response.data.message)
         }
+
     }
 
     if (isLoading) {
@@ -41,9 +42,9 @@ const AllUser = () => {
 
     return (
         <div className='py-10'>
-            <div className="overflow-x-auto mx-10 mid-lg:mx-0">
+            <div className="mx-10 mid-lg:mx-0">
                 <h1 className='headingM pb-4 text-black'>All User</h1>
-                <table className="table w-full border rounded-lg">
+                <table className="table overflow-x-auto w-full border rounded-lg">
                     <thead>
                         <tr>
                             <td className='font-bold'>Serial</td>

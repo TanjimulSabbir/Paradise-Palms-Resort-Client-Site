@@ -5,7 +5,7 @@ import Service from "./Service";
 
 const Banner01 = () => {
   return (
-    <div className="py-16 space-y-14 bg-gray-200">
+    <div className="pb-16 pt-24 space-y-14 bg-gray-200">
       <Service />
 
       <div className="UniversalPadding">

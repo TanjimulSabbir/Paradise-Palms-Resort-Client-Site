@@ -37,7 +37,7 @@ const Banner08 = () => {
             </div>
           </div>
           {/* Offer Button-1 */}
-          <div className="flex justify-around items-center mt-8 p-4 bg-rose-200 mx-4">
+          <div className="flex justify-between items-center mt-8 p-4 bg-rose-200 mx-4">
             <h2 className="headingS text-xl text-black">
               15% Off on this packages
             </h2>
@@ -63,7 +63,7 @@ const Banner08 = () => {
             </div>
           </div>
           {/* offer Button-2 */}
-          <div className="flex justify-around items-center bg-rose-200 mt-8 p-4 mx-4">
+          <div className="flex justify-between items-center bg-rose-200 mt-8 p-4 mx-4">
             <h2 className="headingS text-xl text-black">
               21% Off on this packages
             </h2>
