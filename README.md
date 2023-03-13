@@ -72,7 +72,10 @@ The app should now be running on http://localhost:3000.
 
 Live link : https://paradise-palms-tourist-h-c7621.web.app/
 
-Admin login: Email: tanzimulislamsabbir@gmail.com Password: Tanjim25& 
+Admin login: 
+
+Email: tanzimulislamsabbir@gmail.com 
+Password: Tanjim25& 
 
 License
 
