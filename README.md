@@ -23,31 +23,27 @@ Front-end:
 React.js: A front-end library for building user interfaces.
 
 Tailwind CSS
-
-React Hook Form
-
-React Router Dom
-
-React Firebase Hooks
-
-React Toastify
-
-React Icon
-
-React Query
-
-React Date Picker
-
-React Loader Spinner
+,React Hook Form
+,React Router Dom
+,React Firebase Hooks
+,React Toastify
+,React Icon
+,React Query
+,React Date Picker
+,React Loader Spinner,
 Axios
-Authentication:
-Firebase
-React Firebase Hooks
+,Authentication:
+,Firebase
+,React Firebase Hooks
 
-Back-end:
+Back-end: 
+
 MongoDB: A NoSQL database used to store the hotel's data such as rooms, bookings and users.
+
 Express.js: A web application framework for Node.js used for building the RESTful API endpoints.
+
 Node.js: A JavaScript runtime environment used to build the server-side application logic.
+
 Stripe: A payment gateway used to handle payments for room bookings.
 
 Git and GitHub: Version control system and code hosting platform used to collaborate with others.
