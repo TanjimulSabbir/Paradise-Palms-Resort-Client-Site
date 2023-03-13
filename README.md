@@ -31,7 +31,7 @@ Express.js: A web application framework for Node.js used for building the RESTfu
 Node.js: A JavaScript runtime environment used to build the server-side application logic.
 Stripe: A payment gateway used to handle payments for room bookings.
 
-Git and GitHub: Version control system and code hosting platform used to collaborate with team members.
+Git and GitHub: Version control system and code hosting platform used to collaborate with others.
 
 Hosting and Deploy:
 Client Side- Firebase Hosting
@@ -48,18 +48,6 @@ git clone https://github.com/TanjimulSabbir/paradise-palms-booking-hotel.git
 Install the server dependencies:
 bash
 
-cd paradise-palms-booking-hotel/server
-npm install
-Create a .env file in the server folder and add the following variables:
-makefile
-
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/paradise-palms-booking-hotel
-JWT_SECRET=JWT_SECRET_KEY
-STRIPE_SECRET_KEY=
-Install the client dependencies:
-bash
-
 cd ../client
 npm install
 Start the server and client:
@@ -68,6 +56,9 @@ bash
 cd ../server
 npm run start-dev
 The app should now be running on http://localhost:3000.
+
+Live link : https://paradise-palms-tourist-h-c7621.web.app/
+Admin login: email: tanzimulislamsabbir@gmail.com password: Tanjim25& 
 
 License
 This project is licensed under the Paradise Palms License.
