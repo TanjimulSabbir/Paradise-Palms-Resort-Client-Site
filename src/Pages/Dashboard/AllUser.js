@@ -9,37 +9,35 @@ import { AuthContext } from '../AuthContext/AuthProvider';
 
 
 const AllUser = () => {
-    const [user] = useAuthState(auth)
+    const [user] = useAuthState(auth);
     const [AllUser, isLoading] = useAllUser();
-    const { UserSignOut } = useContext(AuthContext)
-    const handleDelete = async (id) => {
+    const { UserSignOut } = useContext(AuthContext);
+
+    const handleDelete = async (email) => {
         const confirmDelete = window.confirm('Are you want to Delete this user?')
         try {
-            if (confirmDelete && user) {
-                axios.defaults.headers.common['authorization'] =
-                    `Bearer ${localStorage.getItem('accessToken')}`;
-                const res = await axios.delete(`https://tourist-booking-server.vercel.app/alluser/${user?.email}`,
-                    { data: { id: id } });
-                if (res.status === 204) {
-                    toast.success(res.data.message)
-                    return AllUser()
-                }
-                AllUser()
+            if (!confirmDelete) {
+                return;
+            }
+            axios.defaults.headers.common['authorization'] =
+                `Bearer ${localStorage.getItem('accessToken')}`;
+            const res = await axios.delete(`http://localhost:5000/alluser/${user?.email}`, { data: { email } });
+            if (res.status === 200) {
+                toast.success(res.data.message)
+                return AllUser();
             }
         } catch (error) {
             const errorStatus = [401, 403].includes(error.response.data.status);
             if (errorStatus) {
                 UserSignOut()
             }
-            toast.error(error.response.data.message)
+            else { toast.error(error.response.data.message) }
         }
 
     }
-
     if (isLoading) {
         return <PageLoading></PageLoading>
     }
-
     return (
         <div className='py-10'>
             <div className="mx-10 mid-lg:mx-0">
@@ -67,7 +65,7 @@ const AllUser = () => {
                                     <td className='border-b'>{User.name}</td>
                                     <td className='border-b'>
                                         {User.email === user?.email ? ActiveUser : User.email}</td>
-                                    <td className='border-b' onClick={() => handleDelete(User?._id)}>
+                                    <td className='border-b' onClick={() => handleDelete(User?.email)}>
                                         <button className='btn btn-sm bg-red-600 text-black border-none'>Delete</button></td>
                                 </tr>
                             </tbody>)

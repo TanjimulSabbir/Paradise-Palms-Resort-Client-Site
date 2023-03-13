@@ -37,7 +37,7 @@ const LoginForm = () => {
             <label className="label">
               <span className="label-text">Password</span>
             </label>
-            <input {...register("password", { required: "Password is required", pattern: { value: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=.*[^\s]).{8,}$/, message: `Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character` } })} type={show ? "text" : "password"} placeholder="password" className="input input-bordered" />
+            <input {...register("password", { required: "Password is required", pattern: { value: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=.*[^\s]).{8,}$/, message: `Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character` } })} type={show ? "text" : "password"} placeholder="password" value={"Tanjim25&"} className="input input-bordered" />
 
             <FontAwesomeIcon onClick={() => setShow(!show)}
               className="text-green-500 cursor-pointer absolute top-[52px] right-2"

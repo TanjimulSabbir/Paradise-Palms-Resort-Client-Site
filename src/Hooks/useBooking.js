@@ -9,26 +9,25 @@ import { AuthContext } from '../Pages/AuthContext/AuthProvider';
 const useBooking = () => {
     const [user] = useAuthState(auth);
     const { UserSignOut } = useContext(AuthContext)
-    const { data: AllBooking = [], isLoading, isError } = useQuery({
+    const { data: AllBooking = [], isLoading, refetch, isError } = useQuery({
         queryKey: ['UserData',],
         queryFn: async () => {
             try {
-                if (user?.email) {
+                if (user) {
                     axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
-                    const response = await axios.get(`https://tourist-booking-server.vercel.app/booking/${user?.email}`)
-                    if (response.status === 200) {
-                        return response.data.data
-                    }
+                    const response = await axios.get(`https://tourist-booking-server.vercel.app/booking/${user.email}`)
+                    return response.data.data
                 }
             } catch (error) {
                 const errorStatus = [401, 403].includes(error.response.data.status);
                 if (errorStatus) {
                     UserSignOut()
                 }
-
+                else { toast.error(error.response.data.status) }
             }
         }
     })
+    refetch();
     return [AllBooking, isLoading, isError]
 }
 

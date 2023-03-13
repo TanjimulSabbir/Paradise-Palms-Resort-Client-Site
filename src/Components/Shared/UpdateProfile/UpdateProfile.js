@@ -112,7 +112,7 @@ function UpdateProfile() {
                                 <span className="label-text">Email</span>
                             </label>
                             <input name='email' type="text" placeholder={user && (user?.emailVerified
-                                ? "Your email is verified" : "You have not yet verifiend your Email Address.") || 'No User'} className="input input-bordered" />
+                                ? "Your email is verified" : "Verify Your Email Address.") || 'No User'} className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -128,7 +128,7 @@ function UpdateProfile() {
                             <input name='url' type="url" placeholder={(user && (user?.photoURL ? "Set URL" : "You Have Not Yet Uploaded Profile Photo.") || 'No User')} className="input input-bordered" />
                         </div>
                         <div className="form-control mt-6">
-                            <button type='submit' disabled={user ? false : true} className="btn btn-outline text-emerald-500 border-emerald-500">Update Profile</button>
+                            <button type='submit' disabled={user ? false : true} className="btn btn-primary">Update Profile</button>
                         </div>
                     </div>
                 </form>

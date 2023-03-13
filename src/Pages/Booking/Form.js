@@ -1,14 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import auth from '../../Firebase/Firebase.init.config';
-import { AuthContext } from '../AuthContext/AuthProvider';
+
 
 const Form = () => {
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
     const [user] = useAuthState(auth);
-    const { UserSignOut } = useContext(AuthContext);
 
     const onSubmit = (data) => {
         toast("Sorry! This Section is Unavailable.😪")

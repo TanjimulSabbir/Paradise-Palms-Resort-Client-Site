@@ -1,4 +1,3 @@
-import { async } from '@firebase/util'
 import axios from 'axios'
 import React, { createContext, useContext, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
@@ -13,7 +12,6 @@ export const DBContext = createContext()
 const UserDBProvider = ({ children }) => {
     const [user] = useAuthState(auth);
     const { UserSignOut } = useContext(AuthContext);
-    const [AllUser, refetch] = useBooking();
     const navigate = useNavigate();
     const location = useLocation();
     const from = location?.state?.from?.pathname || '/'
@@ -31,8 +29,7 @@ const UserDBProvider = ({ children }) => {
             if (errorStatus) {
                 UserSignOut()
             }
-            toast.error(error.response.data.message)
-            throw new Error('Failed to update user');
+            else { toast.error(error.response.data.message) }
         }
     }
     // Booking Delete from Booking_Form
@@ -44,16 +41,15 @@ const UserDBProvider = ({ children }) => {
         try {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
             const response = await axios.delete(`https://tourist-booking-server.vercel.app/booking/${user?.email}`, { data: UserData })
-            if (response.status === 204) {
-                toast.success(`${UserData.bookingName} Deleted Successfully`);
-                AllUser()
+            if (response.status === 200) {
+                toast.success(response.data.message);
             }
         } catch (error) {
             const errorStatus = [401, 403].includes(error.response.data.status);
             if (errorStatus) {
                 UserSignOut()
             }
-            toast.error(error.response.data.message);
+            else { toast.error(error.response.data.message) }
         }
     }
     // Boooking Cart

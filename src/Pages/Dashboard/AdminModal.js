@@ -23,16 +23,17 @@ const AdminModal = () => {
         try {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
             const res = await axios.delete(`https://tourist-booking-server.vercel.app/admin/${user?.email}`, { data: { email } })
-            if (res.status === 204) {
-                toast.success(`${email} Deleted Successfully`)
-                return AllAdmin;
+
+            if (res.status === 200) {
+                toast.success(res.data.message)
+                AllAdmin()
             }
         } catch (error) {
             const errorStatus = [401, 403].includes(error.response.data.status);
             if (errorStatus) {
                 UserSignOut()
             }
-            toast.error(error.response.data.message)
+            else { toast.error(error.response.data.message) }
         }
     }
 

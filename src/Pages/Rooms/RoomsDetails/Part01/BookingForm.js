@@ -21,10 +21,11 @@ const BookingForm = ({ matchedRoom }) => {
 
   const navigate = useNavigate()
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     const UserData = { ...data, bookingName: title, bookingId: _id, img, price }
-    const PostData = async () => {
-      try {
+
+    try {
+      if (user) {
         axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
         const res = await axios.post(`https://tourist-booking-server.vercel.app/booking/${user?.email}`, { UserData })
         if (res.status === 201) {
@@ -32,19 +33,13 @@ const BookingForm = ({ matchedRoom }) => {
           toast.success(res.data.message);
           navigate('/dashboard/allbooking')
         }
-      } catch (error) {
-        const errorStatus = [401, 403].includes(error.response.data.status);
-        if (errorStatus) {
-          UserSignOut()
-        }
-        toast.error(error.response.data.message);
       }
-    }
-    if (user) {
-      PostData()
-    }
-    else {
-      toast.info('Please, login')
+    } catch (error) {
+      const errorStatus = [401, 403].includes(error.response.data.status);
+      if (errorStatus) {
+        UserSignOut()
+      }
+      else { toast.error(error.response.data.message) }
     }
   }
 

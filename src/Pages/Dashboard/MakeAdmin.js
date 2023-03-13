@@ -24,12 +24,12 @@ const MakeAdmin = () => {
                 return AllAdmin();
             }
         } catch (error) {
+            reset()
             const errorStatus = [401, 403].includes(error.response.data.status);
             if (errorStatus) {
                 UserSignOut()
             }
-            reset()
-            toast.error(error.response.data.message)
+            else { toast.error(error.response.data.message) }
         }
     }
 

@@ -18,7 +18,6 @@ const AllBooking = () => {
     if (isError) {
         toast.info('Data geting error')
     }
-
     return (
         <div className='py-10 mx-10 mid-lg:mx-0'>
             <h1 className='headingM py-4 text-black'>All Booking</h1>

@@ -29,9 +29,11 @@ function AuthProvider({ children }) {
     // Create Jwt Token
     const CreateJwtToken = async (UserData) => {
         try {
-            const res = await axios.post(`https://tourist-booking-server.vercel.app/jwt`, { UserData });
+            const res = await axios.post(`https://tourist-booking-server.vercel.app/jwt`,
+                { UserData });
             if (res.status === 201) {
                 localStorage.setItem("accessToken", res.data.data);
+                toast("Jwt Token Created Succesfully")
                 AddLoginUser(UserData);
             }
         } catch (error) {
@@ -39,7 +41,9 @@ function AuthProvider({ children }) {
             if (errorStatus) {
                 signOut()
             }
-            toast.error(error.response.data.message)
+            else {
+                toast.error(error.response.data.message)
+            }
         }
     };
     const CreateEmailUser = async (data) => {
@@ -61,6 +65,7 @@ function AuthProvider({ children }) {
     };
     // Add Login User in Database from Dashboard AllUser
     async function AddLoginUser(UserData) {
+        console.log({ UserData }, 'UserData')
         try {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
             const res = await axios.post(`https://tourist-booking-server.vercel.app/alluser/${UserData.email}`, { UserData })
@@ -70,14 +75,18 @@ function AuthProvider({ children }) {
 
         } catch (error) {
             const errorResponse = error.response.data.status;
+            if (errorResponse === 409) {
+                return navigate(from, { replace: true });
+            }
             const errorStatus = [401, 403].includes(error.response.data.status);
             if (errorStatus) {
                 signOut()
                 toast.success("user sign-out successfully")
             }
-            if (errorResponse === 409) {
-                navigate(from, { replace: true });
+            else {
+                toast.error(error.response.data.message)
             }
+
         }
     }
     const EmailLogin = async (data) => {
@@ -89,12 +98,18 @@ function AuthProvider({ children }) {
                     name: res.user.displayName,
                     email: res.user.email
                 }
-                CreateJwtToken(UserData);
+                console.log(UserData, "userData")
+                if (UserData) {
+                    CreateJwtToken(UserData);
+                }
                 toast.success('Login Successful');
             }
         } catch (err) {
             if (LoginError) {
                 toast.error(LoginError.message)
+            }
+            else {
+                toast.error("Login Failed")
             }
         }
     };
@@ -102,7 +117,7 @@ function AuthProvider({ children }) {
     // User Sign Out
     const UserSignOut = async () => {
         await signOut();
-        toast.success("User Sign out Successfully")
+        toast.success("User Sign-out Successfully")
     }
 
     const AuthInfo = { CreateEmailUser, EmailLogin, UserSignOut };

@@ -15,21 +15,25 @@ const useAdmin = () => {
         queryKey: ['MakeAdminData', user?.email],
         queryFn: async () => {
             try {
-                if (user?.email) {
+                if (user) {
                     axios.defaults.headers.common['authorization'] =
                         `Bearer ${localStorage.getItem('accessToken')}`;
                     const res = await axios.get(`https://tourist-booking-server.vercel.app/admin/${user.email}`)
                     return res.data.data;
                 }
+
             } catch (error) {
                 const errorStatus = [401, 403].includes(error.response.data.status);
                 if (errorStatus) {
                     UserSignOut()
                 }
+                else {
+                    toast.error(error.response.data.message)
+                }
             }
         }
     })
-
+    refetch();
     return [AllAdmin, isLoading, refetch, isError]
 }
 
