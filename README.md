@@ -58,7 +58,8 @@ npm run start-dev
 The app should now be running on http://localhost:3000.
 
 Live link : https://paradise-palms-tourist-h-c7621.web.app/
-Admin login: email: tanzimulislamsabbir@gmail.com password: Tanjim25& 
+
+Admin login: Email: tanzimulislamsabbir@gmail.com Password: Tanjim25& 
 
 License
 This project is licensed under the Paradise Palms License.
