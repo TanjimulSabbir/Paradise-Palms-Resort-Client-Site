@@ -3,11 +3,11 @@ Paradise Palms Booking Hotel
 Paradise Palms Booking Hotel is a web application that allows users to book rooms in a hotel. It is built using the MERN (MongoDB, Express.js, React.js, Node.js) stack.
 
 Features:
-Responsive UI design by tailwind css
-User authentication and authorization with JWT tokens
+Responsive UI design by tailwind css, 
+User authentication and authorization with JWT tokens, 
 Room search and booking functionality by data and booking name.
 
-Admin dashboard to manage rooms, bookings and users
+Admin dashboard to manage rooms, bookings and users. , 
 Payment gateway integration with Stripe (But now this is unavailable for some reasons)
 
 Admin Feature:
