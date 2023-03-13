@@ -25,18 +25,19 @@ Front-end:
 React.js: A front-end library for building user interfaces.
 
 Tailwind CSS
-,React Hook Form
-,React Router Dom
-,React Firebase Hooks
-,React Toastify
-,React Icon
-,React Query
-,React Date Picker
-,React Loader Spinner,
-Axios
-,Authentication:
-,Firebase
-,React Firebase Hooks
+, React Hook Form
+, React Router Dom
+, React Firebase Hooks
+, React Toastify
+, React Icon
+, React Query
+, React Date Picker
+, React Loader Spinner,
+ Axios.
+
+Authentication:
+, Firebase
+, React Firebase Hooks.
 
 Back-end: 
 
