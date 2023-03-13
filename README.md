@@ -58,7 +58,6 @@ Client Side- Firebase Hosting
 Server Side- Vercel Hosting
 
 Prerequisites:
-
 Node.js (v14 or higher)
 
 MongoDB database
