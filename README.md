@@ -42,19 +42,8 @@ Node.js (v14 or higher)
 MongoDB database
 Installation
 Clone the repository from GitHub:
-bash
+git clone https://github.com/TanjimulSabbir/Paradise-Palms-Hotel-Client-Side.git
 
-git clone https://github.com/TanjimulSabbir/paradise-palms-booking-hotel.git
-Install the server dependencies:
-bash
-
-cd ../client
-npm install
-Start the server and client:
-bash
-
-cd ../server
-npm run start-dev
 The app should now be running on http://localhost:3000.
 
 Live link : https://paradise-palms-tourist-h-c7621.web.app/
