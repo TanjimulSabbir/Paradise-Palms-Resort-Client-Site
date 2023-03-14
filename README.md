@@ -65,7 +65,6 @@ MongoDB database
 Installation
 Clone the repository from GitHub:
 
-git clone https://github.com/TanjimulSabbir/Paradise-Palms-Hotel-Client-Side.git
 
 The app should now be running on http://localhost:3000.
 
