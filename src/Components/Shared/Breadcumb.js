@@ -8,7 +8,7 @@ const Breadcumb = () => {
 
     let PathLink = "";
     return (
-        <div className='uppercase flex justify-center flex-row space-x-4 my-14'>
+        <div className='uppercase flex justify-center flex-row space-x-4 py-6'>
             {
                 PathName.map(path => {
                     const ElementName = path === "" ? "Home" : path

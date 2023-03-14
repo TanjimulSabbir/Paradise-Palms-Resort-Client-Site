@@ -9,19 +9,23 @@ import { AuthContext } from '../AuthContext/AuthProvider';
 
 const MakeAdmin = () => {
     const [user] = useAuthState(auth)
-    const [AllAdmin] = useAdmin();
+    const [AllAdmin, refetch] = useAdmin();
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
     const { UserSignOut } = useContext(AuthContext);
 
     const onSubmit = async (data) => {
         const UserData = { email: data.email, userType: data.userType }
+        const ReservedUser = ['tanjimulislamsabbir02@gmail.com', 'tanzimulislamsabbir@gmail.com']
+        if (ReservedUser.includes(data.email)) {
+            return toast('User Already Added')
+        }
         try {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
             const res = await axios.post(`https://tourist-booking-server.vercel.app/admin/${user?.email}`, { UserData })
             if (res.status === 201) {
                 toast.success(res.data.message);
                 reset()
-                return AllAdmin();
+                refetch();
             }
         } catch (error) {
             reset()

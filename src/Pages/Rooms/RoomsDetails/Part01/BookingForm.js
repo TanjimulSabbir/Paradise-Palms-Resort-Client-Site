@@ -55,7 +55,7 @@ const BookingForm = ({ matchedRoom }) => {
 
       <div className="flex flex-col mid-lg:flex-row w-full mx-auto justify-center items-center py-10 bg-base-100">
         <div className="max-w-sm sm:max-w-md shadow-2xl bg-base-100 h-[610px]">
-          <img className="min-h-[610px] rounded-l" src="https://i.ibb.co/tHk9yxk/photo-1596169095544-8605b2f1e3a9-ixlib-rb-4-0.jpg" alt="" />
+          <img className="min-h-[610px] rounded-l object-cover max-h-[610px]" src="https://i.ibb.co/ByJG8qt/Form-Side01.jpg" alt="" />
         </div>
         <div className="w-full max-w-sm sm:max-w-md h-[610px] rounded-r flex items-center justify-center shadow-2xl bg-base-100">
           <form onSubmit={handleSubmit(onSubmit)} className="w-full mx-10 space-y-1">

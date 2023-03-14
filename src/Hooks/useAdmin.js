@@ -33,7 +33,7 @@ const useAdmin = () => {
             }
         }
     })
-    refetch();
+
     return [AllAdmin, isLoading, refetch, isError]
 }
 

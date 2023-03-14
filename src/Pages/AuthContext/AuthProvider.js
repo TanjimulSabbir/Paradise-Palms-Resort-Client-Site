@@ -33,7 +33,7 @@ function AuthProvider({ children }) {
                 { UserData });
             if (res.status === 201) {
                 localStorage.setItem("accessToken", res.data.data);
-                toast("Jwt Token Created Succesfully")
+                navigate(from, { replace: true });
                 AddLoginUser(UserData);
             }
         } catch (error) {
@@ -65,14 +65,12 @@ function AuthProvider({ children }) {
     };
     // Add Login User in Database from Dashboard AllUser
     async function AddLoginUser(UserData) {
-        console.log({ UserData }, 'UserData')
         try {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
             const res = await axios.post(`https://tourist-booking-server.vercel.app/alluser/${UserData.email}`, { UserData })
             if (res.status === 201) {
-                navigate(from, { replace: true });
+                return;
             }
-
         } catch (error) {
             const errorResponse = error.response.data.status;
             if (errorResponse === 409) {
@@ -118,6 +116,7 @@ function AuthProvider({ children }) {
     const UserSignOut = async () => {
         await signOut();
         toast.success("User Sign-out Successfully")
+        navigate("/login")
     }
 
     const AuthInfo = { CreateEmailUser, EmailLogin, UserSignOut };

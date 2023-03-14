@@ -36,7 +36,7 @@ const UserDBProvider = ({ children }) => {
     const BookingDelete = async (UserData) => {
         const conformDelete = window.confirm("Are you sure to Delete this Booking?")
         if (!conformDelete) {
-            return toast('😍😋')
+            return toast('😍')
         }
         try {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;

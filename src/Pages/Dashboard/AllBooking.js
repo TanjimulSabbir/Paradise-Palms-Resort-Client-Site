@@ -9,7 +9,7 @@ import { DBContext } from '../UserDBProvider/UserDBProvider';
 
 const AllBooking = () => {
     const [user] = useAuthState(auth)
-    const [AllBooking, isLoading, isError] = useBooking();
+    const [AllBooking, isLoading, refetch, isError] = useBooking();
     const { BookingDelete } = useContext(DBContext);
 
     if (isLoading) {
@@ -17,6 +17,9 @@ const AllBooking = () => {
     }
     if (isError) {
         toast.info('Data geting error')
+    }
+    if (AllBooking?.length < 1) {
+        return <h1 className='h-screen font-diplayFair font-bold bg-blue-200 flex justify-center items-center'>No Booking Found</h1>
     }
     return (
         <div className='py-10 mx-10 mid-lg:mx-0'>

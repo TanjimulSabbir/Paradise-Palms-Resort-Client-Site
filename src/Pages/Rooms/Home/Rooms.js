@@ -11,8 +11,8 @@ const Rooms = () => {
             <RoomsHeader />
             <div className='py-24 UniversalPadding bg-gray-200'>
                 <RoomsBody />
+                <Breadcumb />
             </div>
-            <Breadcumb />
         </div>
     );
 };

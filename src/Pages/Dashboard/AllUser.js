@@ -10,7 +10,7 @@ import { AuthContext } from '../AuthContext/AuthProvider';
 
 const AllUser = () => {
     const [user] = useAuthState(auth);
-    const [AllUser, isLoading] = useAllUser();
+    const [AllUser, isLoading, refetch] = useAllUser();
     const { UserSignOut } = useContext(AuthContext);
 
     const handleDelete = async (email) => {
@@ -21,10 +21,10 @@ const AllUser = () => {
             }
             axios.defaults.headers.common['authorization'] =
                 `Bearer ${localStorage.getItem('accessToken')}`;
-            const res = await axios.delete(`http://localhost:5000/alluser/${user?.email}`, { data: { email } });
+            const res = await axios.delete(`https://tourist-booking-server.vercel.app/alluser/${user?.email}`, { data: { email } });
             if (res.status === 200) {
                 toast.success(res.data.message)
-                return AllUser();
+                return refetch();
             }
         } catch (error) {
             const errorStatus = [401, 403].includes(error.response.data.status);
@@ -37,6 +37,9 @@ const AllUser = () => {
     }
     if (isLoading) {
         return <PageLoading></PageLoading>
+    }
+    if (AllUser?.length < 1) {
+        return <h1 className='h-screen font-diplayFair font-bold bg-blue-200 flex justify-center items-center'>No User Found</h1>
     }
     return (
         <div className='py-10'>

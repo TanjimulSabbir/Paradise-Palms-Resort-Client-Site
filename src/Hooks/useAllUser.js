@@ -34,7 +34,7 @@ function useAllUser() {
         }
 
     })
-    refetch()
+
     return [AllUser, isLoading, isError, refetch]
 }
 

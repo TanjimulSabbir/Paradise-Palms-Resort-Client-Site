@@ -10,23 +10,28 @@ import { AuthContext } from '../AuthContext/AuthProvider';
 import AdminPower from './AdminPower';
 
 const AdminModal = () => {
-    const [AllAdmin, isLoading] = useAdmin();
+    const [AllAdmin, isLoading, refetch] = useAdmin();
     const { UserSignOut } = useContext(AuthContext)
     const [adminPower, setAdminPower] = useState(false);
     const [user] = useAuthState(auth);
+
 
     const handleDelete = async (email) => {
         const confirmDelete = window.confirm('Are you want to delete this User?')
         if (!confirmDelete) {
             return;
         }
+        const ReservedUser = ['tanjimulislamsabbir02@gmail.com', 'tanzimulislamsabbir@gmail.com']
+        if (ReservedUser.includes(email)) {
+
+            return toast("Hey 👋, Who are You? This is Super Powered Admin. You can not delete this one, Okay?")
+        }
         try {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
             const res = await axios.delete(`https://tourist-booking-server.vercel.app/admin/${user?.email}`, { data: { email } })
-
             if (res.status === 200) {
                 toast.success(res.data.message)
-                AllAdmin()
+                refetch()
             }
         } catch (error) {
             const errorStatus = [401, 403].includes(error.response.data.status);

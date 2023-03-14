@@ -27,7 +27,7 @@ const useBooking = () => {
             }
         }
     })
-    refetch();
+
     return [AllBooking, isLoading, isError]
 }
 

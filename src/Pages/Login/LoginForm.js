@@ -4,9 +4,12 @@ import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthContext/AuthProvider";
+import { BsInfoCircle } from "react-icons/bs";
+import AdminPassword from "./AdminPassword";
 
 const LoginForm = () => {
   const [show, setShow] = useState(false);
+  const [showAdmin, setShowAdmin] = useState(false);
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const { EmailLogin } = useContext(AuthContext)
 
@@ -37,32 +40,37 @@ const LoginForm = () => {
             <label className="label">
               <span className="label-text">Password</span>
             </label>
-            <input {...register("password", { required: "Password is required", pattern: { value: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=.*[^\s]).{8,}$/, message: `Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character` } })} type={show ? "text" : "password"} placeholder="password" value={"Tanjim25&"} className="input input-bordered" />
+            <input {...register("password", { required: "Password is required", pattern: { value: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=.*[^\s]).{8,}$/, message: `Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character` } })} type={show ? "text" : "password"} placeholder="Password" className="input input-bordered" />
 
             <FontAwesomeIcon onClick={() => setShow(!show)}
-              className="text-green-500 cursor-pointer absolute top-[52px] right-2"
+              className="text-black cursor-pointer absolute top-[52px] right-2"
               icon={show ? faEye : faEyeSlash}>
             </FontAwesomeIcon>
 
             <small className="text-red-500">
               {errors?.password?.message}
             </small>
-            <label className="label">
+            <label className="label flex">
               <a href="#p" className="label-text-alt link link-hover">
                 Forgot password?
               </a>
+              <label title="Admin Login" onClick={() => setShowAdmin(true)} htmlFor="my-modal-3"><BsInfoCircle className="cursor-pointer"></BsInfoCircle></label>
             </label>
           </div>
 
-          <div className="form-control mt-6">
+          <div className="form-control mt-4">
             <button className="btn btn-primary">Login</button>
           </div>
           <p className="text-sm link link-hover">
-            Are you new here? <Link to={"/signup"} className='link text-green-500'>Create an account</Link>
+            Are you new here? <Link to={"/signup"} className='link text-black'>Create an account</Link>
           </p>
         </form>
       </div>
+      {showAdmin && <AdminPassword />}
     </div>
+
+
+
   );
 };
 
