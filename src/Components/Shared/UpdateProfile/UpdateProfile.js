@@ -19,6 +19,7 @@ function UpdateProfile() {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location?.state?.from?.pathname || '/'
+
     const handleUpdate = async (event) => {
         event.preventDefault();
         const email = event.target.email.value.trim();
@@ -27,6 +28,10 @@ function UpdateProfile() {
 
         if (!(name && email && url)) {
             return toast('Provided valid input')
+        }
+        const ReservedUser = ['tanjimulislamsabbir02@gmail.com', 'tanzimulislamsabbir@gmail.com']
+        if (ReservedUser.includes(user?.email)) {
+            return toast("You can't Update this user Profile")
         }
         try {
             const res = await updateProfile({ displayName: name, photoURL: url });
