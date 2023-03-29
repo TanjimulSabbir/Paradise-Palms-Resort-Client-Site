@@ -1,4 +1,4 @@
-## Paradise Palms Booking Hotel
+## Paradise Palms Resort
 
 Paradise Palms resort is a robust and feature-rich web application that enables users to book resort rooms seamlessly. The application is designed using the MERN stack (MongoDB, Express.js, React.js, Node.js) to provide a seamless and responsive user experience across all devices.
 
@@ -47,9 +47,8 @@ The app should now be running on http://localhost:3000.
 Live link : https://paradise-palms-tourist-h-c7621.web.app/
 
 #### Admin login: 
-
 #### Email: tanzimulislamsabbir@gmail.com 
 #### Password: Tanjim25& 
 
-##### License
+#### License 
 This project is licensed under the Paradise Palms by Tanjimul Islam Sabbir.
