@@ -1,20 +1,17 @@
 ## Paradise Palms Booking Hotel
 
-Paradise Palms Booking Hotel is a web application that allows users to book rooms in a hotel. It is built using the MERN (MongoDB, Express.js, React.js, Node.js) stack.
+Paradise Palms resort is a robust and feature-rich web application that enables users to book resort rooms seamlessly. The application is designed using the MERN stack (MongoDB, Express.js, React.js, Node.js) to provide a seamless and responsive user experience across all devices.
 
-### Features:
-- Responsive UI design by tailwind css.
-- User authentication and authorization with JWT tokens. 
-- Room search and booking functionality by data and booking name.
-- Admin dashboard to manage rooms, bookings and users. 
-- Payment gateway integration with Stripe (But now this is unavailable for some reasons)
+The application has been designed using the Tailwind CSS framework to ensure that it is fully responsive and provides a great user experience on any device. User authentication and authorization have been integrated into the application using JWT Tokens, which means users can securely access their accounts.
 
-### Admin Feature:
-#### Admin
-Admin can see any user, can delete, can make anyone an admin or moderator. Admin can also see all bookings details. Admin can change any information. Admin has a lot of modification access.
+The application provides users with the ability to search for rooms based on their preferences and book them using a user-friendly interface. The search functionality allows users to filter rooms by date and booking name, making it easy to find the right room for their needs.
 
-#### Moderator
-Moderators are just able to view users. They are not able to delete or make anyone like as an Admin. Moderators are not able to view bookings details. But they can be able to see booking details if Admin allows.
+The admin panel of the application is packed with features that enable the resort staff to manage rooms, bookings, and users with ease. The admin can view all the bookings made by users and manage them as needed. They can also manage rooms by changing their details, images, and other information.
+
+The application integrates with Stripe for payment gateway services, enabling users to pay for their bookings securely. However, this feature is currently unavailable due to some reasons.
+
+The admin panel provides the resort staff with full control over user management, allowing them to view all users' details, delete users, and grant admin or moderator privileges.Overall, this platform offers a convenient and secure booking experience for users.
+
 
 ### Technologies Used
 #### Front-end
@@ -40,7 +37,7 @@ Moderators are just able to view users. They are not able to delete or make anyo
 - Node.js: A JavaScript runtime environment used to build the server-side application logic.
 
 ### Database
-- MongoDB database
+- MongoDB Database
 
 ### Installation
 Clone the repository from GitHub:
