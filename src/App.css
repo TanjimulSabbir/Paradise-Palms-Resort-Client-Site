@@ -1,3 +1,7 @@
 .active {
-    color: #006838;
+    color: #020202;
+    text-decoration: underline;
+    text-decoration-color: green;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
 }

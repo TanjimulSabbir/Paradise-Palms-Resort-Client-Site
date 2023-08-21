@@ -27,22 +27,25 @@ const Navbar = () => {
         return <PageLoading></PageLoading>
     }
     const LoginLogOut = <>
-        {user ? <p onClick={handleSignOut} >Logout</p> : <Link to='/login'>Login</Link>}
+        {
+            user ? <Link to="" onClick={handleSignOut} >Logout</Link> : <Link className='cursor-pointer block'
+                to='/login'>Login</Link>
+        }
     </>
 
-    const ActiveBtn = 'hover:bg-primary text-white rounded active:bg-primary focus:outline-none'
+    const ActiveBtn = 'text-white rounded focus:outline-none font-diplayFair p-2 lg:py-0'
     const NavMenu = <>
-        <li className={ActiveBtn}><NavLink to='/'>Home</NavLink></li>
-        <li className={ActiveBtn}><NavLink to='/rooms'>Rooms</NavLink></li>
-        <li className={ActiveBtn}><NavLink to='/services'>Services</NavLink></li>
-        <li className={ActiveBtn}><NavLink to='/offers'>Offers</NavLink></li>
-        <li className={ActiveBtn}><NavLink to='/blog'>Blog</NavLink></li>
-        <li className={ActiveBtn}><NavLink to='/dashboard'>Dashboard</NavLink></li>
-        <li className={ActiveBtn}>{LoginLogOut}</li>
+        <p className={ActiveBtn}><NavLink to='/'>Home</NavLink></p>
+        <p className={ActiveBtn}><NavLink to='/rooms'>Rooms</NavLink></p>
+        <p className={ActiveBtn}><NavLink to='/services'>Services</NavLink></p>
+        <p className={ActiveBtn}><NavLink to='/offers'>Offers</NavLink></p>
+        <p className={ActiveBtn}><NavLink to='/blog'>Blog</NavLink></p>
+        <p className={ActiveBtn}><NavLink to='/dashboard'>Dashboard</NavLink></p>
+        <p className={ActiveBtn}>{LoginLogOut}</p>
     </>
 
     return (
-        <div className="navbar bg-blue-600">
+        <div className="navbar bg-[#173b6f]">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div>
@@ -53,15 +56,15 @@ const Navbar = () => {
                         </label>
 
                         <ul tabIndex={0} onClick={() => setSidebar(!sidebar)} className={`w-[300px] -ml-2 mt-2 h-screen rounded-none menu dropdown-content transition 
-                        shadow text-white bg-black ${sidebar ? "block duration-500 ease-in-out" : "hidden"}`}>
+                        shadow text-white bg-[#173b6f] ${sidebar ? "block duration-500 ease-in-out" : "hidden"}`}>
                             {NavMenu}
                         </ul>
                     </div>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl text-black" href='#l'>Paradise Palms</a>
+                {/* <a className="btn btn-ghost normal-case text-xl text-[#2e5798]" href='#l'>Paradise Palms</a> */}
             </div>
-            <div className="navbar-end hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 text-white">
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal px-1 text-white space-x-6 mr-2">
                     {NavMenu}
                 </ul>
             </div>

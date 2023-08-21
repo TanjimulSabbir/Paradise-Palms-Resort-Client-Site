@@ -8,7 +8,7 @@ module.exports = {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
       'md': '800px',
-      'mid-lg':'1000px',
+      'mid-lg': '1000px',
       'lg': '1200px',
       'xl': '1360px',
       '2xl': '1600px',
@@ -29,7 +29,8 @@ module.exports = {
       },
       colors:
       {
-        'b3T-color': '#797979'
+        'b3T-color': '#797979',
+        BgColor: "#8892b0",
       },
     },
     fontFamily:
