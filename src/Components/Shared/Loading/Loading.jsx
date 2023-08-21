@@ -2,7 +2,7 @@ import React from "react";
 import {Puff,ThreeDots ,BallTriangle,Watch, ColorRing} from "react-loader-spinner";
 const PageLoading = () => {
   return (
-    <div className="flex justify-center items-center">
+    <div className="h-screen w-full flex justify-center items-center">
  <ColorRing
   visible={true}
   height="200"

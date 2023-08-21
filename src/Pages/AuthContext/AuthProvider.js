@@ -69,7 +69,7 @@ function AuthProvider({ children }) {
             axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
             const res = await axios.post(`https://tourist-booking-server.vercel.app/alluser/${UserData.email}`, { UserData })
             if (res.status === 201) {
-                return;
+                return navigate(from, { replace: true });
             }
         } catch (error) {
             const errorResponse = error.response.data.status;
@@ -101,6 +101,7 @@ function AuthProvider({ children }) {
                     CreateJwtToken(UserData);
                 }
                 toast.success('Login Successful');
+             return navigate(from, { replace: true })
             }
         } catch (err) {
             if (LoginError) {

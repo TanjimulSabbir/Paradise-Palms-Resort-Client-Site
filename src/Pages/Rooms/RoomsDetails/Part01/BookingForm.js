@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import PageLoading from "../../../../Components/Shared/Loading/Loading";
 import auth from "../../../../Firebase/Firebase.init.config";
@@ -10,27 +10,34 @@ import useRoom from "../../../../Hooks/useRoom";
 import { AuthContext } from "../../../AuthContext/AuthProvider";
 
 const BookingForm = ({ matchedRoom }) => {
-  const [RoomsData, isLoading, isError] = useRoom();
+  let [RoomsData, isLoading, isError] = useRoom();
   const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
   const [user] = useAuthState(auth);
   const { UserSignOut } = useContext(AuthContext);
-
+  const location = useLocation();
   const params = useParams();
   const MatchedRoomData = RoomsData?.find(rooms => rooms._id === params.id)
   const { _id, price, title, img } = MatchedRoomData;
 
   const navigate = useNavigate()
+  const from = location?.state?.from.pathname || "/";
 
   const onSubmit = async (data) => {
+    if (!user) {
+      toast.success("Entered")
+      return navigate("/login")
+    }
     const UserData = { ...data, bookingName: title, bookingId: _id, img, price }
 
     try {
       if (user) {
         axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
         const res = await axios.post(`https://tourist-booking-server.vercel.app/booking/${user?.email}`, { UserData })
+        isLoading = true;
         if (res.status === 201) {
           reset();
           toast.success(res.data.message);
+          isLoading = false;
           navigate('/dashboard/allbooking')
         }
       }
@@ -42,7 +49,12 @@ const BookingForm = ({ matchedRoom }) => {
       else { toast.error(error.response.data.message) }
     }
   }
-
+  const handleLogInFunc = () => {
+    if (!user) {
+      toast.info("Login is required")
+      return navigate("/login");
+    }
+  }
   if (isLoading) {
     return <PageLoading></PageLoading>
   }
@@ -64,7 +76,7 @@ const BookingForm = ({ matchedRoom }) => {
                 <span className="label-text">Name</span>
               </label>
               <input
-                {...register("name", { required: user ? "user name is required" : "login is required" })}
+                {...register("name", { required: user ? "user name is required" : "Login is required" })}
                 value={user?.displayName}
                 readOnly
                 type="text"
@@ -125,7 +137,7 @@ const BookingForm = ({ matchedRoom }) => {
               </select>
               <small className="text-[12px] text-red-500 pl-2 mb-4">{errors.seat?.message}</small>
             </div>
-            <button type="submit" className="Btn-Primary w-full rounded ">
+            <button type="submit" onClick={() => handleLogInFunc()} className="Btn-Primary w-full rounded ">
               Book the Room
             </button>
           </form>
