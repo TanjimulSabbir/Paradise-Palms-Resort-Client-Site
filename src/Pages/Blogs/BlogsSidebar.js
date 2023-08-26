@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import PageLoading from "../../Components/Shared/Loading/Loading";
 import useBlogs from "../../Hooks/useBlogs";
 
 const BlogsSidebar = () => {
-  const [BlogsData, isLoading] = useBlogs();
+  let [BlogsData, isLoading] = useBlogs();
+ 
+  // const BlogTitle = BlogsData.map((blog) => blog.title);
+
+  const [filteredBlogs, setFilteredBlogs] = useState(BlogsData);
+  
+  const handleSearch = (event) => {
+    const inputData = event.target?.value?.toLowerCase();
+    const filtered = BlogsData?.filter(blog => blog.title.toLowerCase().includes(inputData));
+    setFilteredBlogs(filtered);
+  }
+  console.log(filteredBlogs,BlogsData)
   if (isLoading) {
     return <PageLoading />;
   }
-  const BlogTitle = BlogsData.map((blog) => blog.title);
-  const HandleSearch = () => {
-    alert('Now, Search option is Unavailable')
-  }
-
   return (
     <div className="pt-8 p-4">
       <div className="form-control">
@@ -20,8 +26,9 @@ const BlogsSidebar = () => {
             type="text"
             placeholder="Search Catagories"
             className="input input-bordered"
+            // onChange={handleSearch}
           />
-          <button className="btn bg-[#B3F2DD] btn-square" onClick={HandleSearch}>
+          <button className="btn bg-[#B3F2DD] btn-square" onClick={(event)=>handleSearch(event)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -42,13 +49,17 @@ const BlogsSidebar = () => {
       <div className="mt-6">
         <h1 className="headingS text-black">Catagories</h1>
         <div className="mt-4 text-green-500">
-          {BlogTitle.map((title, index) => (
-            <p className="border-b py-4">
+          {filteredBlogs.map((data, index) => {
+            const {title}=data;
+            console.log(title)
+            return(
+              <p className="border-b py-4">
               <a href={`#${title}`}>
                 {index + 1}. {title}
               </a>
             </p>
-          ))}
+            )
+          })}
         </div>
       </div>
     </div>
