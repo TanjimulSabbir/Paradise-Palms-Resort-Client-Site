@@ -14,7 +14,7 @@ const Breadcumb = () => {
                     const ElementName = path === "" ? "Home" : path
                     PathLink = `${PathLink !== '/' ? PathLink : ""}/` + path
                     return (
-                        <button className="btn bg-black border-emerald-400 text-emerald-500">
+                        <button className="btn bg-[#B3F2DD] bg-black border-emerald-400 text-emerald-500">
                             <Link to={PathLink}>{ElementName}</Link>
                         </button>
                     )

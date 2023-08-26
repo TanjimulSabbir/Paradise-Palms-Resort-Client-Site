@@ -11,7 +11,8 @@ export const AuthContext = createContext();
 function AuthProvider({ children }) {
     const location = useLocation();
     const navigate = useNavigate();
-    const from = location?.state?.from.pathname || "/";
+    const from = location?.state?.from?.pathname || "/";
+    console.log(from,"from")
     const [user] = useAuthState(auth)
     // Create Email User
     const [createUserWithEmailAndPassword, EmailUser, CreateLoading, CreateError] =
@@ -33,7 +34,7 @@ function AuthProvider({ children }) {
                 { UserData });
             if (res.status === 201) {
                 localStorage.setItem("accessToken", res.data.data);
-                navigate(from, { replace: true });
+                navigate(from);
                 AddLoginUser(UserData);
             }
         } catch (error) {

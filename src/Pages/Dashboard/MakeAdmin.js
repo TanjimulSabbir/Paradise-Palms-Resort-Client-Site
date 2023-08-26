@@ -65,7 +65,7 @@ const MakeAdmin = () => {
                 </div>
 
                 <div className="form-control mt-6">
-                    <button className="btn btn-primary" disabled={user ? false : true}>Submit</button>
+                    <button className="btn bg-[#B3F2DD] btn-primary" disabled={user ? false : true}>Submit</button>
                 </div>
             </form>
         </div>

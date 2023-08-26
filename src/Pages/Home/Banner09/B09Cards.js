@@ -56,7 +56,7 @@ const B09Cards = () => {
       })}
       {pathName === "/" && (
         <Link to={"/blog"}>
-          <button className="btn border-none rounded-none text-black bg-rose-300">
+          <button className="btn bg-[#B3F2DD] border-none rounded-none text-black bg-rose-300">
             know More{" "}
             <FontAwesomeIcon
               icon={faArrowRight}

@@ -6,6 +6,8 @@ import auth from '../../../Firebase/Firebase.init.config';
 import { DBContext } from '../../../Pages/UserDBProvider/UserDBProvider';
 import PageLoading from '../Loading/Loading';
 import ModalUpdatePassword from './ModalUpdatePassword';
+import UPdate from './UPdate';
+import Buttons from './Buttons';
 
 function UpdateProfile() {
     const [updateProfile, updatingLoading, UpdatinError] = useUpdateProfile(auth);
@@ -90,25 +92,25 @@ function UpdateProfile() {
     VarificationError && toast.error(VarificationError.message);
 
 
-    const style = 'btn w-full border-none p-2 rounded text-black'
+    const style = 'w-full border-none p-2 rounded text-pink-500 font-bold'
     return (
         <div className='py-14'>
-            <div className='flex flex-col-reverse justify-center items-center'>
-                <div className='w-full mt-16 max-w-sm md:max-w-md'>
-                    <div>
+            {/* <div className='flex flex-col-reverse justify-center items-center'> */}
+                {/* <div className='w-full mt-16 max-w-sm md:max-w-md'>
+                    <div class="flex justify-between items-center text-sm">
                         <p onClick={handleVerification}
-                            disabled={Date.now() - lastClick < 4 * 1000} className={`bg-green-600 ${style}`}>
+                            disabled={Date.now() - lastClick < 4 * 1000} className={` ${style}`}>
                             Send Email Verification</p>
 
-                        <p className={`bg-green-600  ${style} my-5 cursor-pointer`}>
+                        <p className={`  ${style} my-5 cursor-pointer`}>
                             <label htmlFor="my-modal-6" className='cursor-pointer' onClick={() => setIsOpen(true)}>Update Password</label>
                         </p>
 
-                        <p onClick={handleDelete} className={`bg-red-600 ${style}`}>
+                        <p onClick={handleDelete} className={` ${style}`}>
                             Detele Account</p>
                     </div>
-                </div>
-                <form onSubmit={handleUpdate} className="w-full p-6 max-w-sm sm:max-w-md border rounded">
+                </div> */}
+                {/* <form onSubmit={handleUpdate} className="w-full p-6 max-w-sm sm:max-w-md border rounded">
                     <div>
                         <h1 className='font-displayFair text-black text-3xl text-center'>
                             Update Profile</h1>
@@ -133,11 +135,13 @@ function UpdateProfile() {
                             <input name='url' type="url" placeholder={(user && (user?.photoURL ? "Set URL" : "You Have Not Yet Uploaded Profile Photo.") || 'No User')} className="input input-bordered" />
                         </div>
                         <div className="form-control mt-6">
-                            <button type='submit' disabled={user ? false : true} className="btn btn-primary">Update Profile</button>
+                            <button type='submit' disabled={user ? false : true} className="">Update Profile</button>
                         </div>
                     </div>
-                </form>
-            </div>
+                </form> */}
+                <UPdate/>
+                <Buttons/>
+            {/* </div> */}
             {isOpen && <ModalUpdatePassword></ModalUpdatePassword>}
         </div>
     )

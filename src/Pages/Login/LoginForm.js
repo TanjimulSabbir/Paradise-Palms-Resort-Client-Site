@@ -59,7 +59,7 @@ const LoginForm = () => {
           </div>
 
           <div className="form-control mt-4">
-            <button className="btn btn-primary">Login</button>
+            <button className="btn">Login</button>
           </div>
           <p className="text-sm link link-hover">
             Are you new here? <Link to={"/signup"} className='link text-black'>Create an account</Link>

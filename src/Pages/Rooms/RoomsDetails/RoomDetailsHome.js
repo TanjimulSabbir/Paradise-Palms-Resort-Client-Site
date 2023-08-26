@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import img1 from "../images/heading.jpg";
 import RoomImage from "./Part01/RoomImage";
 import BookingForm from "./Part01/BookingForm";
@@ -12,10 +12,12 @@ import Breadcumb from "../../../Components/Shared/Breadcumb";
 const RoomDetailsHome = () => {
   const params = useParams();
   const [RoomsData, isLoading] = useRoom();
+  
 
   if (isLoading) {
     return <PageLoading></PageLoading>;
   }
+
   const matchedRoom = RoomsData?.find((room) => room._id === params.id);
 
   return (
@@ -23,7 +25,7 @@ const RoomDetailsHome = () => {
       <img src={img1} alt="" />
       <div className="py-24">
         <RoomImage matchedRoom={matchedRoom && matchedRoom}></RoomImage>
-        <BookingForm matchedRoom={matchedRoom && matchedRoom}></BookingForm>
+        <BookingForm matchedRoom={matchedRoom && matchedRoom} ></BookingForm>
         <RoomFacilitie />
         <RoomOverView />
       </div>

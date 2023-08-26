@@ -1,7 +1,7 @@
 .active {
-    color: #020202;
+    color: #4FFEFE;
     text-decoration: underline;
-    text-decoration-color: green;
+    text-decoration-color: #4FFEFE;
     text-underline-offset: 6px;
     text-decoration-thickness: 2px;
 }

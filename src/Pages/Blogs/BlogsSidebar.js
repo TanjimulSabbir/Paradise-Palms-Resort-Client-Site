@@ -21,7 +21,7 @@ const BlogsSidebar = () => {
             placeholder="Search Catagories"
             className="input input-bordered"
           />
-          <button className="btn btn-square" onClick={HandleSearch}>
+          <button className="btn bg-[#B3F2DD] btn-square" onClick={HandleSearch}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"

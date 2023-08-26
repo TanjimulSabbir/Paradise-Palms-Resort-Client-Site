@@ -18,6 +18,8 @@ const BookingForm = ({ matchedRoom }) => {
   const params = useParams();
   const MatchedRoomData = RoomsData?.find(rooms => rooms._id === params.id)
   const { _id, price, title, img } = MatchedRoomData;
+  const [BookingLoading, SetbookingLoading] = useState(false);
+
 
   const navigate = useNavigate()
   const from = location?.state?.from.pathname || "/";
@@ -33,12 +35,12 @@ const BookingForm = ({ matchedRoom }) => {
       if (user) {
         axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('accessToken')}`;
         const res = await axios.post(`https://tourist-booking-server.vercel.app/booking/${user?.email}`, { UserData })
-        isLoading = true;
+        SetbookingLoading(true)
         if (res.status === 201) {
           reset();
           toast.success(res.data.message);
-          isLoading = false;
-          navigate('/dashboard/allbooking')
+          SetbookingLoading(false);
+          return navigate('/dashboard/allbooking')
         }
       }
     } catch (error) {
@@ -55,7 +57,7 @@ const BookingForm = ({ matchedRoom }) => {
       return navigate("/login");
     }
   }
-  if (isLoading) {
+  if (BookingLoading) {
     return <PageLoading></PageLoading>
   }
 
