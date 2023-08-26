@@ -3,32 +3,32 @@ import PageLoading from "../../Components/Shared/Loading/Loading";
 import useBlogs from "../../Hooks/useBlogs";
 
 const BlogsSidebar = () => {
-  let [BlogsData, isLoading] = useBlogs();
- 
-  // const BlogTitle = BlogsData.map((blog) => blog.title);
+  // Using destructuring to get BlogsData and isLoading from the useBlogs hook
+  const [BlogsData, isLoading] = useBlogs();
 
   const [filteredBlogs, setFilteredBlogs] = useState(BlogsData);
-  
+
   const handleSearch = (event) => {
-    const inputData = event.target?.value?.toLowerCase();
-    const filtered = BlogsData?.filter(blog => blog.title.toLowerCase().includes(inputData));
+    const inputData = event.target.value.toLowerCase();
+    const filtered = BlogsData.filter(blog => blog.title.toLowerCase().includes(inputData));
     setFilteredBlogs(filtered);
   }
-  console.log(filteredBlogs,BlogsData)
+
   if (isLoading) {
     return <PageLoading />;
   }
+
   return (
     <div className="pt-8 p-4">
       <div className="form-control">
         <div className="input-group">
           <input
             type="text"
-            placeholder="Search Catagories"
+            placeholder="Search Categories"
             className="input input-bordered"
-            // onChange={handleSearch}
+            onChange={handleSearch}
           />
-          <button className="btn bg-[#B3F2DD] btn-square" onClick={(event)=>handleSearch(event)}>
+          <button className="btn bg-[#B3F2DD] btn-square" onClick={handleSearch}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -47,18 +47,17 @@ const BlogsSidebar = () => {
         </div>
       </div>
       <div className="mt-6">
-        <h1 className="headingS text-black">Catagories</h1>
+        <h1 className="headingS text-black">Categories</h1>
         <div className="mt-4 text-green-500">
           {filteredBlogs.map((data, index) => {
-            const {title}=data;
-            console.log(title)
-            return(
-              <p className="border-b py-4">
-              <a href={`#${title}`}>
-                {index + 1}. {title}
-              </a>
-            </p>
-            )
+            const { title } = data;
+            return (
+              <p className="border-b py-4" key={index}>
+                <a href={`#${title}`}>
+                  {index + 1}. {title}
+                </a>
+              </p>
+            );
           })}
         </div>
       </div>
