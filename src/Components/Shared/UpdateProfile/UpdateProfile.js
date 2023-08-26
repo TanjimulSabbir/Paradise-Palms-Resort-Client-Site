@@ -92,17 +92,17 @@ function UpdateProfile() {
     VarificationError && toast.error(VarificationError.message);
 
 
-    const style = 'w-full border-none p-2 rounded text-pink-500 font-bold'
+    const style = 'w-full border-none p-2 rounded font-bold bg-[#0C356A] cursor-pointer'
     return (
-        <div className='py-14'>
-            <div className='flex flex-col-reverse  items-center'>
-                <div className='w-full mt-16 max-w-sm md:max-w-md'>
-                    <div class="flex justify-between items-center text-sm">
+        <div className='py-14 bg-gray-200'>
+            <div className='flex flex-col-reverse items-center'>
+                <div className='w-full mt-10 max-w-sm md:max-w-xl text-center'>
+                    <div class="flex justify-center items-center text-sm space-x-4">
                         <p onClick={handleVerification}
                             disabled={Date.now() - lastClick < 4 * 1000} className={` ${style}`}>
                             Send Email Verification</p>
 
-                        <p className={`  ${style} my-5 cursor-pointer`}>
+                        <p className={`${style} cursor-pointer`}>
                             <label htmlFor="my-modal-6" className='cursor-pointer' onClick={() => setIsOpen(true)}>Update Password</label>
                         </p>
 
@@ -110,32 +110,34 @@ function UpdateProfile() {
                             Detele Account</p>
                     </div>
                 </div>
-                <form onSubmit={handleUpdate} className="w-full p-6 max-w-sm sm:max-w-md shadow-xl">
+                <form onSubmit={handleUpdate} className="p-6 max-w-xl shadow-xl bg-white rounded-lg">
                     <div>
-                        <h2 class="text-lg font-semibold text-gray-700 capitalize dark:text-white">Update info </h2>
+                        <h2 class="text-lg font-semibold text-black capitalize ">Update info </h2>
 
-                        <div className='flex items-center justify-between space-x-3'>
-                            <div className="form-control">
+                        <div className='flex items-center justify-between space-x-3 mt-5'>
+                            <div className="flex-1 form-control">
                                 <label className="label">
                                     <span className="label-text">User Name</span>
                                 </label>
                                 <input name='name' type="text"
-                                    className="input " />
+                                    className="input input-bordered" />
                             </div>
-                            <div className="form-control">
+                            <div className="flex-1 form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input name='email' type="text" className="input " />
+                                <input name='email' type="text" className="input input-bordered" />
                             </div>
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Profile Photo</span>
                             </label>
-                            <input name='url' type="url" className="input " />
+                            <input name='url' type="url" className="input input-bordered" />
                         </div>
-                      
+                      <div className='mt-4'>
+                      <button className='border py-3 px-4 bg-black text-white rounded-lg' type='submit'>Update</button>
+                      </div>
                     </div>
                 </form>
                 {/* <UPdate></UPdate> */}
