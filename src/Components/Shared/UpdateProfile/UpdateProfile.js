@@ -95,8 +95,8 @@ function UpdateProfile() {
     const style = 'w-full border-none p-2 rounded text-pink-500 font-bold'
     return (
         <div className='py-14'>
-            {/* <div className='flex flex-col-reverse justify-center items-center'> */}
-                {/* <div className='w-full mt-16 max-w-sm md:max-w-md'>
+            <div className='flex flex-col-reverse  items-center'>
+                <div className='w-full mt-16 max-w-sm md:max-w-md'>
                     <div class="flex justify-between items-center text-sm">
                         <p onClick={handleVerification}
                             disabled={Date.now() - lastClick < 4 * 1000} className={` ${style}`}>
@@ -109,39 +109,38 @@ function UpdateProfile() {
                         <p onClick={handleDelete} className={` ${style}`}>
                             Detele Account</p>
                     </div>
-                </div> */}
-                {/* <form onSubmit={handleUpdate} className="w-full p-6 max-w-sm sm:max-w-md border rounded">
+                </div>
+                <form onSubmit={handleUpdate} className="w-full p-6 max-w-sm sm:max-w-md shadow-xl">
                     <div>
-                        <h1 className='font-displayFair text-black text-3xl text-center'>
-                            Update Profile</h1>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Email</span>
-                            </label>
-                            <input name='email' type="text" placeholder={user && (user?.emailVerified
-                                ? "Your email is verified" : "Verify Your Email Address.") || 'No User'} className="input input-bordered" />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">User Name</span>
-                            </label>
-                            <input name='name' type="text"
-                                placeholder={user ? user.displayName : "User Name"} className="input input-bordered" />
+                        <h2 class="text-lg font-semibold text-gray-700 capitalize dark:text-white">Update info </h2>
+
+                        <div className='flex items-center justify-between space-x-3'>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">User Name</span>
+                                </label>
+                                <input name='name' type="text"
+                                    className="input " />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Email</span>
+                                </label>
+                                <input name='email' type="text" className="input " />
+                            </div>
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Profile Photo</span>
                             </label>
-                            <input name='url' type="url" placeholder={(user && (user?.photoURL ? "Set URL" : "You Have Not Yet Uploaded Profile Photo.") || 'No User')} className="input input-bordered" />
+                            <input name='url' type="url" className="input " />
                         </div>
-                        <div className="form-control mt-6">
-                            <button type='submit' disabled={user ? false : true} className="">Update Profile</button>
-                        </div>
+                      
                     </div>
-                </form> */}
-                <UPdate/>
-                <Buttons/>
-            {/* </div> */}
+                </form>
+                {/* <UPdate></UPdate> */}
+                {/* <Buttons/> */}
+            </div>
             {isOpen && <ModalUpdatePassword></ModalUpdatePassword>}
         </div>
     )
