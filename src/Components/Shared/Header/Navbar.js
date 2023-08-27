@@ -33,7 +33,7 @@ const Navbar = () => {
         }
     </>
 
-    const ActiveBtn = 'text-white rounded focus:outline-none font-diplayFair p-2 lg:py-0'
+    const ActiveBtn = 'text-white rounded focus:outline-none font-diplayFair p-4 lg:py-0 hover:bg-gray-800 lg:hover:bg-transparent'
     const NavMenu = <>
         <p className={ActiveBtn}><NavLink to='/'>Home</NavLink></p>
         <p className={ActiveBtn}><NavLink to='/rooms'>Rooms</NavLink></p>
@@ -49,9 +49,9 @@ const Navbar = () => {
             <div className="navbar-start">
                 <div className="dropdown">
                     <div>
-                        <label tabIndex={0} onClick={() => setSidebar(!sidebar)} className="btn bg-transparent border-none -ml-1 lg:hidden">
+                        <label tabIndex={0} onClick={() => setSidebar(!sidebar)} className={`btn bg-transparent border-none -ml-1 lg:hidden text-white `}>
                             {
-                                sidebar ? <TfiClose className="text-lg" /> : <TfiAlignJustify className="text-lg" />
+                                sidebar ? <TfiClose className={`text-2xl`} /> : <TfiAlignJustify className="text-2xl" />
                             }
                         </label>
 

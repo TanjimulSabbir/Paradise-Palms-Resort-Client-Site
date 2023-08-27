@@ -5,7 +5,7 @@ import Main from './Main'
 
 const Layout = () => {
     return (
-        <div>
+        <div className='max-w-[1500px] mx-auto'>
             <Header />
             <Main />
             <Footer />
