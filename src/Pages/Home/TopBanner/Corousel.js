@@ -15,7 +15,7 @@ const Corousel = () => {
         window.location.hash = "#slide1";
     }
     const textOnImage = <>
-        <div className='absolute top-0 left-0 flex inset-0 items-center bg-black bg-opacity-10'>
+        <div className='absolute top-0 left-0 flex inset-0 items-center bg-black bg-opacity-40'>
             <div className='UniversalPadding py-10 space-y-10'>
                 <div>
                     <h2 className='font-diplayFair text-white font-bold leading-tight text-2xl md:text-[40px] lg:text-[55px] md:w-2/3 lg:w-2/4'>{selectedText?.title}</h2>
@@ -28,7 +28,7 @@ const Corousel = () => {
     return (
         <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full">
-                <img src={img1} className="w-full object-cover" alt='' />
+                <img src={img2} className="w-full object-cover" alt='' />
                 {textOnImage}
                 <div className="absolute right-0 md:flex justify-between transform md:-translate-y-1/2 md:left-5 md:right-5 top-1/2">
                     <a href="#slide4" className="text-white p-4">❮</a>
@@ -36,7 +36,7 @@ const Corousel = () => {
                 </div>
             </div>
             <div id="slide2" className="carousel-item relative w-full">
-                <img src={img2} className="w-full object-cover" alt='' />
+                <img src={img1} className="w-full object-cover" alt='' />
                 {textOnImage}
                 <div className="absolute right-0 md:flex justify-between transform md:-translate-y-1/2 md:left-5 md:right-5 top-1/2">
                     <a href="#slide1" className="text-white p-4">❮</a>

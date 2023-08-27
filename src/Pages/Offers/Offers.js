@@ -16,7 +16,7 @@ const Offers = () => {
   }
 
   return (
-    <div className="py-24 UniversalPadding space-y-16 bg-gray-100">
+    <div className="pt-24 UniversalPadding space-y-16 bg-gray-100">
       <div>
         <h2 className="font-diplayFair text-3xl font-bold">
           What we offer to our customer
