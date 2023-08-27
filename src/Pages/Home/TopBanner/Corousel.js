@@ -15,7 +15,7 @@ const Corousel = () => {
         window.location.hash = "#slide1";
     }
     const textOnImage = <>
-        <div className='absolute top-0 left-0 flex inset-0 items-center bg-black bg-opacity-40'>
+        <div className='absolute top-0 left-0 flex inset-0 items-center lg:bottom-1/4 bg-black bg-opacity-40'>
             <div className='UniversalPadding py-10 space-y-10'>
                 <div>
                     <h2 className='font-diplayFair text-white font-bold leading-tight text-2xl md:text-[40px] lg:text-[55px] md:w-2/3 lg:w-2/4'>{selectedText?.title}</h2>
