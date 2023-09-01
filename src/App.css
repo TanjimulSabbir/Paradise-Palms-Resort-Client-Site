@@ -5,3 +5,7 @@
     text-underline-offset: 6px;
     text-decoration-thickness: 2px;
 }
+
+.PlayfairDisplay {
+    font-family: 'Playfair Display', serif;
+}

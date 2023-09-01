@@ -56,7 +56,7 @@ const Navbar = () => {
                         </label>
 
                         <ul tabIndex={0} onClick={() => setSidebar(!sidebar)} className={`w-[300px] -ml-2 mt-2 h-screen rounded-none menu dropdown-content transition 
-                        shadow text-white bg-[#000505] ${sidebar ? "block duration-500 ease-in-out" : "hidden"}`}>
+                        shadow text-white bg-white ${sidebar ? "block duration-500 ease-in-out" : "hidden"}`}>
                             {NavMenu}
                         </ul>
                     </div>
