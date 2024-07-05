@@ -1,11 +1,27 @@
 .active {
-    color: #4FFEFE;
+    color: #05a4a4;
     text-decoration: underline;
-    text-decoration-color: #4FFEFE;
+    text-decoration-color: #05a4a4;
     text-underline-offset: 6px;
     text-decoration-thickness: 2px;
 }
 
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.IBMPlex {
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
 .PlayfairDisplay {
     font-family: 'Playfair Display', serif;
+}
+
+.lora {
+    font-family: "Lora", serif;
+}
+
+.openSans {
+    font-family: "Open Sans", sans-serif;
 }

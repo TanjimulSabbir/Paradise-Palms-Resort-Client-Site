@@ -2,12 +2,13 @@ import axios from 'axios';
 import React, { useContext, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import toast  from 'react-hot-toast';
 import PageLoading from '../../Components/Shared/Loading/Loading';
 import auth from '../../Firebase/Firebase.init.config'
 import useAdmin from '../../Hooks/useAdmin';
 import { AuthContext } from '../AuthContext/AuthProvider';
 import AdminPower from './AdminPower';
+import "../../style/animation.css"
 
 const AdminModal = () => {
     const [AllAdmin, isLoading, refetch] = useAdmin();
@@ -51,7 +52,7 @@ const AdminModal = () => {
     return (
         <div>
             <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-            <div className="modal">
+            <div className="downSlider modal">
                 <div className="modal-box relative">
                     {user ? !AllAdmin?.length ? NotAdminModerator : <div className='flex justify-between items-center'>
                         <h3 className="text-2xl font-diplayFair font-bold">Admin Users</h3>
@@ -59,7 +60,7 @@ const AdminModal = () => {
 
                     <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute 
                     right-2 top-2">✕</label>
-                    <table className="table w-full">
+                    <table className="rightSlider table w-full">
                         {
                             AllAdmin && AllAdmin?.map((User => {
                                 return (<tbody>

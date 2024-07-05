@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useContext } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
-import { toast } from 'react-toastify';
+import toast  from 'react-hot-toast';
 import auth from '../Firebase/Firebase.init.config';
 import { AuthContext } from '../Pages/AuthContext/AuthProvider';
 

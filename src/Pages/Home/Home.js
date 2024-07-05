@@ -15,7 +15,7 @@ const Home = () => {
     useTitle('Home')
 
     return (
-        <div className='min-h-screen'>
+        <div className=''>
             <TopBanner />
             <Banner02 />
             <Banner03 />

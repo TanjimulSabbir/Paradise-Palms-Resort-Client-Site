@@ -5,8 +5,8 @@ import Service from "./Service";
 
 const Banner01 = () => {
   return (
-    <div className="bg-gray-200">
-      <div className="py-24 space-y-14">
+    <div className="leftSlider bg-gray-200">
+      <div className="pb-24 pt-14 space-y-14">
         <Service />
 
         <div className="UniversalPadding">

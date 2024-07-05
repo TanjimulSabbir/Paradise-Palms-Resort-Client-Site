@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { createContext } from "react";
 import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignOut, useUpdateProfile } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import  toast  from "react-hot-toast";
 import PageLoading from "../../Components/Shared/Loading/Loading";
 import auth from "../../Firebase/Firebase.init.config";
 

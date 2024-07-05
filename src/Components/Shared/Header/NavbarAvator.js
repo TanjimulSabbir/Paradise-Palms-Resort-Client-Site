@@ -2,7 +2,7 @@ import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import toast  from 'react-hot-toast';
 import auth from '../../../Firebase/Firebase.init.config';
 import PageLoading from '../Loading/Loading';
 
@@ -24,7 +24,7 @@ const NavbarAvator = () => {
     }
 
     const LoginLogOut = <Link to={user ? "" : "/login"}>
-        {user ? <p onClick={handleSignOut} >Logout</p> : "Login"}
+        {user ? <p onClick={handleSignOut} className='font-bold'>Logout</p> : "Login"}
     </Link>
 
     if (loading) {
@@ -39,9 +39,9 @@ const NavbarAvator = () => {
             </label>
 
             <ul tabIndex={0} className={`menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 ${Menushow ? "hidden" : "block"}`}>
-                <li><a>{userName}</a></li>
-                <li><Link to={'/updateprofile'}>Settings</Link></li>
-                <li>{LoginLogOut}</li>
+                <li className='ransition-all duration-500 hover:bg-green-600'><a>{userName}</a></li>
+                {/* <li><Link to={'/updateprofile'}>Settings</Link></li> */}
+                <li className='transition-all duration-500 hover:bg-red-600'>{LoginLogOut}</li>
             </ul>
         </div>
     );

@@ -2,14 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import img1 from '../../../Assets/images/Banner02/welcome-img-1.jpg'
 import img2 from '../../../Assets/images/Banner02/welcome-img-2.jpg'
+import "../../../style/animation.css"
 
 const Banner02 = () => {
     return (
-        <div className='UniversalPadding bg-white pb-24 pt-10 lg:pt-24'>
+        <div className='rightSlider UniversalPadding bg-white pb-24 pt-10 lg:pt-24'>
             <div className='lg:flex lg:justify-center'>
                 <div className='lg:flex lg:space-x-3 px-3 justify-center items-center'>
-                    <img src={img1} alt="welcome" className='hidden w-full lg:h-full lg:block' />
-                    <img src={img2} alt="welcome" className='w-full lg:max-w-[300px] h-full object-cover' />
+                    <img src={img1} alt="welcome" className='leftSlider hidden w-full lg:h-full lg:block' />
+                    <img src={img2} alt="welcome" className='rightSlider w-full lg:max-w-[300px] h-full object-cover' />
                 </div>
                 <div className='mt-10 lg:space-y-5 mb-4 lg:ml-14 lg:mt-0 lg:w-1/2'>
                     <h1 className='text-3xl md:text-4xl mid-lg:text-3xl lg:text-4xl font-diplayFair font-bold leading-tight'>Welcome to our Resort Paradise Palms</h1>

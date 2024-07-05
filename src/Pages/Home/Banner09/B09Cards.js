@@ -4,6 +4,7 @@ import useBlogs from "../../../Hooks/useBlogs";
 import PageLoading from "../../../Components/Shared/Loading/Loading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import "../../../style/animation.css"
 
 const B09Cards = () => {
   const location = useLocation();
@@ -21,13 +22,13 @@ const B09Cards = () => {
 
   return (
     <div
-      className={`grid grid-cols-1 md:grid-cols-2 ${pathName === "/" ? "lg:grid-cols-3" : "lg:grid-cols-1"
+      className={`rightSlider grid grid-cols-1 md:grid-cols-2 ${pathName === "/" ? "lg:grid-cols-3" : "lg:grid-cols-1"
         } gap-y-16 md:gap-8 lg:gap-10`}
     >
       {BlogsData?.map((blog) => {
         const { _id, title, description, img, date, author } = blog;
         return (
-          <div key={_id} className="relative pb-6 shadow-lg" id={`${title}`}>
+          <div key={_id} className="downSlider relative pb-6 shadow-lg" id={`${title}`}>
             <img
               src={img}
               className={`rounded ${pathName === "/" ? "md:h-[300px]" : "max-h-min"} w-full`} alt="blog" />

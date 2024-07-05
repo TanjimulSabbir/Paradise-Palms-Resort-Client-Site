@@ -1,11 +1,12 @@
+import { useContext } from 'react';
 import axios from 'axios';
-import React, { useContext } from 'react'
 import { useAuthState, } from 'react-firebase-hooks/auth';
-import { toast } from 'react-toastify';
+import toast  from 'react-hot-toast';
 import PageLoading from '../../Components/Shared/Loading/Loading';
 import auth from '../../Firebase/Firebase.init.config';
 import useAllUser from '../../Hooks/useAllUser'
 import { AuthContext } from '../AuthContext/AuthProvider';
+import { BsTrash } from 'react-icons/bs';
 
 
 const AllUser = () => {
@@ -39,7 +40,7 @@ const AllUser = () => {
         return <PageLoading></PageLoading>
     }
     if (AllUser?.length < 1) {
-        return <h1 className='h-screen font-diplayFair font-bold bg-blue-200 flex justify-center items-center'>No User Found</h1>
+        return <h1 className='h-screen font-bold bg-blue-200 flex justify-center items-center'>No User Found</h1>
     }
     return (
         <div className='py-10'>
@@ -69,7 +70,7 @@ const AllUser = () => {
                                     <td className='border-b'>
                                         {User.email === user?.email ? ActiveUser : User.email}</td>
                                     <td className='border-b' onClick={() => handleDelete(User?.email)}>
-                                        <button className='btn btn-sm bg-red-600 text-black border-none'>Delete</button></td>
+                                        <BsTrash className="text-red-500 cursor-pointer w-5 h-5"/></td>
                                 </tr>
                             </tbody>)
                         }))

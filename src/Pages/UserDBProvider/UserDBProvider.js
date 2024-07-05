@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { createContext, useContext, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
+import toast  from 'react-hot-toast';
 import auth from '../../Firebase/Firebase.init.config'
 import useBooking from '../../Hooks/useBooking'
 import { AuthContext } from '../AuthContext/AuthProvider'

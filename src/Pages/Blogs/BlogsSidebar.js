@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import PageLoading from "../../Components/Shared/Loading/Loading";
 import useBlogs from "../../Hooks/useBlogs";
+import "../../style/animation.css"
 
 const BlogsSidebar = () => {
   // Using destructuring to get BlogsData and isLoading from the useBlogs hook
   const [BlogsData, isLoading] = useBlogs();
 
-  const [filteredBlogs, setFilteredBlogs] = useState(BlogsData);
+  const [filteredBlogs, setFilteredBlogs] = useState(BlogsData || []);
 
   const handleSearch = (event) => {
     const inputData = event.target.value.toLowerCase();
@@ -19,16 +20,16 @@ const BlogsSidebar = () => {
   }
 
   return (
-    <div className="pt-8 p-4">
+    <div className="leftSlider pt-8 p-4 text-white">
       <div className="form-control">
-        <div className="input-group">
+        <div className="rightSlider input-group">
           <input
             type="text"
             placeholder="Search Categories"
-            className="input input-bordered"
+            className="input input-bordered text-black"
             onChange={handleSearch}
           />
-          <button className="btn bg-[#B3F2DD] btn-square" onClick={handleSearch}>
+          <button className="btn bg-[#0ce49c] btn-square" onClick={handleSearch}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -46,14 +47,14 @@ const BlogsSidebar = () => {
           </button>
         </div>
       </div>
-      <div className="mt-6">
-        <h1 className="headingS text-black">Categories</h1>
+      <div className="topSlider mt-6">
+        <h1 className="headingS">Categories</h1>
         <div className="mt-4 text-green-500">
           {filteredBlogs.map((data, index) => {
             const { title } = data;
             return (
-              <p className="border-b py-4" key={index}>
-                <a href={`#${title}`}>
+              <p className="rightSlider border-b py-4" key={index}>
+                <a href={`#${title}`} className="grow">
                   {index + 1}. {title}
                 </a>
               </p>

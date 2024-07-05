@@ -1,0 +1,144 @@
+@keyframes top {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes down {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes left {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes right {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: .25;
+        scale: .25;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes grow {
+    from {
+        opacity: .10;
+        scale: .9;
+    }
+
+    80% {
+        opacity: .50;
+    }
+
+    to {
+        opacity: .9;
+        scale: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+
+    }
+
+    to {
+        opacity: .25;
+    }
+}
+
+@keyframes searchModal {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.topSlider {
+    animation: top 1s ease-in-out;
+}
+
+.topSliderSlow {
+    animation: top 3s ease-in-out;
+}
+
+.downSlider {
+    animation: down 1s ease-in-out;
+}
+
+.downSliderSlow {
+    animation: down 3s ease-in-out;
+}
+
+.leftSlider {
+    animation: left 1s ease-in-out;
+}
+
+.leftSliderSlow {
+    animation: left 2.5s ease-in-out;
+}
+
+.rightSlider {
+    animation: right 1s ease-in-out;
+}
+
+.rightSliderSlow {
+    animation: right 2.5s ease-in-out;
+}
+
+.fade-in {
+    animation: fade-in 2s linear;
+}
+
+.grow {
+    animation: grow 1s linear;
+}
+
+.growSlow {
+    animation: grow 2s linear;
+}
+
+.fade-in-slow {
+    animation: fade-in 3s ease-in-out;
+}
+
+.fade-out {
+    animation: fade-out 1s ease-in-out;
+}
+
+.searchModalAnimation {
+    animation: searchModal .5s ease-in;
+}

@@ -3,11 +3,12 @@ import React, { useContext, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
-import { toast } from "react-toastify";
+
 import PageLoading from "../../../../Components/Shared/Loading/Loading";
 import auth from "../../../../Firebase/Firebase.init.config";
 import useRoom from "../../../../Hooks/useRoom";
 import { AuthContext } from "../../../AuthContext/AuthProvider";
+import toast from "react-hot-toast";
 
 const BookingForm = ({ matchedRoom }) => {
   let [RoomsData, isLoading, isError] = useRoom();
@@ -64,7 +65,7 @@ const BookingForm = ({ matchedRoom }) => {
   return (
     <div className="UniversalPadding mt-10 w-full">
       <div>
-        <h1 className="text-2xl sm:text-3xl mid-lg:text-2xl p-3 font-diplayFair font-bold text-center text-black">{title}/{price}</h1>
+        <h1 className="text-2xl sm:text-3xl mid-lg:text-2xl p-3 font-bold text-center text-black">{title}/{price}</h1>
       </div>
 
       <div className="flex flex-col mid-lg:flex-row w-full mx-auto justify-center items-center py-10 bg-base-100">

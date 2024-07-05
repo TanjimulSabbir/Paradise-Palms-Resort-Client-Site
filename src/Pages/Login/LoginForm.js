@@ -6,11 +6,12 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthContext/AuthProvider";
 import { BsInfoCircle } from "react-icons/bs";
 import AdminPassword from "./AdminPassword";
+import "../../style/animation.css"
 
 const LoginForm = () => {
   const [show, setShow] = useState(false);
   const [showAdmin, setShowAdmin] = useState(false);
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const { EmailLogin } = useContext(AuthContext)
 
   const onSubmit = (data) => {
@@ -18,7 +19,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="pb-14 pt-10">
+    <div className="topSlider pb-14 mt-24 h-screen">
       <div className="card max-w-sm sm:max-w-md mx-auto shadow-2xl border">
         <div className="text-center lg:text-center mt-4">
           <h1 className="text-3xl font-bold font-diplayFair">Login</h1>
@@ -61,7 +62,7 @@ const LoginForm = () => {
           <div className="form-control mt-4">
             <button className="btn">Login</button>
           </div>
-          <p className="text-sm link link-hover">
+          <p className="rightSlider text-sm link link-hover">
             Are you new here? <Link to={"/signup"} className='link text-black'>Create an account</Link>
           </p>
         </form>

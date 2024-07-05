@@ -1,15 +1,16 @@
 import React, { useContext } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import toast  from 'react-hot-toast';
 import PageLoading from '../../Components/Shared/Loading/Loading';
 import auth from '../../Firebase/Firebase.init.config';
 import useBooking from '../../Hooks/useBooking'
 import { DBContext } from '../UserDBProvider/UserDBProvider';
+import { BsTrash } from 'react-icons/bs';
 
 const AllBooking = () => {
     const [user] = useAuthState(auth)
-    const [AllBooking, isLoading, refetch, isError] = useBooking();
+    const [AllBooking, isLoading, isError] = useBooking();
     const { BookingDelete } = useContext(DBContext);
 
     if (isLoading) {
@@ -19,7 +20,7 @@ const AllBooking = () => {
         toast.info('Data geting error')
     }
     if (AllBooking?.length < 1) {
-        return <h1 className='h-screen font-diplayFair font-bold bg-blue-200 flex justify-center items-center'>No Booking Found</h1>
+        return <h1 className='h-screen font-bold bg-blue-200 flex justify-center items-center'>No Booking Found</h1>
     }
     return (
         <div className='py-10 mx-10 mid-lg:mx-0'>
@@ -27,12 +28,12 @@ const AllBooking = () => {
             <table className="table overflow-x-auto table-zebra w-full">
                 <thead>
                     <tr>
-                        <td className='font-displayFair'>Serial</td>
-                        <th className='font-displayFair'>Booking Name</th>
-                        <th className='font-displayFair'>Email</th>
-                        <th className='font-displayFair'>Price</th>
-                        <th className='font-displayFair'>Payment</th>
-                        <th className='font-displayFair'>Options</th>
+                        <td>Serial</td>
+                        <th>Booking Name</th>
+                        <th>Email</th>
+                        <th>Price</th>
+                        <th>Payment</th>
+                        <th>Options</th>
                     </tr>
                 </thead>
                 {
@@ -44,8 +45,8 @@ const AllBooking = () => {
                                 <td className='border-b'>{bookingName}</td>
                                 <td className='border-b'>{email}</td>
                                 <td className='border-b'>{price}</td>
-                                <td className='border-b'><Link className='badge badge-lg border-none bg-green-600 hover:bg-green-700 duration-150' to={'/payment'}>Pay</Link></td>
-                                <td className='border-b'><p className='btn btn-sm border-none bg-red-500 text-black hover:bg-red-600 duration-150 cursor-pointer' onClick={() => BookingDelete({ date, bookingName, email })}>Booking Delete</p></td>
+                                <td className='border-b'><Link className='text-sm py-1 px-3 bg-green-600 hover:bg-green-700 transition-colors duration-300 cursor-pointer rounded' to={'/payment'}>Pay</Link></td>
+                                <td className='border-b'><p onClick={() => BookingDelete({ date, bookingName, email })}> <BsTrash className="text-red-500 cursor-pointer w-5 h-5" /></p></td>
                             </tr>
                         </tbody>)
                     })

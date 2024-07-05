@@ -2,7 +2,7 @@ import { async } from '@firebase/util';
 import React from 'react'
 import { useUpdatePassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import toast  from 'react-hot-toast';
 import auth from '../../../Firebase/Firebase.init.config';
 import PageLoading from '../Loading/Loading';
 

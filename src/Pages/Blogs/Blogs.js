@@ -9,7 +9,7 @@ import Breadcumb from '../../Components/Shared/Breadcumb';
 const Blogs = () => {
 
   return (
-    <div className='lg:flex UniversalPadding py-14 scroll-smooth'>
+    <div className='lg:flex UniversalPadding py-14 scroll-smooth bg-[black] text-white'>
       <div className='lg:w-[30%]'>
         <Banner09Heading />
         <BlogsSidebar />

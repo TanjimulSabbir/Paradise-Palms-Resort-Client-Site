@@ -5,8 +5,10 @@ import auth from '../../../Firebase/Firebase.init.config';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
 import PageLoading from '../Loading/Loading';
-import { toast } from 'react-toastify';
+
 import { TfiAlignJustify, TfiClose } from "react-icons/tfi";
+import "../../../style/animation.css"
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -33,20 +35,20 @@ const Navbar = () => {
         }
     </>
 
-    const ActiveBtn = 'text-white rounded focus:outline-none font-diplayFair p-4 lg:py-0 hover:bg-gray-800 lg:hover:bg-transparent'
+    const ActiveBtn = 'rightSlider text-white rounded focus:outline-none p-4 lg:py-0 hover:bg-gray-800 lg:hover:bg-transparent'
     const NavMenu = <>
         <p className={ActiveBtn}><NavLink to='/'>Home</NavLink></p>
         <p className={ActiveBtn}><NavLink to='/rooms'>Rooms</NavLink></p>
         <p className={ActiveBtn}><NavLink to='/services'>Services</NavLink></p>
-        <p className={ActiveBtn}><NavLink to='/offers'>Offers</NavLink></p>
+        {/* <p className={ActiveBtn}><NavLink to='/offers'>Offers</NavLink></p> */}
         <p className={ActiveBtn}><NavLink to='/blog'>Blog</NavLink></p>
         <p className={ActiveBtn}><NavLink to='/dashboard'>Dashboard</NavLink></p>
         <p className={ActiveBtn}>{LoginLogOut}</p>
     </>
 
     return (
-        <div className="navbar bg-[#000505]">
-            <div className="navbar-start">
+        <div className="rightSliderSlow navbar">
+            <div className="leftSlider navbar-start">
                 <div className="dropdown">
                     <div>
                         <label tabIndex={0} onClick={() => setSidebar(!sidebar)} className={`btn bg-transparent border-none -ml-1 lg:hidden text-white `}>
@@ -63,7 +65,7 @@ const Navbar = () => {
                 </div>
                 {/* <a className="btn btn-ghost normal-case text-xl text-[#2e5798]" href='#l'>Paradise Palms</a> */}
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="grow navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-white space-x-6 mr-2">
                     {NavMenu}
                 </ul>

@@ -8,7 +8,7 @@ const OutletPart = ({ matchedRoom }) => {
 
   return (
     <div>
-      <div className="pt-16 flex font-openSans text-[11px] text-black mid-lg:text-[12px] border-b-2 pb-2 justify-around">
+      <div className="pt-16 flex items-center space-x-5 lg:space-x-10 text-[11px] text-black mid-lg:text-[12px] border-b-2 pb-2">
         <NavLink
           className="p-1 sm:p-2 uppercase"
           to={`/rooms/${_id}/description`}
@@ -34,7 +34,7 @@ const OutletPart = ({ matchedRoom }) => {
           Pricing Plans
         </NavLink>
       </div>
-      <div className="mt-14 mid-lg:px-10">
+      <div className="mt-14">
         <Outlet></Outlet>
         {params.info ? "" : <Review></Review>}
       </div>

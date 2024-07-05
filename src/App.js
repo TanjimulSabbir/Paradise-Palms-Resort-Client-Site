@@ -1,15 +1,16 @@
 import './App.css';
 import { RouterProvider } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 import Router from './Components/Layout/Routes/Routes';
-import { ToastContainer } from 'react-toastify';
 import ScrollToTopButton from './Components/Shared/ScrollTop/Scrolltop';
+
 
 function App() {
 
   return (
     <div>
       <RouterProvider router={Router}></RouterProvider>
-      <ToastContainer />
+      <Toaster position='top-center' />
       <ScrollToTopButton />
     </div>
   );
