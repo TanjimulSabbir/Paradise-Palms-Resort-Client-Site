@@ -12,9 +12,9 @@ const Footer = () => {
             </div>
             <div>
                 <span className="font-bold font-diplayFair">Quick Link</span>
-                <a className="link link-hover font-openSans">About Hotel</a>
-                <a className="link link-hover font-openSans">Terms & Conditionis</a>
-                <a className="link link-hover font-openSans">Jobs</a>
+               <span className="link link-hover font-openSans">About Hotel</span>
+               <span className="link link-hover font-openSans">Terms & Conditionis</span>
+               <span className="link link-hover font-openSans">Jobs</span>
             </div>
             <div>
                 <span className="font-bold font-diplayFair">Contact Info</span>
