@@ -18,10 +18,10 @@ const Footer = () => {
             </div>
             <div>
                 <span className="font-bold font-diplayFair">Contact Info</span>
-                <a className="link link-hover font-openSans">Phone: +88953 445 4892</a>
-                <a className="link link-hover font-openSans">256, Resort Street,, New York 24</a>
-                <a className="link link-hover font-openSans">tanjimulislamsabbir02@gmail.com</a>
-                <a className="link link-hover font-openSans">info@paradisepalms.com</a>
+                <span  className="link link-hover font-openSans">Phone: +88953 445 4892</span>
+                <span className="link link-hover font-openSans">256, Resort Street,, New York 24</span>
+                <span className="link link-hover font-openSans">tanjimulislamsabbir02@gmail.com</span>
+                <span className="link link-hover font-openSans">info@paradisepalms.com</span>
             </div>
             <div>
                 <span className="font-bold font-diplayFair">Newsletter</span>

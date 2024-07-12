@@ -7,7 +7,7 @@ import auth from '../../../Firebase/Firebase.init.config';
 import PageLoading from '../Loading/Loading';
 
 const NavbarAvator = () => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
     const [Menushow, setMenuShow] = useState(false)
     const navigate = useNavigate()
     const userName = <>{user?.uid ? user.displayName ? user.displayName : <Link to='/updateprofile'>Update Profile</Link> : 'No User'}</>
