@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { createContext, useContext, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useLocation, useNavigate } from 'react-router-dom'
-import toast  from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import auth from '../../Firebase/Firebase.init.config'
 import useBooking from '../../Hooks/useBooking'
 import { AuthContext } from '../AuthContext/AuthProvider'
@@ -74,7 +74,7 @@ const UserDBProvider = ({ children }) => {
 
                 <div tabIndex={0} className={`card dropdown-content text-black bg-green-600 shadow-2xl rounded-box w-64 ${isOpen ? "block" : "hidden"}`}>
                     <div className="card-body">
-                        <h2 className="card-title font-diplayFair font-bold">{AllBooking.length} {AllBooking.length > 1 && 'items' || 'item'}</h2>
+                        <h2 className="card-title font-diplayFair font-bold">{AllBooking.length} {(AllBooking.length > 1 && 'items') || 'item'}</h2>
                         <p className='font-openSans '>Your Total Amount is ${TotalPrice}.</p>
                         <p className='font-openSans '>You have Booked {AllBooking.length} Room{AllBooking.length > 1 && 's'} and Total {seat.reduce((acc, curr) => acc + Number(curr), 0)} seat.</p>
                     </div>
