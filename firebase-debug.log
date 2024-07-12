@@ -1,0 +1,81 @@
+[debug] [2024-07-12T09:04:35.631Z] ----------------------------------------------------------------------
+[debug] [2024-07-12T09:04:35.636Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Tanjimul Sabbir\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-07-12T09:04:35.637Z] CLI Version:   12.5.2
+[debug] [2024-07-12T09:04:35.637Z] Platform:      win32
+[debug] [2024-07-12T09:04:35.637Z] Node Version:  v20.2.0
+[debug] [2024-07-12T09:04:35.638Z] Time:          Fri Jul 12 2024 15:04:35 GMT+0600 (Bangladesh Standard Time)
+[debug] [2024-07-12T09:04:35.638Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-12T09:04:35.651Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-12T09:04:35.652Z] > authorizing via signed-in user (tanjimulislamsabbir02@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Web Development\Learn-with-me\my-projects\Paradise-Palms-Hotel-Client-Side
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-07-12T09:04:41.365Z] Using project from CLI flag: paradise-palms-tourist-h-c7621
+[debug] [2024-07-12T09:04:41.367Z] > refreshing access token with scopes: []
+[debug] [2024-07-12T09:04:41.371Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-07-12T09:04:41.371Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-12T09:04:41.844Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-07-12T09:04:41.845Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-12T09:04:41.847Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/paradise-palms-tourist-h-c7621 [none]
+[debug] [2024-07-12T09:04:42.292Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/paradise-palms-tourist-h-c7621 401
+[debug] [2024-07-12T09:04:42.293Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/paradise-palms-tourist-h-c7621 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2024-07-12T09:04:42.296Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-07-12T09:04:42.606Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\Tanjimul Sabbir\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\Tanjimul Sabbir\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project paradise-palms-tourist-h-c7621. Please make sure the project exists and your account has permission to access it.
+[debug] [2024-07-12T09:07:56.878Z] ----------------------------------------------------------------------
+[debug] [2024-07-12T09:07:56.882Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Tanjimul Sabbir\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2024-07-12T09:07:56.882Z] CLI Version:   12.5.2
+[debug] [2024-07-12T09:07:56.882Z] Platform:      win32
+[debug] [2024-07-12T09:07:56.883Z] Node Version:  v20.2.0
+[debug] [2024-07-12T09:07:56.883Z] Time:          Fri Jul 12 2024 15:07:56 GMT+0600 (Bangladesh Standard Time)
+[debug] [2024-07-12T09:07:56.883Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-12T09:07:56.992Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-12T09:07:56.993Z] > authorizing via signed-in user (tanjimulislamsabbir02@gmail.com)
+[debug] [2024-07-12T09:07:56.994Z] [iam] checking project paradise-palms-tourist-h-c7621 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-12T09:07:56.997Z] > refreshing access token with scopes: []
+[debug] [2024-07-12T09:07:57.000Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-07-12T09:07:57.000Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-12T09:07:57.441Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-07-12T09:07:57.442Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-12T09:07:57.443Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/paradise-palms-tourist-h-c7621:testIamPermissions [none]
+[debug] [2024-07-12T09:07:57.443Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/paradise-palms-tourist-h-c7621:testIamPermissions x-goog-quota-user=projects/paradise-palms-tourist-h-c7621
+[debug] [2024-07-12T09:07:57.444Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/paradise-palms-tourist-h-c7621:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-12T09:07:58.981Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/paradise-palms-tourist-h-c7621:testIamPermissions 401
+[debug] [2024-07-12T09:07:58.981Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/paradise-palms-tourist-h-c7621:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2024-07-12T09:07:58.984Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-07-12T09:07:58.985Z] > refreshing access token with scopes: []
+[debug] [2024-07-12T09:07:58.986Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-07-12T09:07:58.987Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-12T09:07:59.117Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-07-12T09:07:59.118Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-12T09:07:59.119Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/paradise-palms-tourist-h-c7621 [none]
+[debug] [2024-07-12T09:08:00.423Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/paradise-palms-tourist-h-c7621 401
+[debug] [2024-07-12T09:08:00.423Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/paradise-palms-tourist-h-c7621 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2024-07-12T09:08:00.424Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-07-12T09:08:00.758Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\Tanjimul Sabbir\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\Tanjimul Sabbir\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project paradise-palms-tourist-h-c7621. Please make sure the project exists and your account has permission to access it.

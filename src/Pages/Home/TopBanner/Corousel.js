@@ -13,7 +13,7 @@ const Corousel = () => {
     let hashName = (location.hash).split('#slide')[1]
     const { selectedText } = TBText(hashName);
     if (!hashName) {
-        window.location.hash = "#slide1";
+        window.location.hash = "#slide5";
     }
     const textOnImage = <>
         <div className='topSliderSlow absolute top-0 pt-10 left-0 w-full h-screen flex items-center justify-center bg-[#000000ac]'>
@@ -29,7 +29,7 @@ const Corousel = () => {
     return (
         <div className="grow carousel w-full h-screen">
             <div id="slide1" className="carousel-item relative w-full">
-                <img src={img4} className="w-full object-cover h-screen" alt='' />
+                <img src={img5} className="w-full object-cover h-screen" alt='' />
                 {textOnImage}
                 <div className="absolute right-0 md:flex justify-between transform md:-translate-y-1/2 md:left-5 md:right-5 top-1/2">
                     <a href="#slide4" className="text-white p-4">❮</a>

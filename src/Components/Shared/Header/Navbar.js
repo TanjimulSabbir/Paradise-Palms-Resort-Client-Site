@@ -65,10 +65,12 @@ const Navbar = () => {
                 </div>
                 {/* <a className="btn btn-ghost normal-case text-xl text-[#2e5798]" href='#l'>Paradise Palms</a> */}
             </div>
-            <div className="grow navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 text-white space-x-6 mr-2">
-                    {NavMenu}
-                </ul>
+            <div className="grow navbar-center hidden lg:flex ">
+                <div className=''>
+                    <ul className="menu menu-horizontal px-1 text-white space-x-6 mr-2">
+                        {NavMenu}
+                    </ul>
+                </div>
             </div>
             <NavbarAvator></NavbarAvator>
         </div>

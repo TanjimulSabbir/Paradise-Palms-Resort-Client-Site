@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink, Outlet, useLocation, useParams } from "react-router-dom";
+import { NavLink, Outlet, useParams } from "react-router-dom";
 import Review from "./OutletChild/Review";
 
 const OutletPart = ({ matchedRoom }) => {

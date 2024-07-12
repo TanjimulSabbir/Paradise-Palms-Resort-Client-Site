@@ -15,7 +15,7 @@ const Home = () => {
     useTitle('Home')
 
     return (
-        <div className=''>
+        <div>
             <TopBanner />
             <Banner02 />
             <Banner03 />
